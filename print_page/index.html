@@ -1131,15 +1131,15 @@ With the environment assembled and validated, you will next put Bob to work: tra
 <p>IBM Bob is powered by generative AI and LLMs, and a defining trait of these systems is that they are <em>non-deterministic</em> — unlike the <em>deterministic</em> tools most developers are accustomed to. In practice, that means the same prompt can produce different code from one run to the next. This is both a strength and a quirk of the technology, and it is something to work <em>with</em> rather than against.</p>
 <p><strong>Precision is what tips the odds in your favor.</strong> The more clearly you describe what you want, the more closely Bob's output will mirror your intent; conversely, the smallest change in wording can meaningfully change the generated code. Throughout this lab, your results may differ from the solutions shown — and that is expected, not a defect. Whenever an output diverges, you have three good options: refine the prompt and try again, edit the generated code by hand, or simply proceed if the variation still compiles and runs. Human review remains essential at every step, and never more so than while you are still learning the tool.</p>
 </div>
-<div class="admonition quote">
+<div class="admonition warning">
 <p class="admonition-title">WANT TO GO DEEPER?</p>
 <p>As prefaced earlier, there is an <em>optional</em> <strong>"advanced"</strong> form of this workflow that is also documented within the same module. Those of you wishing to go hands-on with deploying real-world environments and live services will greatly enjoy the materials. However, due to the potential of significant Bob token consumption and limitations on the number of environments IBM Technology Zone can allocate to IBM sellers at any one time, the "advanced" section is optional material not required for accreditation of this Level 3 courseware.</p>
 </div>
-<h2 id="2-iii-hands-on-brief-the-demo-builder"><strong>iii. Hands-on: Brief the Demo Builder</strong></h2>
+<h2 id="2-iii-brief-the-demo-builder"><strong>iii. Brief the Demo Builder</strong></h2>
 <hr />
 <ol>
 <li>
-<p>Click the <strong>Modes</strong> button — currently set on <strong>Agent</strong> mode.</p>
+<p>Within the Agentic Sidebar, click the <strong>Modes</strong> selector (which is likely displaying <em>Agent</em> mode at this time) to expose more options:</p>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/6f4df407-1aee-4fc2-9e53-fa4a4ab6b1a8/user_cropped_screenshot_4fbd8851da6c44efa1b218557dce0e8b_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/6f4df407-1aee-4fc2-9e53-fa4a4ab6b1a8/user_cropped_screenshot_4fbd8851da6c44efa1b218557dce0e8b_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
@@ -1148,7 +1148,7 @@ With the environment assembled and validated, you will next put Bob to work: tra
 <hr />
 <ol start="2">
 <li>
-<p>On the drop-down list, click <strong>IBM Pre-Sales Demo Builder</strong> to switch to this mode.</p>
+<p>From the drop-down list, switch to the <strong>IBM Pre-Sales Demo Builder</strong> mode.</p>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/60f1f9b3-1cef-46a7-bd68-8e61d40d222b/user_cropped_screenshot_9cfe9ad8bb714542a4314903d9671231_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/60f1f9b3-1cef-46a7-bd68-8e61d40d222b/user_cropped_screenshot_9cfe9ad8bb714542a4314903d9671231_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
@@ -1157,10 +1157,9 @@ With the environment assembled and validated, you will next put Bob to work: tra
 <hr />
 <ol start="3">
 <li>
-<p>With IBM Bob in <em>IBM Pre-Sales Demo Builder</em> mode, paste the following prompt:</p>
+<p>With IBM Bob now in <em>IBM Pre-Sales Demo Builder</em> mode, paste the following prompt into the Agentic Sidebar and press <span class="keys"><kbd class="key-enter">Enter</kbd></span> to execute.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#2-__codelineno-0-1"></a>I need a demo of an AI agent that monitors IoT sensor data from factory equipment, predicts failures before they happen, and automatically creates maintenance work orders with recommended parts and technicians.
 </code></pre></div>
-<p>...and click the <strong>Send message</strong> button (the upward-facing arrow).</p>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/01f39876-7a18-4df1-8c44-81ef53898d68/user_cropped_screenshot_903cb6c6f9fe417b8bced4d1df3e6fad_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/01f39876-7a18-4df1-8c44-81ef53898d68/user_cropped_screenshot_903cb6c6f9fe417b8bced4d1df3e6fad_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
@@ -1169,8 +1168,11 @@ With the environment assembled and validated, you will next put Bob to work: tra
 <hr />
 <ol start="4">
 <li>
-<p>IBM Pre-Sales Demo Builder mode starts by running preflight checks and the intake process.</p>
-<p>Approve the MCP tool prompt — click <strong>Approve for task</strong> to reduce the amount of manual approvals required later in the flow.</p>
+<p>IBM Pre-Sales Demo Builder mode will first run pre-flight checks to ensure everything is prepared and then begins the intake process.</p>
+<ul>
+<li><strong>Approve</strong> the MCP tool prompt</li>
+<li>Click the <strong>Approve for task</strong> toggle to reduce the amount of manual approvals required later in the flow</li>
+</ul>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/8d360330-1e36-4910-ac40-de0b3ebbb554/user_cropped_screenshot_296cea4d15ee4fb788cea00bc2001232_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/8d360330-1e36-4910-ac40-de0b3ebbb554/user_cropped_screenshot_296cea4d15ee4fb788cea00bc2001232_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
@@ -1179,10 +1181,13 @@ With the environment assembled and validated, you will next put Bob to work: tra
 <hr />
 <ol start="5">
 <li>
-<p>The intake completes, and Pre-Sales Demo Builder mode now poses a short sequence of questions — five, in the run captured here — to tailor the demo to your liking.</p>
+<p>Once the intake questionnaire is completed, the Pre-Sales Demo Builder mode will present an additional, short sequence of questions (five in the documented example) in order to further tailor the demo to your requirements.</p>
 <p>First, it asks <em>"How should the AI agent be built? [...]"</em></p>
 <p>Select the top option:</p>
 <p><strong>"watsonx.ai (RECOMMENDED) — A LangGraph ReAct agent running in a FastAPI backend. [...]"</strong></p>
+<div class="admonition warning">
+<p>Recall that generative AI systems are <em>non-deterministic</em> by design. Your results may vary.</p>
+</div>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/2b05099f-fc4b-4aec-b593-2db1a334d239/user_cropped_screenshot_5d90f5cf408740d1aaba65e5811369b3_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/2b05099f-fc4b-4aec-b593-2db1a334d239/user_cropped_screenshot_5d90f5cf408740d1aaba65e5811369b3_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
@@ -1204,7 +1209,8 @@ With the environment assembled and validated, you will next put Bob to work: tra
 <li>
 <p>Next, you are asked <em>"How do you want to run and deploy this demo"</em>.</p>
 <p>Select the <strong>"Run locally"</strong> option that fits your specific operating system — typically one of the top two responses. For example:</p>
-<p><strong>"Run locally first — I'm on Intel/AMD (amd64) Mac, Linux, or Windows"</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#2-__codelineno-1-1"></a>Run locally first — I&#39;m on Intel/AMD (amd64) Mac, Linux, or Windows
+</code></pre></div>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/eba41f32-99f1-4086-a31f-751ec0c4d585/user_cropped_screenshot_0eb35b73a8e44c7699197b29e3a0b93f_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/eba41f32-99f1-4086-a31f-751ec0c4d585/user_cropped_screenshot_0eb35b73a8e44c7699197b29e3a0b93f_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
@@ -1213,9 +1219,13 @@ With the environment assembled and validated, you will next put Bob to work: tra
 <hr />
 <ol start="8">
 <li>
-<p>Next, you are asked <em>"What specific factory equipment scenario should be showcased?"</em></p>
-<p>Click the top option — <strong>Industrial CNC machines + conveyor belts + HVAC systems [...]</strong></p>
-<p><em>Here you have more flexibility. If a listed industry or scenario aligns better with your own experience or interests, you are welcome to select it — though your results will drift further from the captures shown in this guide.</em></p>
+<p>Next, it asks <em>"What specific factory equipment scenario should be showcased?"</em></p>
+<p>Click the top option:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#2-__codelineno-2-1"></a>Industrial CNC machines + conveyor belts + HVAC systems \[...\]
+</code></pre></div>
+<div class="admonition quote">
+<p>Here you have more flexibility. If a listed industry or scenario aligns better with your own experience or interests, you are welcome to select it — though your results will drift further from the captures shown in this guide.</p>
+</div>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/fbffd1ff-a6c7-4574-84a7-1b6af20e1ab1/user_cropped_screenshot_6fa8a952a1a9417dab0187f9e6f8c620_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/fbffd1ff-a6c7-4574-84a7-1b6af20e1ab1/user_cropped_screenshot_6fa8a952a1a9417dab0187f9e6f8c620_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
@@ -1224,8 +1234,10 @@ With the environment assembled and validated, you will next put Bob to work: tra
 <hr />
 <ol start="9">
 <li>
-<p>Finally, Pre-Sales Demo Builder mode performs a last confirmation that everything is in order.</p>
-<p>Click <strong>"No — we have everything, start building now!"</strong></p>
+<p>Finally, Pre-Sales Demo Builder mode requests a final confirmation that everything is in order.</p>
+<p>Select the following option to conclude the fact-gathering phase and move ahead with the build instructions:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#2-__codelineno-3-1"></a>No — we have everything, start building now!
+</code></pre></div>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/2c4bcecd-eead-49f9-b911-9e58e59d9821/user_cropped_screenshot_11822e8a0d5b4b5b8b32b0baadffcafc_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/2c4bcecd-eead-49f9-b911-9e58e59d9821/user_cropped_screenshot_11822e8a0d5b4b5b8b32b0baadffcafc_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
@@ -1234,11 +1246,11 @@ With the environment assembled and validated, you will next put Bob to work: tra
 <hr />
 <h2 id="2-iv-the-autonomous-build"><strong>iv. The autonomous build</strong></h2>
 <hr />
-<p>With the intake complete, the balance of the work shifts to Bob. Your role across the following steps settles into a rhythm: review what Bob proposes, and approve. Where the captures below read "Click <strong>Approve for task</strong>", your run may present <strong>Approve once</strong> or a similar blue action button — click whichever appears to keep the workflow moving.</p>
+<p>With the intake complete, the balance of the work shifts to Bob. Your role across the following encompasses oversight and steering: review what Bob proposes and either approve the workflow or course-correct as necessary.</p>
 <hr />
 <ol start="10">
 <li>
-<p>Bob begins working. As usual, approve tasks when prompted.</p>
+<p>Bob begins working. As usual, <strong>approve</strong> tasks when prompted (if you agree with Bob's recommended course of action.)</p>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/53608484-01e3-42f7-985c-93f58bd79fcf/user_cropped_screenshot_4f4416a13f214674b09ef4806504cf72_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/53608484-01e3-42f7-985c-93f58bd79fcf/user_cropped_screenshot_4f4416a13f214674b09ef4806504cf72_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
@@ -1247,116 +1259,78 @@ With the environment assembled and validated, you will next put Bob to work: tra
 <hr />
 <ol start="11">
 <li>
-<p>Bob starts making the subdirectories that will store the project.</p>
-<p>Click <strong>"Approve for task"</strong>.</p>
+<p>Bob creates subdirectories that will store the project.</p>
+<ul>
+<li>Click <strong>"Approve for task"</strong></li>
+<li>Continue clicking through <strong>Approve once</strong> / <strong>Approve for task</strong> as prompted, until the <em>back-end build</em> has concluded</li>
+</ul>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/0cd7f0b1-1fd4-4412-8b84-18953746a133/user_cropped_screenshot_9ee526360d844a51a7545c0713b2dfd0_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/0cd7f0b1-1fd4-4412-8b84-18953746a133/user_cropped_screenshot_9ee526360d844a51a7545c0713b2dfd0_text_export.jpeg" alt="" width="600" /></a>
+</p>
+<p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/c9715c5f-5434-48e7-9aea-09d1cd85d050/File_7b0f0a00b55a4cb987b8bb42d15bb50c_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/c9715c5f-5434-48e7-9aea-09d1cd85d050/File_7b0f0a00b55a4cb987b8bb42d15bb50c_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
 </li>
 </ol>
 <hr />
 <ol start="12">
 <li>
-<p>Click <strong>"Approve for task"</strong>.</p>
-<p><p align="left">
-<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/c9715c5f-5434-48e7-9aea-09d1cd85d050/File_7b0f0a00b55a4cb987b8bb42d15bb50c_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/c9715c5f-5434-48e7-9aea-09d1cd85d050/File_7b0f0a00b55a4cb987b8bb42d15bb50c_text_export.jpeg" alt="" width="600" /></a>
-</p></p>
-</li>
-</ol>
-<hr />
-<ol start="13">
-<li>
-<p>Continue clicking through <strong>Approve once</strong> / <strong>Approve for task</strong> as prompted.</p>
-<p>Here, the backend build has completed — and IBM Bob's Pre-Sales Demo Builder mode is now running the build verification.</p>
+<p>At last, the <em>back-end build</em> has completed and IBM Bob's Pre-Sales Demo Builder mode is now running the build verification.</p>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/a24c808a-661b-428a-bbbc-6138ce3625e5/user_cropped_screenshot_6eb2136871314fe9953cc5c89c397c2d_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/a24c808a-661b-428a-bbbc-6138ce3625e5/user_cropped_screenshot_6eb2136871314fe9953cc5c89c397c2d_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
 </li>
 </ol>
 <hr />
-<ol start="14">
+<ol start="13">
 <li>
-<p>Pre-Sales Demo Builder mode now runs the backend tests. Click <strong>Approve for task</strong> once again.</p>
+<p>Pre-Sales Demo Builder mode now runs the <em>back-end tests</em>. Click <strong>Approve for task</strong> once again.</p>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/779d42d9-369d-421c-b519-268f580b65aa/user_cropped_screenshot_28004ec57a004878ba49634fe499a4ce_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/779d42d9-369d-421c-b519-268f580b65aa/user_cropped_screenshot_28004ec57a004878ba49634fe499a4ce_text_export.jpeg" alt="" width="600" /></a>
+</p>
+<p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/a2c72685-ab81-4b85-92d1-3f8872eb51b8/user_cropped_screenshot_7ad50d9ddb94493fa415b288a5426939_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/a2c72685-ab81-4b85-92d1-3f8872eb51b8/user_cropped_screenshot_7ad50d9ddb94493fa415b288a5426939_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+<details class="warning">
+<summary>TROUBLESHOOTING</summary>
+<p>Should the Agentic Sidebar freeze or time out at any point, simply sending the prompt <code>continue</code> should everything back on track.</p>
+<p>In this instance, after the <code>continue</code> prompt was sent, Bob understood exactly where it left off and resumed working intelligently. Continue clicking through <strong>Approve for task</strong>.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/ecc6a933-d90c-47b3-b4d4-04ea70a20094/user_cropped_screenshot_a29c89b585b344a8a856905d1f102b35_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/ecc6a933-d90c-47b3-b4d4-04ea70a20094/user_cropped_screenshot_a29c89b585b344a8a856905d1f102b35_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</details>
+</li>
+<li>
+<p>Once the back-end deploy is ready, Bob will moves on towards building the <em>front-end</em>.</p>
+<p>Continue clicking <strong>Approve for task</strong> to advance the workflow.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/e7cb6d7a-70c9-4bda-ace4-fcc37f0d4689/user_cropped_screenshot_ec2c26b1b8fd45288815e5e204c7c1d5_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/e7cb6d7a-70c9-4bda-ace4-fcc37f0d4689/user_cropped_screenshot_ec2c26b1b8fd45288815e5e204c7c1d5_text_export.jpeg" alt="" width="600" /></a>
+</p>
+<p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/697f0fe7-64f9-4ffb-bf86-f61c0153bdfa/user_cropped_screenshot_b5d190a1352f411d96c8860dc52deaad_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/697f0fe7-64f9-4ffb-bf86-f61c0153bdfa/user_cropped_screenshot_b5d190a1352f411d96c8860dc52deaad_text_export.jpeg" alt="" width="600" /></a>
+</p>
+<p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/f88af881-5757-4b39-9bad-90872c027e12/user_cropped_screenshot_59855436e39846e082023a8dbcd24267_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/f88af881-5757-4b39-9bad-90872c027e12/user_cropped_screenshot_59855436e39846e082023a8dbcd24267_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
 </li>
 </ol>
 <hr />
 <ol start="15">
 <li>
-<p>Should the Agentic Sidebar freeze or time out at any point, simply sending the prompt <code>continue</code> gets everything back on track.</p>
-<p><p align="left">
-<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/a2c72685-ab81-4b85-92d1-3f8872eb51b8/user_cropped_screenshot_7ad50d9ddb94493fa415b288a5426939_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/a2c72685-ab81-4b85-92d1-3f8872eb51b8/user_cropped_screenshot_7ad50d9ddb94493fa415b288a5426939_text_export.jpeg" alt="" width="600" /></a>
-</p></p>
-</li>
-</ol>
-<hr />
-<ol start="16">
-<li>
-<p>In this instance, after the <code>continue</code> prompt was sent, Bob understood exactly where it left off and resumed working intelligently. Continue clicking through <strong>Approve for task</strong>.</p>
-<p><p align="left">
-<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/ecc6a933-d90c-47b3-b4d4-04ea70a20094/user_cropped_screenshot_a29c89b585b344a8a856905d1f102b35_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/ecc6a933-d90c-47b3-b4d4-04ea70a20094/user_cropped_screenshot_a29c89b585b344a8a856905d1f102b35_text_export.jpeg" alt="" width="600" /></a>
-</p></p>
-</li>
-</ol>
-<hr />
-<ol start="17">
-<li>
-<p>Bob now moves on to build the frontend. Click <strong>Approve for task</strong>.</p>
-<p><p align="left">
-<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/e7cb6d7a-70c9-4bda-ace4-fcc37f0d4689/user_cropped_screenshot_ec2c26b1b8fd45288815e5e204c7c1d5_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/e7cb6d7a-70c9-4bda-ace4-fcc37f0d4689/user_cropped_screenshot_ec2c26b1b8fd45288815e5e204c7c1d5_text_export.jpeg" alt="" width="600" /></a>
-</p></p>
-</li>
-</ol>
-<hr />
-<ol start="18">
-<li>
-<p>Click <strong>Approve for task</strong>.</p>
-<p><p align="left">
-<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/697f0fe7-64f9-4ffb-bf86-f61c0153bdfa/user_cropped_screenshot_b5d190a1352f411d96c8860dc52deaad_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/697f0fe7-64f9-4ffb-bf86-f61c0153bdfa/user_cropped_screenshot_b5d190a1352f411d96c8860dc52deaad_text_export.jpeg" alt="" width="600" /></a>
-</p></p>
-</li>
-</ol>
-<hr />
-<ol start="19">
-<li>
-<p>Click <strong>Approve for task</strong>.</p>
-<p><p align="left">
-<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/f88af881-5757-4b39-9bad-90872c027e12/user_cropped_screenshot_59855436e39846e082023a8dbcd24267_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/f88af881-5757-4b39-9bad-90872c027e12/user_cropped_screenshot_59855436e39846e082023a8dbcd24267_text_export.jpeg" alt="" width="600" /></a>
-</p></p>
-</li>
-</ol>
-<hr />
-<ol start="20">
-<li>
-<p>The build is nearly finished. IBM Pre-Sales Demo Builder mode now wants to run its final compliance tests.</p>
-<p>Click <strong>Approve for task</strong>.</p>
+<p>The build is nearly finished. IBM Pre-Sales Demo Builder mode now wants to run its final <em>compliance tests</em>.</p>
+<p>Continue clicking <strong>Approve for task</strong> to advance the workflow.</p>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/ed089580-6c50-4a81-bf6d-e71d3b87c4bc/user_cropped_screenshot_8cd6c33fcc914ec19e6a8816844ce869_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/ed089580-6c50-4a81-bf6d-e71d3b87c4bc/user_cropped_screenshot_8cd6c33fcc914ec19e6a8816844ce869_text_export.jpeg" alt="" width="600" /></a>
-</p></p>
-</li>
-</ol>
-<hr />
-<ol start="21">
-<li>
-<p>Click <strong>Approve for task</strong>.</p>
-<p><p align="left">
+</p>
+<p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/afe6a62b-f74c-48e5-8f8d-d255b26c071e/user_cropped_screenshot_db76544699b64cde9e1ca67777dc721a_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/afe6a62b-f74c-48e5-8f8d-d255b26c071e/user_cropped_screenshot_db76544699b64cde9e1ca67777dc721a_text_export.jpeg" alt="" width="600" /></a>
-</p></p>
-</li>
-</ol>
-<hr />
-<ol start="22">
-<li>
-<p>Click <strong>Approve for task</strong>.</p>
-<p><p align="left">
+</p>
+<p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/fed7711a-1757-44ae-8b99-b95dcfd490af/user_cropped_screenshot_e4e6b4fa32ce4e89aece4fe8ace70062_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/fed7711a-1757-44ae-8b99-b95dcfd490af/user_cropped_screenshot_e4e6b4fa32ce4e89aece4fe8ace70062_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
-</li>
-</ol>
-<hr />
-<ol start="23">
+<details class="warning">
+<summary>TROUBLESHOOTING</summary>
+<ol>
 <li>
 <p>In this instance, Pre-Sales Demo Builder caught a bug during its compliance pass and begins investigating.</p>
 <p>Click <strong>Approve for task</strong>.</p>
@@ -1364,9 +1338,6 @@ With the environment assembled and validated, you will next put Bob to work: tra
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/0912f81b-0cea-4063-923c-6f3dc5110b46/user_cropped_screenshot_f103016dc24c47ec8e03bf65ce60c0bf_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/0912f81b-0cea-4063-923c-6f3dc5110b46/user_cropped_screenshot_f103016dc24c47ec8e03bf65ce60c0bf_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
 </li>
-</ol>
-<hr />
-<ol start="24">
 <li>
 <p>IBM Pre-Sales Demo Builder mode attempts a different search method to locate the bug.</p>
 <p>Click <strong>Approve for task</strong>.</p>
@@ -1374,9 +1345,6 @@ With the environment assembled and validated, you will next put Bob to work: tra
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/818d77e3-3bc6-4997-a50e-c26c38f45214/user_cropped_screenshot_1e245467f7ed4a9482bd62bd4528b21d_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/818d77e3-3bc6-4997-a50e-c26c38f45214/user_cropped_screenshot_1e245467f7ed4a9482bd62bd4528b21d_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
 </li>
-</ol>
-<hr />
-<ol start="25">
 <li>
 <p>Click <strong>"Approve for task"</strong>.</p>
 <p><p align="left">
@@ -1384,13 +1352,15 @@ With the environment assembled and validated, you will next put Bob to work: tra
 </p></p>
 </li>
 </ol>
-<hr />
+</details>
+</li>
+</ol>
 <h2 id="2-v-launch-the-demo"><strong>v. Launch the demo</strong></h2>
 <hr />
-<ol start="26">
+<ol start="16">
 <li>
-<p>Demo completed and verified!</p>
-<p>Now, read through the final completion message. As you scroll, look for a section that provides the Terminal commands to start the app.</p>
+<p>At this stage, the demo build has been completed and verified.</p>
+<p>Read through the final completion message and locate the <strong>Terminal commands</strong> (documented within the console read-out) to start the application.</p>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/6e82530c-d497-45be-94cd-28ab810b6d93/File_8fab59f601a94309ae699ce8fb1a31e5_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/6e82530c-d497-45be-94cd-28ab810b6d93/File_8fab59f601a94309ae699ce8fb1a31e5_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
@@ -1407,7 +1377,7 @@ With the environment assembled and validated, you will next put Bob to work: tra
 <summary>OPTIONAL: A ONE-CLICK QUICKSTART SCRIPT</summary>
 <p>Remember that IBM Bob is remarkably flexible. If something irritates or confuses you at any point in the process, simply explain it to Bob in natural language.</p>
 <p>A case in point: prefer not to open Terminal windows every time you run the app? Ask Bob to make you a quickstart script. A prompt like the following will work:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#2-__codelineno-1-1"></a>Make a quickstart script that allows me to start the app in 1 click, no manual Terminal windows.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#2-__codelineno-4-1"></a>Make a quickstart script that allows me to start the app in 1 click, no manual Terminal windows.
 </code></pre></div>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/348ae2ae-544f-4c27-8ca9-203939210e18/user_cropped_screenshot_c790bfccaae8420aafcc1b631340aa38_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/348ae2ae-544f-4c27-8ca9-203939210e18/user_cropped_screenshot_c790bfccaae8420aafcc1b631340aa38_text_export.jpeg" alt="" width="600" /></a>
@@ -1492,7 +1462,7 @@ With the environment assembled and validated, you will next put Bob to work: tra
 <ol start="35">
 <li>
 <p>To finish starting up the app, execute the following command within the terminal window where you changed directories to the frontend folder:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#2-__codelineno-2-1"></a>npm run dev
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#2-__codelineno-5-1"></a>npm run dev
 </code></pre></div>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/e6e40ccc-9ee7-49f8-9b05-fa9e3ee215ef/user_cropped_screenshot_8f7aa93b449c4555823d6b2262bdda97_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/e6e40ccc-9ee7-49f8-9b05-fa9e3ee215ef/user_cropped_screenshot_8f7aa93b449c4555823d6b2262bdda97_text_export.jpeg" alt="" width="600" /></a>
