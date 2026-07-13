@@ -1,0 +1,1624 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="IBM watsonx Code Assistant Level 4">
+      
+      
+        <meta name="author" content="Christopher Bienko (cdbienko@us.ibm.com)">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.1">
+    
+    
+      
+        <title>2. Setup and registration - IBM watsonx Code Assistant Level 4</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings2.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings3.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings4.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings5.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings6.css">
+    
+      <link rel="stylesheet" href="../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../../styles/override-print.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#setup-and-registration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IBM watsonx Code Assistant Level 4" class="md-header__button md-logo" aria-label="IBM watsonx Code Assistant Level 4" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IBM watsonx Code Assistant Level 4
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2. Setup and registration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IBM watsonx Code Assistant Level 4" class="md-nav__button md-logo" aria-label="IBM watsonx Code Assistant Level 4" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    IBM watsonx Code Assistant Level 4
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toc/" class="md-nav__link">
+        Table of Contents
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          On-Premises Installation and Deployment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="On-Premises Installation and Deployment" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          On-Premises Installation and Deployment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-premises/1/" class="md-nav__link">
+        1. Objectives and requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-premises/2/" class="md-nav__link">
+        2. Reserve an environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-premises/3/" class="md-nav__link">
+        3. Bastion host setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-premises/4/" class="md-nav__link">
+        4. Cluster preparation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-premises/5/" class="md-nav__link">
+        5. Install prerequisite software
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-premises/6/" class="md-nav__link">
+        6. Install IBM Software Hub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-premises/7/" class="md-nav__link">
+        7. Install watsonx Code Assistant
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          IBM Cloud (SaaS) Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IBM Cloud (SaaS) Configuration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          IBM Cloud (SaaS) Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../saas/1/" class="md-nav__link">
+        1. Objectives and requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../saas/2/" class="md-nav__link">
+        2. Reserve an environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../saas/3/" class="md-nav__link">
+        3. Configure for enterprise Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../saas/4/" class="md-nav__link">
+        4. Install WCA extension for Visual Studio Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../saas/5/" class="md-nav__link">
+        5. Install WCA plug-in for Eclipse IDE
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Application Modernization - WebSphere to Liberty
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Application Modernization - WebSphere to Liberty" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Application Modernization - WebSphere to Liberty
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appmod/1/" class="md-nav__link">
+        1. Objectives and requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appmod/2/" class="md-nav__link">
+        2. Basic migration capabilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appmod/3/" class="md-nav__link">
+        3. Configuration management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appmod/4/" class="md-nav__link">
+        4. APIs and libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appmod/5/" class="md-nav__link">
+        5. EJB modernization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appmod/6/" class="md-nav__link">
+        6. JMS integration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appmod/7/" class="md-nav__link">
+        7. Security modernization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appmod/8/" class="md-nav__link">
+        8. Full stack modernization
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Bob Demo-Builder Mode
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bob Demo-Builder Mode" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Bob Demo-Builder Mode
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1/" class="md-nav__link">
+        1. Objectives and requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2. Setup and registration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        2. Setup and registration
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-what-youre-building-toward" class="md-nav__link">
+    i. What you're building toward
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-before-you-start" class="md-nav__link">
+    ii. Before you start
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-hands-on-install-the-ce-bob-marketplace-demo-builder" class="md-nav__link">
+    iii. Hands-on: Install the CE Bob Marketplace &amp; Demo Builder
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-validation" class="md-nav__link">
+    iv. Validation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-connect-the-mcp-servers" class="md-nav__link">
+    v. Connect the MCP servers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-key-takeaways" class="md-nav__link">
+    vi. Key takeaways
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3/" class="md-nav__link">
+        3. Deploying with demo builder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4/" class="md-nav__link">
+        4. Prompting best-practices with demo builder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5/" class="md-nav__link">
+        5. Strategies for building better demos with Bob
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6/" class="md-nav__link">
+        6. Build consistently with asset templates
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-what-youre-building-toward" class="md-nav__link">
+    i. What you're building toward
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-before-you-start" class="md-nav__link">
+    ii. Before you start
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-hands-on-install-the-ce-bob-marketplace-demo-builder" class="md-nav__link">
+    iii. Hands-on: Install the CE Bob Marketplace &amp; Demo Builder
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-validation" class="md-nav__link">
+    iv. Validation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-connect-the-mcp-servers" class="md-nav__link">
+    v. Connect the MCP servers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-key-takeaways" class="md-nav__link">
+    vi. Key takeaways
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<p><strong>BOB DEMO-BUILDER MODE</strong></p>
+<h1 id="setup-and-registration"><strong>SETUP AND REGISTRATION</strong></h1>
+<hr />
+<h2 id="i-what-youre-building-toward"><strong>i. What you're building toward</strong></h2>
+<hr />
+<p>Within this chapter, you will assemble the Demo Builder environment end-to-end:</p>
+<ul>
+<li>Install the <strong>Client Engineering Bob Marketplace</strong> extension</li>
+<li>Create the <strong>GitHub Personal Access Token (PAT)</strong> that unlocks its catalog</li>
+<li>Stand up a fresh project workspace</li>
+<li>Install the <strong>IBM Pre-Sales Demo Builder</strong> itself: the packaged Mode, Skills, and MCP servers that the remainder of this lab runs upon</li>
+<li>Acquire the short-lived credentials for (and configure) the <strong>Carbon</strong> and <strong>TechZone</strong> MCP servers that the Demo Builder depends upon</li>
+</ul>
+<p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/83b65053-d280-4447-9de9-c285df882f00/File_bf25e53e8bd64c56b12b8b1c5e93b227_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/83b65053-d280-4447-9de9-c285df882f00/File_bf25e53e8bd64c56b12b8b1c5e93b227_text_export.jpeg" alt="" width="600" /></a>
+</p>
+<div class="admonition quote">
+<p>The illustration above serves as a one page map of the setup work ahead. Follow along in the subsequent steps for detailed, step-by-step guidance (with links and highlighted screen captures throughout.)</p>
+</div>
+<h2 id="ii-before-you-start"><strong>ii. Before you start</strong></h2>
+<hr />
+<ul>
+<li><strong>IBM Bob</strong> is installed and open</li>
+<li>You can sign in to <a href="http://github.ibm.com/?utm_source=skills_network&amp;utm_content=in_lab_content_link&amp;utm_id=Lab-Bob+Demo+Builder+L3+v1-v1">github.ibm.com</a></li>
+<li>Your <strong>IBMid</strong> credentials are at hand</li>
+<li>You are connected to the <strong>IBM Intranet</strong> (or via Cisco AnyConnect VPN)</li>
+<li>A local folder is available to serve as your Bob project workspace</li>
+</ul>
+<p>No additional downloads or staged files are required before you begin.</p>
+<div class="admonition note">
+<p class="admonition-title"><strong>A WORD ON WORKING WITH GENERATIVE AI</strong></p>
+<p>IBM Bob is powered by generative AI and LLMs, and a defining trait of these systems is that they are <em>non-deterministic</em> — unlike the <em>deterministic</em> tools most developers are accustomed to. In practice, that means the same prompt can produce different code from one run to the next. This is both a strength and a quirk of the technology, and it is something to work <em>with</em> rather than against.</p>
+<p><strong>Precision is what tips the odds in your favor.</strong> The more clearly you describe what you want, the more closely Bob's output will mirror your intent; conversely, the smallest change in wording can meaningfully change the generated code. Throughout this lab, your results may differ from the solutions shown — and that is expected, not a defect. Whenever an output diverges, you have three good options: refine the prompt and try again, edit the generated code by hand, or simply proceed if the variation still compiles and runs. Human review remains essential at every step, and never more so than while you are still learning the tool.</p>
+</div>
+<h2 id="iii-hands-on-install-the-ce-bob-marketplace-demo-builder"><strong>iii. Hands-on: Install the CE Bob Marketplace &amp; Demo Builder</strong></h2>
+<hr />
+<p>The work ahead proceeds in four phases: download the Marketplace extension; create the GitHub PAT that authenticates it; install the extension and register your token; and, finally, install the Demo Builder into a fresh workspace.</p>
+<hr />
+<ol>
+<li>
+<p>Start by navigating to the following page within a <strong>web browser</strong>:</p>
+<p><a href="https://github.ibm.com/ClientEngineering/bob/tree/main/How-To/Bob-Marketplace?utm_source=skills_network&amp;utm_content=in_lab_content_link&amp;utm_id=Lab-Bob+Demo+Builder+L3+v1-v1">https://github.ibm.com/ClientEngineering/bob/tree/main/How-To/Bob-Marketplace</a></p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/48419d99-6cfb-42c5-8bb6-0e3cdf06565f/File_90cde6fef04040ddad5fa28e2686b431_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/48419d99-6cfb-42c5-8bb6-0e3cdf06565f/File_90cde6fef04040ddad5fa28e2686b431_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="2">
+<li>
+<p>Scroll down to the <em>Installation Guide</em> subsection.</p>
+<p><strong>Click the link</strong> under <em>Step 1 - Download the extension</em>:</p>
+<p><a href="https://github.ibm.com/ClientEngineering/bob/blob/main/Extensions/Bob-PreSales-DEMO-Builder-Marketplace.vsix?utm_source=skills_network&amp;utm_content=in_lab_content_link&amp;utm_id=Lab-Bob+Demo+Builder+L3+v1-v1">https://github.ibm.com/ClientEngineering/bob/blob/main/Extensions/Bob-PreSales-DEMO-Builder-Marketplace.vsix</a></p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/8bd3e3c6-e34d-4664-ab4b-2caf31caa1e6/File_6db5c7af583649daa99432406b25a5a2_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/8bd3e3c6-e34d-4664-ab4b-2caf31caa1e6/File_6db5c7af583649daa99432406b25a5a2_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="3">
+<li>
+<p>You will be redirected to the extension's file page.</p>
+<p>Click the <strong>Download raw file</strong> button (as shown in the screenshot below.)</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/c4dc2fc3-62ee-499a-8c34-9ce0f1b30742/File_1f73cb392d1a4c558efe5920a3217e8a_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/c4dc2fc3-62ee-499a-8c34-9ce0f1b30742/File_1f73cb392d1a4c558efe5920a3217e8a_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="4">
+<li>
+<p><strong>Click README.md</strong> (under <em>How-To/Bob-Marketplace</em> in the File Explorer on the side).</p>
+<p>This redirects you to <a href="https://github.ibm.com/ClientEngineering/bob/blob/main/How-To/Bob-Marketplace/README.md?utm_source=skills_network&amp;utm_content=in_lab_content_link&amp;utm_id=Lab-Bob+Demo+Builder+L3+v1-v1">https://github.ibm.com/ClientEngineering/bob/blob/main/How-To/Bob-Marketplace/README.md</a> <em>(alternatively, you may follow that link directly).</em></p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/e7804813-bc84-4315-bc0c-d8b9cba19e0f/File_da3ac33c2ca04cd08fa474334f4cd4bf_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/e7804813-bc84-4315-bc0c-d8b9cba19e0f/File_da3ac33c2ca04cd08fa474334f4cd4bf_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="5">
+<li>
+<p>Back on the <strong>README</strong> page, scroll down until you reach <em>Step 2 - Create a GitHub API Token</em>.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/d7a039af-57bc-4fb7-9ca3-9ea16f5817c5/File_3df3ddcebb214c61b7beca17b91f2e9b_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/d7a039af-57bc-4fb7-9ca3-9ea16f5817c5/File_3df3ddcebb214c61b7beca17b91f2e9b_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="6">
+<li>
+<p><strong>Click the link:</strong> <a href="https://github.ibm.com/settings/tokens/new?utm_source=skills_network&amp;utm_content=in_lab_content_link&amp;utm_id=Lab-Bob+Demo+Builder+L3+v1-v1">https://github.ibm.com/settings/tokens/new</a></p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/a926b748-bb6e-43ed-a93d-2b907be9e82b/File_7f1e65418ce247dfa28c931f9fec303c_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/a926b748-bb6e-43ed-a93d-2b907be9e82b/File_7f1e65418ce247dfa28c931f9fec303c_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="7">
+<li>
+<p>Assign your <strong>GitHub PAT</strong> a name that you will recognize later.</p>
+<p>Populate the <strong>Note</strong> field with <code>Bob Marketplace</code> or something similar.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/bf21c83a-baaa-4a8f-aece-141c25fdf20a/File_5982113a0bcf495392e8fec0578a6bcd_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/bf21c83a-baaa-4a8f-aece-141c25fdf20a/File_5982113a0bcf495392e8fec0578a6bcd_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="8">
+<li>
+<p>Expand the <strong>Expiration</strong> field and select <code>90 days</code>.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/ab905020-a63e-4ff6-a94a-152a168e6a74/File_cc3e71ddea2943279fa6e17fc28708de_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/ab905020-a63e-4ff6-a94a-152a168e6a74/File_cc3e71ddea2943279fa6e17fc28708de_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="9">
+<li>
+<p>Under <em>Select scopes</em>, toggle <strong>on</strong> (checkmark) the <code>repo</code> option. This will automatically select the nested options (<code>repostatus</code>, <code>repo_deployment</code>, etc) as well.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/08dcd8c7-14ff-49a7-97ea-d7893c4de1da/File_f8848392f05a4bf6a69a73d8c901f60f_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/08dcd8c7-14ff-49a7-97ea-d7893c4de1da/File_f8848392f05a4bf6a69a73d8c901f60f_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="10">
+<li>
+<p>Leave all other settings at their defaults. Scroll to the bottom of the page and click the green <strong>Generate token</strong> button.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/2e876ba7-a0ea-4a81-ae45-ce945c5d23b0/File_632a88197395430bacf27651d3a77311_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/2e876ba7-a0ea-4a81-ae45-ce945c5d23b0/File_632a88197395430bacf27651d3a77311_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="11">
+<li>
+<p>Press the <strong>copy</strong> button (the two overlapping squares) to copy the newly-generated GitHub Personal Access Token (PAT) to the clipboard.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/25860032-a987-4a61-8256-ed348cd71d9a/File_b4bbd68c0b374d55a3b07cd6a9863bf9_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/25860032-a987-4a61-8256-ed348cd71d9a/File_b4bbd68c0b374d55a3b07cd6a9863bf9_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="12">
+<li>
+<p>Paste and save your GitHub PAT within a password manager (or, less securely, within any text editor).</p>
+<div class="admonition warning">
+<p class="admonition-title">RETAIN YOUR CREDENTIALS DOCUMENT</p>
+<p>You will paste this token into Bob shortly — but do <strong>not</strong> delete it once you have done so. The saved credentials are your first resort for troubleshooting later in this chapter.</p>
+</div>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/6973ea58-3909-4ac9-b4bc-36e68d012191/File_e499df02c1e0467cabc4737b604071ca_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/6973ea58-3909-4ac9-b4bc-36e68d012191/File_e499df02c1e0467cabc4737b604071ca_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<p>To complete the tasks detailed throughout this module, you will make use of <strong>three Bob Custom Modes</strong>. Each has been packaged for a frictionless, one-click install from the Bob Marketplace for Client Engineering.</p>
+<p>First, the Marketplace extension itself must be installed:</p>
+<hr />
+<ol start="13">
+<li>
+<p>Within the Bob IDE, click the <strong>Extensions</strong> tab from the left-hand side of the interface (or alternatively press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-x">X</kbd></span>).</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/d739f5bf-0a5e-4430-ad22-85323d95f02b/File_c2226678e0564046b20d1374f942c2fa_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/d739f5bf-0a5e-4430-ad22-85323d95f02b/File_c2226678e0564046b20d1374f942c2fa_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="14">
+<li>
+<p>The <strong>Extensions</strong> panel will open. In the top-right corner of the panel, next to the circular (loop) icon, click the three-dotted icon (<code>...</code>) to open a drop-down menu of additional options.</p>
+<p>Click <strong>Install from VSIX...</strong></p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/95057a19-1cdf-42e0-a6a5-3429ea6e8b75/File_0e47061acda14d6a86dfdc676fb82738_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/95057a19-1cdf-42e0-a6a5-3429ea6e8b75/File_0e47061acda14d6a86dfdc676fb82738_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="15">
+<li>
+<p>Within the File Explorer, select <strong>Bob-PreSales-DEMO-Builder-Marketplace.vsix</strong> — the file you downloaded earlier when you pressed <strong>Download raw file</strong>. Likely this file is sitting in your local <em>Downloads</em> folder.</p>
+<p>Click the <strong>Install</strong> button to continue.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/721e2b99-9058-4464-95fd-5f4f380fef09/File_af7551ef21ac49979ce01b9c03ee7ce3_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/721e2b99-9058-4464-95fd-5f4f380fef09/File_af7551ef21ac49979ce01b9c03ee7ce3_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="16">
+<li>
+<p><strong>Client Engineering Bob Marketplace</strong> should now appear within the <em>Installed</em> section of the <strong>Extensions</strong> panel.</p>
+<p>Take note that a Marketplace icon has also appeared along the tabs on the left-hand sidebar of the Bob IDE.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/67d4033e-30c8-49b9-8c17-231cf475d5e4/File_dd96d7505baf4725ba9f32a221c07878_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/67d4033e-30c8-49b9-8c17-231cf475d5e4/File_dd96d7505baf4725ba9f32a221c07878_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="17">
+<li>
+<p>Click the <strong>CE Bob Marketplace</strong> tab from the sidebar.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/da150891-98c1-47b8-91ec-e7e3edf33a6e/File_94ca814cf8a34a288efcdbdf3c6076ea_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/da150891-98c1-47b8-91ec-e7e3edf33a6e/File_94ca814cf8a34a288efcdbdf3c6076ea_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="18">
+<li>
+<p>Click the triangular <span class="keys"><kbd class="key-greater">&gt;</kbd></span> icon next to the <strong>Collections</strong> drop-down to expose the contents.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/392770a3-d802-43d3-9762-301a8b123566/File_e59a186cb7744e1d86b6108665e6c8a5_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/392770a3-d802-43d3-9762-301a8b123566/File_e59a186cb7744e1d86b6108665e6c8a5_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="19">
+<li>
+<p>The <strong>IBM Pre-Sales Demo Builder</strong> extension will appear under the <em>Collections</em> dropdown. <strong>Double-click</strong> it to open a detailed panel view.</p>
+<ul>
+<li>Before the extension can be installed, register the GitHub PAT created earlier</li>
+<li>Click the small <strong>key icon</strong> (<em>Bob Marketplace: Set Repository Token</em>) near the top of the CE Bob Marketplace panel</li>
+</ul>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/b638848b-943b-4bf0-835c-b1ecfa9f73ad/File_893d6e3fab4f43a2af1c5b377a60c9fe_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/b638848b-943b-4bf0-835c-b1ecfa9f73ad/File_893d6e3fab4f43a2af1c5b377a60c9fe_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="20">
+<li>
+<p>An input window expands at the top of your screen, within the IBM Bob search bar.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/fe7b0774-f73f-4dca-8451-c0c89034c96d/File_a2010f6ce84f4d30b6c200798c3cb874_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/fe7b0774-f73f-4dca-8451-c0c89034c96d/File_a2010f6ce84f4d30b6c200798c3cb874_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="21">
+<li>
+<p>Copy and paste the GitHub PAT into the input window and press <span class="keys"><kbd class="key-enter">Enter</kbd></span> to continue.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/adabc9c0-f3b0-4ff8-94a0-5508aa7432cb/File_722d6bb2f3ef4bd18b449240f259fc82_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/adabc9c0-f3b0-4ff8-94a0-5508aa7432cb/File_722d6bb2f3ef4bd18b449240f259fc82_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="22">
+<li>
+<p>A <strong>"Token saved [...]"</strong> notification will appear in the bottom-right portion of your screen.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/041eb37f-8a90-47eb-a30e-5e5d404f3033/File_6d4aa5a9ed0b4e51a2811de232aaf1c4_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/041eb37f-8a90-47eb-a30e-5e5d404f3033/File_6d4aa5a9ed0b4e51a2811de232aaf1c4_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="23">
+<li>
+<p>Next, a project workspace must be established.</p>
+<p>Click the <strong>Explorer</strong> tab from the Bob IDE sidebar.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/21fa5455-1688-4cf3-94b1-567c9bc0c42f/File_e56a6c0f0b104d428d7c0fba61544505_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/21fa5455-1688-4cf3-94b1-567c9bc0c42f/File_e56a6c0f0b104d428d7c0fba61544505_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="24">
+<li>
+<p>Click <strong>Open Folder</strong>.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/0929afc5-facf-490d-a994-72b7db70b0ec/File_614e7c914d384825bb87958b5624e979_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/0929afc5-facf-490d-a994-72b7db70b0ec/File_614e7c914d384825bb87958b5624e979_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="25">
+<li>
+<p>Create a <strong>New folder</strong> and name it <code>Bob L3 Demo Builder</code>.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/8df3ae5e-7abc-4d73-a1bb-429926ed00f3/File_2e5cd70852b74fa18d591a17fc1a03e6_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/8df3ae5e-7abc-4d73-a1bb-429926ed00f3/File_2e5cd70852b74fa18d591a17fc1a03e6_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="26">
+<li>
+<p>Highlight (click once) the newly-created folder and then press <strong>Select folder</strong>.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/b6ed57b6-cf4d-4e25-936d-57d2c1ab42e6/File_ff9cc51c6934413198d7967374f3fa43_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/b6ed57b6-cf4d-4e25-936d-57d2c1ab42e6/File_ff9cc51c6934413198d7967374f3fa43_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="27">
+<li>
+<p>Click <strong>"Yes, I trust the authors"</strong> when prompted to do so.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/efb42451-33a8-4bcd-8e81-446a42115d79/File_5c0207610ecd49c3be6947a72b115be0_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/efb42451-33a8-4bcd-8e81-446a42115d79/File_5c0207610ecd49c3be6947a72b115be0_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="28">
+<li>
+<p>From the Bob IDE sidebar, click the <strong>"CE Bob Marketplace"</strong> tab.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/5a5494c6-2985-42f3-890a-b391a48ee7c8/File_b0aa361b213941eea35652c75d0300bd_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/5a5494c6-2985-42f3-890a-b391a48ee7c8/File_b0aa361b213941eea35652c75d0300bd_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="29">
+<li>
+<p>Expand <strong>Collections</strong> once again by pressing the <span class="keys"><kbd class="key-greater">&gt;</kbd></span> icon.</p>
+<p>Click <strong>Install</strong> next to <strong>IBM Pre-Sales Demo Builder</strong> to continue.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/de0e6dca-297e-4f45-a6ac-7c8754bb0853/File_ce043162055549669dd7db88a4897ccc_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/de0e6dca-297e-4f45-a6ac-7c8754bb0853/File_ce043162055549669dd7db88a4897ccc_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="30">
+<li>
+<p>Click <strong>Install</strong> on the pop-up window that appears.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/5fae6952-13e1-4e03-9a73-f27f5a75ea36/File_3ce258d416b34db2ad94a3fa23c81a30_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/5fae6952-13e1-4e03-9a73-f27f5a75ea36/File_3ce258d416b34db2ad94a3fa23c81a30_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="31">
+<li>
+<p>A notification in the bottom-right corner of the Bob IDE will confirm that the install was successfully completed — specifically, that <strong>10 items</strong> have been installed from Pre-Sales Demo Builder.</p>
+<p>Next, click the <strong>Explorer</strong> tab.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/fe15e194-1dae-424a-8183-55bcad469126/File_302e88702fbd40dfb5110bf717b9ad19_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/fe15e194-1dae-424a-8183-55bcad469126/File_302e88702fbd40dfb5110bf717b9ad19_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/504c7062-cde4-4a4a-a5d2-a942e7fa58a9/File_4cfc36cbcb13442f86ba1446bd3092be_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/504c7062-cde4-4a4a-a5d2-a942e7fa58a9/File_4cfc36cbcb13442f86ba1446bd3092be_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="32">
+<li>
+<p>Take note of the <strong><code>.bob</code></strong> folder that has been installed automatically into your project. This contains all of the components needed to complete this hands-on lab and demo-builder exercises. You will recognize the pattern from <a href="https://ibm.github.io/bob-l3/tailor/3-1/" target="_blank"><strong>Module 3 | Tailor</strong></a>: Modes, Rules, and Skills, distributed as version-controlled files within <code>.bob/</code>.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/4dd2c81a-1b7e-4a27-9ea8-6685386ef4fe/File_e459f2e0e2124ebc89086b068b6d2297_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/4dd2c81a-1b7e-4a27-9ea8-6685386ef4fe/File_e459f2e0e2124ebc89086b068b6d2297_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<h2 id="iv-validation"><strong>iv. Validation</strong></h2>
+<hr />
+<p>At this point, you have:</p>
+<ul>
+<li>Installed the <strong>Client Engineering Bob Marketplace</strong></li>
+<li>Created a <strong>GitHub PAT</strong> and linked it to the Marketplace</li>
+<li>Installed the <strong>Demo Builder</strong></li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">READINESS CHECK</p>
+<p>Before proceeding, verify each of the following items:</p>
+<ul>
+<li>Client Engineering Bob Marketplace icon is visible</li>
+<li>GitHub API token is configured</li>
+<li>Marketplace catalog loads successfully</li>
+<li>Modes are visible</li>
+<li>Skills are visible</li>
+<li>MCP Servers are visible</li>
+</ul>
+</div>
+<h2 id="v-connect-the-mcp-servers"><strong>v. Connect the MCP servers</strong></h2>
+<hr />
+<p>The Demo Builder relies upon two MCP servers:</p>
+<ol>
+<li><strong>Carbon</strong> (IBM's design system)</li>
+<li><strong>TechZone</strong> (environment provisioning and documentation)</li>
+</ol>
+<p>Each server requires short-lived credentials for access — three in total, which you (the user) will gather in the steps ahead and store within a separate document (such as Notepad) for later use:</p>
+<table>
+<thead>
+<tr>
+<th>CREDENTIAL</th>
+<th>ACQUIRED FROM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Carbon Authorization Code</strong></td>
+<td>The Carbon MCP IBMid flow (<em>detailed in the steps below</em>)</td>
+</tr>
+<tr>
+<td><strong>Carbon Session ID</strong></td>
+<td>The Carbon MCP IBMid flow (<em>generated alongside the Authorization Code</em>)</td>
+</tr>
+<tr>
+<td><strong>TechZone API token</strong></td>
+<td>Your TechZone profile page (<em>detailed in the steps below</em>)</td>
+</tr>
+</tbody>
+</table>
+<details class="note">
+<summary>THESE KEYS ARE IMPERMANENT BY DESIGN</summary>
+<p>The credentials you have just gathered are time-sensitive:</p>
+<ul>
+<li>Your <strong>TechZone API key</strong> resets every time you re-log into TechZone</li>
+<li>Your <strong>Carbon authorization code</strong> resets every <strong>2 hours</strong></li>
+</ul>
+</details>
+<hr />
+<p><strong>ACQUIRING YOUR CREDENTIALS</strong></p>
+<p>The following steps will guide you through the process of acquiring your Carbon and TechZone credentials.</p>
+<hr />
+<ol start="33">
+<li>
+<p>Navigate to the following website within your <strong>web browser</strong>:</p>
+<div class="admonition warning">
+<p><strong><a href="https://carbondesignsystem.com/developing/carbon-mcp/onboarding-and-setup/">Carbon MCP – Carbon Design System</a></strong></p>
+</div>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/3f9da313-ac81-464a-bef5-8ca278241fe9/user_cropped_screenshot_76ce5a4bd163450eb71136f8d88136d9_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/3f9da313-ac81-464a-bef5-8ca278241fe9/user_cropped_screenshot_76ce5a4bd163450eb71136f8d88136d9_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="34">
+<li>
+<p>Scroll down to <em>Step 2: Getting access credentials</em>, and click the hyperlink:</p>
+<div class="admonition warning">
+<p><strong><a href="https://mcp.carbondesignsystem.com/mcp/auth/ibmid/web">Visit this link to generate your token and session ID</a></strong></p>
+</div>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/f5ea6aba-4996-4c69-b95e-b005954cc901/File_4a446cea4b6c45ceb28d42cde3c14b4c_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/f5ea6aba-4996-4c69-b95e-b005954cc901/File_4a446cea4b6c45ceb28d42cde3c14b4c_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="35">
+<li>
+<p>The web browser will be redirected to the usual IBM sign-in page. <strong>Authenticate</strong> with your IBMid.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/578306c9-9d46-4e46-a6c5-0678b577c124/File_7acfc9e148684740b5b7ee73ad3c21dc_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/578306c9-9d46-4e46-a6c5-0678b577c124/File_7acfc9e148684740b5b7ee73ad3c21dc_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="36">
+<li>
+<p>Review and accept the Carbon MCP Terms of Use, then click <strong>Continue</strong>.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/2708a402-83c2-4c03-ab75-b86f93cca753/File_923f899add7e470e874ce751f2503a12_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/2708a402-83c2-4c03-ab75-b86f93cca753/File_923f899add7e470e874ce751f2503a12_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="37">
+<li>
+<p>Click the overlapping squares icon next to the <em>Authorization code</em> box to <strong>copy it</strong> to a clipboard.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/df208a1f-64f1-4dc3-a0d5-c9168396a1bc/File_f1a24e70342f41ad87e1272df5cc2117_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/df208a1f-64f1-4dc3-a0d5-c9168396a1bc/File_f1a24e70342f41ad87e1272df5cc2117_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="38">
+<li>
+<p>Paste your <strong>Carbon Authorization code</strong> within a separate document (such as Notepad) for reference later.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/bf5b1bc5-0938-4390-bb09-076364f0aaaf/File_856b2f9c4dda4f1996fc149647e26e83_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/bf5b1bc5-0938-4390-bb09-076364f0aaaf/File_856b2f9c4dda4f1996fc149647e26e83_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="39">
+<li>
+<p>Click the overlapping squares icon next to the <em>Session ID</em> box to copy it to the clipboard.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/b916822a-875f-4e20-92ee-1a9ec974397e/File_2a56b7bfd364430a964f195acad8853a_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/b916822a-875f-4e20-92ee-1a9ec974397e/File_2a56b7bfd364430a964f195acad8853a_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="40">
+<li>
+<p>Paste your <strong>Carbon Session ID</strong> within the document (such as Notepad) for later use.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/e2f71833-ea57-4f95-8652-ac8077f812b1/File_370abab951df4991b71afcc8b6018801_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/e2f71833-ea57-4f95-8652-ac8077f812b1/File_370abab951df4991b71afcc8b6018801_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="41">
+<li>
+<p>Open a <strong>new tab</strong> within your web browser and navigate to the following page:</p>
+<div class="admonition warning">
+<p><strong><a href="https://techzone.ibm.com/home?utm_source=skills_network&amp;utm_content=in_lab_content_link&amp;utm_id=Lab-Bob+Demo+Builder+L3+v1+-+MCP+Setup+Only-v1">techzone.ibm.com/home</a></strong></p>
+</div>
+<p>Click your profile picture icon in the top right corner.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/4a86326c-b06e-48b6-a340-912b9b1775a3/user_cropped_screenshot_357310e8fbc34a0ba0bc95646eae5e01_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/4a86326c-b06e-48b6-a340-912b9b1775a3/user_cropped_screenshot_357310e8fbc34a0ba0bc95646eae5e01_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="42">
+<li>
+<p>Within the drop-down window that appears, click <strong>My profile</strong>.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/f5b5b78b-f383-4bff-b860-b853a9f2c4e8/File_589f9c9cb4a345edb479de773d6f69f4_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/f5b5b78b-f383-4bff-b860-b853a9f2c4e8/File_589f9c9cb4a345edb479de773d6f69f4_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="43">
+<li>
+<p>Click the overlapping squares icon next to the <em>API token</em> box to copy it to the clipboard.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/81ca0468-8d53-48d5-8bea-30d576082914/File_daa4c778ea224dbcb26adad285de42cb_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/81ca0468-8d53-48d5-8bea-30d576082914/File_daa4c778ea224dbcb26adad285de42cb_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="44">
+<li>
+<p>Paste your <strong>TechZone API token</strong> within the document (such as Notepad) for reference later.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/60d775e1-1c20-40ce-a180-4d1fef539f98/File_85e8d3c8fd574dfc8aed9fbbcd136d47_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/60d775e1-1c20-40ce-a180-4d1fef539f98/File_85e8d3c8fd574dfc8aed9fbbcd136d47_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<p><strong>CONFIGURE THE MCP SERVERS</strong></p>
+<p>With all of the necessary credentials generated and recorded, the MCP servers can now be configured:</p>
+<hr />
+<ol start="45">
+<li>Activate the <strong>Agentic Sidebar</strong> by clicking the <strong>Bob</strong> icon at the top of the IDE interface (just to the right of the search bar).</li>
+</ol>
+<hr />
+<ol start="46">
+<li>
+<p>Use the <strong>Mode toggle</strong> button to activate <strong>Agent Mode</strong>.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/0d638b43-fea3-4d5a-a717-26dbeb141d39/File_10f453772ff34e4193328c3825980c46_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/0d638b43-fea3-4d5a-a717-26dbeb141d39/File_10f453772ff34e4193328c3825980c46_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+<div class="admonition quote">
+<p>Take note that the newly-added Pre-Sales Demo Builder mode is also visible at this point — but don't use it yet.</p>
+</div>
+</li>
+</ol>
+<hr />
+<ol start="47">
+<li>
+<p>Copy the following prompt to your clipboard. Before executing the instruction within the Agentic Sidebar, <strong>modify Lines 2 through 4</strong> to replace each <code>your-key</code> placeholder with the actual credentials gathered and stored earlier.</p>
+<p>When ready, paste the modified prompt into the Agentic Sidebar and press <span class="keys"><kbd class="key-enter">Enter</kbd></span> to execute the instruction.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>Help me setup the Carbon and TechZone MCP servers. Here are my credentials:
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="hll">Carbon Authorization Code: your-key
+</span><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="hll">Carbon Session ID: your-key
+</span><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="hll">TechZone API Key: your-key
+</span></code></pre></div></td></tr></table></div>
+<p><em>If you have past experience with configuring and using MCP with Bob, you can also add your credentials to the <code>mcp.json</code> file manually.</em></p>
+<details class="warning">
+<summary>ALTERNATIVE: MANUAL MCP CONFIGURATION</summary>
+<p>Should you prefer to wire the MCP servers by hand (or need to troubleshoot what Bob configured on your behalf), the TechZone MCP configuration JSON is published at <a href="https://github.ibm.com/ClientEngineering/bob/blob/main/MCP/ibm-techzone-mcp-bob/techzone-mcp-config.json" target="_blank">github.ibm.com/ClientEngineering/bob — techzone-mcp-config.json</a>.</p>
+<p>Copy the entirety of its contents into the <strong>Project MCPs</strong> configuration and save, then verify that the <em>techzone request</em> and <em>techzone documentation</em> servers appear. A quick functional test:</p>
+<ul>
+<li>Prompt Bob to list environments</li>
+<li>Search for <code>StudentID</code> environments</li>
+<li>Request a 1-day test environment</li>
+</ul>
+</details>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/0f4395b5-8713-4cfc-ab8e-918de98d6720/File_7b4743398f8e46da94d0a09a1ed0277a_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/0f4395b5-8713-4cfc-ab8e-918de98d6720/File_7b4743398f8e46da94d0a09a1ed0277a_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="48">
+<li>
+<p>With Bob in <strong>Agent Mode</strong> and the prompt carrying your real credentials, click <strong>Send</strong> or press <span class="keys"><kbd class="key-enter">Enter</kbd></span> to execute.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/328b8af5-720f-40de-bcf9-74dbdcb963e7/File_ff75fb7df35949cf9a7ece94ce3c7ac4_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/328b8af5-720f-40de-bcf9-74dbdcb963e7/File_ff75fb7df35949cf9a7ece94ce3c7ac4_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="49">
+<li>
+<p>Bob begins working on configuring the MCP servers. Because the Pre-Sales Demo Builder Mode was installed from the CE Bob Marketplace, a portion of the manual setup is already complete — as Bob notes, it only needs to fill in the credentials.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/f400dfed-6611-4bf0-8680-b14b165a3cec/user_cropped_screenshot_2fdbaca748bc4408bceff253a1ce3377_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/f400dfed-6611-4bf0-8680-b14b165a3cec/user_cropped_screenshot_2fdbaca748bc4408bceff253a1ce3377_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="50">
+<li>
+<p>Eventually, IBM Bob will finish configuration of the MCP servers.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/b8541b0f-f6d4-4327-9a1b-19781ae2b663/File_d0507680d91e4da79550ad8ca9fab72e_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/b8541b0f-f6d4-4327-9a1b-19781ae2b663/File_d0507680d91e4da79550ad8ca9fab72e_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+<div class="admonition quote">
+<p>For additional verification, you can confirm the configuration by navigating to <em>Bob Settings</em>:</p>
+<ul>
+<li>Click the <strong>gear</strong> icon</li>
+<li>On the settings screen, click <strong>MCP</strong></li>
+<li>The MCP servers that were added should come into view</li>
+</ul>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/ded00b79-384a-45cf-b53a-964673666010/File_5a9100ff8556482f82ef8aa3f32ccbf4_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/ded00b79-384a-45cf-b53a-964673666010/File_5a9100ff8556482f82ef8aa3f32ccbf4_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/ff565900-aca7-473b-ae94-68a9e9ff2f41/user_cropped_screenshot_568e66eed918467bacdae0e1fc45d33f_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/ff565900-aca7-473b-ae94-68a9e9ff2f41/user_cropped_screenshot_568e66eed918467bacdae0e1fc45d33f_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</div>
+</li>
+</ol>
+<hr />
+<ol start="51">
+<li>
+<p>Finally, refresh IBM Bob to ensure the MCP servers will work for the tasks ahead. In the top search bar, type:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&gt; reload window
+</code></pre></div>
+<p>Click the <strong>"Developer: Reload Window"</strong> button from the drop-down options.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/54ed0618-3025-4a84-818b-6875ad929934/user_cropped_screenshot_48de0d97ee0d47aba07470355650bd27_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/54ed0618-3025-4a84-818b-6875ad929934/user_cropped_screenshot_48de0d97ee0d47aba07470355650bd27_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<h2 id="vi-key-takeaways"><strong>vi. Key takeaways</strong></h2>
+<hr />
+<ul>
+<li>The <strong>CE Bob Marketplace</strong> is the distribution channel for Client Engineering's packaged assets — <em>Modes</em>, <em>Skills</em>, and <em>MCP</em> servers are installed as a <code>VSIX</code> extension</li>
+<li>A <strong>GitHub PAT</strong> (with <code>repo</code> scope and a 90-day expiry) is the key that unlocks the Marketplace catalog; store it within a password manager and expect to refresh it periodically</li>
+<li>Installing the <strong>IBM Pre-Sales Demo Builder</strong> places 10 items — a complete <code>.bob/</code> folder of <em>Modes</em>, <em>Rules</em>, and <em>Skills</em> — into your project workspace</li>
+<li>Three short-lived credentials power the MCP servers — the <strong>Carbon Authorization Code</strong>, the <strong>Carbon Session ID</strong>, and the <strong>TechZone API token</strong>; when <em>MCP</em> calls misbehave, regenerating fresh credentials is the first remedy to attempt</li>
+<li>A <strong>Developer: Reload Window</strong> refresh after MCP configuration ensures the servers register cleanly for the tasks ahead</li>
+<li>Validate the complete chain (Marketplace, token, catalog, <em>Modes</em>, <em>Skills</em>, and <em>MCP</em> servers) <strong>before</strong> any demo work begins</li>
+</ul>
+<p></br>
+With the environment assembled and validated, you will now shift attention to a discipline that can tremendously influence the quality of your generated demos: being able to effectively brief and prompt the Bob Demo-Builder Mode itself.</p>
+<hr />
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 1. Objectives and requirements" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              1. Objectives and requirements
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../3/" class="md-footer__link md-footer__link--next" aria-label="Next: 3. Deploying with demo builder" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              3. Deploying with demo builder
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 IBM
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "content.code.annotate", "content.code.copy", "content.code.select", "navigation.footer"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+        <script src="../../js/print-site.js"></script>
+      
+        <script src="../../_static/hide-toc-nav.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

@@ -1,0 +1,1094 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="IBM watsonx Code Assistant Level 4">
+      
+      
+        <meta name="author" content="Christopher Bienko (cdbienko@us.ibm.com)">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.1">
+    
+    
+      
+        <title>6. Build consistently with asset templates - IBM watsonx Code Assistant Level 4</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.69437709.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings2.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings3.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings4.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings5.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings6.css">
+    
+      <link rel="stylesheet" href="../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../../styles/override-print.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#build-consistently-with-asset-templates" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="IBM watsonx Code Assistant Level 4" class="md-header__button md-logo" aria-label="IBM watsonx Code Assistant Level 4" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IBM watsonx Code Assistant Level 4
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6. Build consistently with asset templates
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IBM watsonx Code Assistant Level 4" class="md-nav__button md-logo" aria-label="IBM watsonx Code Assistant Level 4" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    IBM watsonx Code Assistant Level 4
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../toc/" class="md-nav__link">
+        Table of Contents
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          On-Premises Installation and Deployment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="On-Premises Installation and Deployment" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          On-Premises Installation and Deployment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-premises/1/" class="md-nav__link">
+        1. Objectives and requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-premises/2/" class="md-nav__link">
+        2. Reserve an environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-premises/3/" class="md-nav__link">
+        3. Bastion host setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-premises/4/" class="md-nav__link">
+        4. Cluster preparation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-premises/5/" class="md-nav__link">
+        5. Install prerequisite software
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-premises/6/" class="md-nav__link">
+        6. Install IBM Software Hub
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-premises/7/" class="md-nav__link">
+        7. Install watsonx Code Assistant
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          IBM Cloud (SaaS) Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="IBM Cloud (SaaS) Configuration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          IBM Cloud (SaaS) Configuration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../saas/1/" class="md-nav__link">
+        1. Objectives and requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../saas/2/" class="md-nav__link">
+        2. Reserve an environment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../saas/3/" class="md-nav__link">
+        3. Configure for enterprise Java
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../saas/4/" class="md-nav__link">
+        4. Install WCA extension for Visual Studio Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../saas/5/" class="md-nav__link">
+        5. Install WCA plug-in for Eclipse IDE
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Application Modernization - WebSphere to Liberty
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Application Modernization - WebSphere to Liberty" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Application Modernization - WebSphere to Liberty
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appmod/1/" class="md-nav__link">
+        1. Objectives and requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appmod/2/" class="md-nav__link">
+        2. Basic migration capabilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appmod/3/" class="md-nav__link">
+        3. Configuration management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appmod/4/" class="md-nav__link">
+        4. APIs and libraries
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appmod/5/" class="md-nav__link">
+        5. EJB modernization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appmod/6/" class="md-nav__link">
+        6. JMS integration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appmod/7/" class="md-nav__link">
+        7. Security modernization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appmod/8/" class="md-nav__link">
+        8. Full stack modernization
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Bob Demo-Builder Mode
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Bob Demo-Builder Mode" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Bob Demo-Builder Mode
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1/" class="md-nav__link">
+        1. Objectives and requirements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2/" class="md-nav__link">
+        2. Setup and registration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3/" class="md-nav__link">
+        3. Deploying with demo builder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4/" class="md-nav__link">
+        4. Prompting best-practices with demo builder
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5/" class="md-nav__link">
+        5. Strategies for building better demos with Bob
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          6. Build consistently with asset templates
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        6. Build consistently with asset templates
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-from-consumer-to-contributor" class="md-nav__link">
+    i. From consumer, to contributor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-deciding-which-asset-to-build" class="md-nav__link">
+    ii. Deciding which asset to build
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-authoring-a-mode" class="md-nav__link">
+    iii. Authoring a MODE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-authoring-a-skill" class="md-nav__link">
+    iv. Authoring a SKILL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-authoring-a-rule" class="md-nav__link">
+    v. Authoring a RULE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-the-golden-rule-all-templates-enforce" class="md-nav__link">
+    vi. The golden rule all templates enforce
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vii-key-takeaways" class="md-nav__link">
+    vii. Key takeaways
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-from-consumer-to-contributor" class="md-nav__link">
+    i. From consumer, to contributor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-deciding-which-asset-to-build" class="md-nav__link">
+    ii. Deciding which asset to build
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-authoring-a-mode" class="md-nav__link">
+    iii. Authoring a MODE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-authoring-a-skill" class="md-nav__link">
+    iv. Authoring a SKILL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-authoring-a-rule" class="md-nav__link">
+    v. Authoring a RULE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-the-golden-rule-all-templates-enforce" class="md-nav__link">
+    vi. The golden rule all templates enforce
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vii-key-takeaways" class="md-nav__link">
+    vii. Key takeaways
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<p><strong>BOB DEMO-BUILDER MODE</strong></p>
+<h1 id="build-consistently-with-asset-templates"><strong>BUILD CONSISTENTLY WITH ASSET TEMPLATES</strong></h1>
+<hr />
+<h2 id="i-from-consumer-to-contributor"><strong>i. From consumer, to contributor</strong></h2>
+<hr />
+<p>This closing chapter is positioned deliberately as an aside — somewhat apart from the hands-on flow, and readable at your own pace — for the moment when <em>consuming</em> the asset library is no longer sufficient. To this point you have operated as a consumer: you installed the Demo Builder, briefed it well, and examined the strategy underneath. Sooner or later, however, every practitioner encounters a gap — a vertical without a Mode, a product without a Skill, a team convention with no Rule holding it in place. The <strong>asset templates</strong> are the mechanism for filling that gap <em>without breaking the discipline</em> documented in the previous chapter.</p>
+<p>The underlying idea: the templates are the <strong>executable form of the strategy</strong>. Each one encodes its corresponding contract — the MODE core contract, the SKILL design principles and definition of done, the RULE principles and definition of done — as a fill-in skeleton. Author from the template, and the resulting asset conforms to the strategy <em>by construction</em>, rather than by after-the-fact review.</p>
+<table>
+<thead>
+<tr>
+<th>TEMPLATE</th>
+<th>USE IT TO CREATE</th>
+<th>CONFORMS TO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MODE.template.yaml</code></td>
+<td>a new general or industry mode → <code>MODES/…</code></td>
+<td>the MODE core contract</td>
+</tr>
+<tr>
+<td><code>SKILL.template.md</code></td>
+<td>a new skill → <code>SKILLS/&lt;name&gt;/SKILL.md</code></td>
+<td>the SKILL principles + definition of done</td>
+</tr>
+<tr>
+<td><code>RULE.template.md</code></td>
+<td>a new ambient rule → <code>rules/rules-&lt;name&gt;/&lt;name&gt;.md</code></td>
+<td>the RULE principles + definition of done</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ii-deciding-which-asset-to-build"><strong>ii. Deciding which asset to build</strong></h2>
+<hr />
+<p>The most common authoring mistake is not filling a template in poorly — it is selecting the wrong template entirely. Before copying anything, run your idea through the decision tree:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&quot;A constraint that must always hold (any mode, any task)?&quot; → RULE  (global / workspace / mode-specific by scope; needs flags/schemas? → it&#39;s a SKILL)
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&quot;How to approach an engagement class&quot;?            → MODE   (vertical &amp; deep? → Industry MODE, replaces a general one)
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>&quot;How to use a product / contract / capability&quot;?   → SKILL  (drives an MCP? → SKILL paired with that MCP)
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>&quot;How to reach a system from Bob&quot;?                 → SDK/CLI exists &amp; available? yes → use it (document in a SKILL)
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                                                                                no  → MCP (last resort) + paired SKILL
+</code></pre></div>
+<p>Recall the litmus tests from the strategy chapter. If a constraint should hold even when nobody asked for it, it is a Rule. If it constitutes method for a whole engagement class, it is a Mode. If it is product knowledge carrying depth, it is a Skill. And reach is documented first as a Skill describing an SDK or CLI — with an MCP built only as the last resort.</p>
+<hr />
+<h2 id="iii-authoring-a-mode"><strong>iii. Authoring a MODE</strong></h2>
+<hr />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cp MODE.template.yaml MODES/&lt;your-mode&gt;.yaml
+</code></pre></div>
+<p>Fill every <code>&lt;PLACEHOLDER&gt;</code>, delete every <code>[GUIDANCE]</code> note, and keep the section skeleton — <em>it is the contract</em>. Remember the strategy's second golden rule as you write: a mode is <strong>thin</strong>. Persona + lifecycle + gates + non-negotiables + <strong>references to skills</strong> — never duplicated product knowledge.</p>
+<p><strong>MODE core contract checklist:</strong></p>
+<ul>
+<li>[ ] 1. Clear persona + engagement class (<code>roleDefinition</code>, <code>whenToUse</code>).</li>
+<li>[ ] 2. Shared build lifecycle present: intake → mapping → build → document → verify → hand-off.</li>
+<li>[ ] 3. Shared non-negotiables enforced (runnable artifacts; synthetic data; env secrets; mock works with zero deps; accessibility; honest claims; compliance-before-done).</li>
+<li>[ ] 4. Decision gates G0–G5 implemented as optioned questions; autonomous between gates.</li>
+<li>[ ] 5. <strong>References</strong> the skills it depends on — duplicates none of their content.</li>
+<li>[ ] 6. Ships a self-check script (<code>check-compliance.sh</code>, plus <code>check-carveouts.sh</code> if it has guardrails).</li>
+<li>[ ] <code>slug</code> is unique and <strong>does not equal any SKILL name</strong>.</li>
+<li>[ ] Industry mode: states it <strong>replaces</strong> a named general mode; adds only vertical KB / guardrails / blueprints / components / stricter synthetic-data.</li>
+<li>[ ] File parses: <code>python3 -c "import yaml,sys; yaml.safe_load(open(sys.argv[1]))" MODES/&lt;your-mode&gt;.yaml</code></li>
+</ul>
+<p>Make the final line a standing practice: run the parse check with every authoring pass. A Mode that fails to parse will fail silently in the field.</p>
+<hr />
+<h2 id="iv-authoring-a-skill"><strong>iv. Authoring a SKILL</strong></h2>
+<hr />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mkdir SKILLS/&lt;name&gt; <span class="o">&amp;&amp;</span> cp SKILL.template.md SKILLS/&lt;name&gt;/SKILL.md
+</code></pre></div>
+<p><strong>SKILL definition of done:</strong></p>
+<ul>
+<li>[ ] Valid cross-runtime frontmatter: <code>name</code>, <code>description</code>, <code>metadata.enabled: true</code>.</li>
+<li>[ ] <code>name</code> is unique and <strong>does not equal any MODE slug</strong>.</li>
+<li>[ ] <code>description</code> is rich with concrete <strong>trigger terms</strong> (drives auto-discovery).</li>
+<li>[ ] Single responsibility — one product/contract/capability.</li>
+<li>[ ] Content <strong>verified against a real product version</strong>; the "Verified against X, <date>" stamp is filled in.</li>
+<li>[ ] Depth pushed to <code>references/</code>; <code>SKILL.md</code> stays focused (progressive disclosure).</li>
+<li>[ ] States its paired <strong>MCP / SDK / CLI</strong> (or "none").</li>
+<li>[ ] No secrets; credentials via env/connection patterns only.</li>
+</ul>
+<p>Two of these items deserve special attention. The <strong>description</strong> is the single most important line in the file — it is what triggers auto-discovery, so write it in the form of "use this whenever the user mentions or needs X" and be generous with trigger terms. The <strong>verification stamp</strong>, meanwhile, is what separates a field manual from folklore: run the CLI, exercise the API, and then record the version and date that the content was verified against.</p>
+<hr />
+<h2 id="v-authoring-a-rule"><strong>v. Authoring a RULE</strong></h2>
+<hr />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mkdir rules/rules-&lt;name&gt; <span class="o">&amp;&amp;</span> cp RULE.template.md rules/rules-&lt;name&gt;/&lt;name&gt;.md
+</code></pre></div>
+<p>A rule is <strong>always-on and short</strong> — it costs context on every turn, so cut anything optional. It states <em>what must always hold</em>; it never teaches a product API (point to a skill instead). Each rule lives in its own <code>rules-&lt;name&gt;/</code> folder so it can be copied individually into <code>.bob/rules/</code>.</p>
+<p>Pick the scope deliberately: org-wide → <code>~/.bob/rules/</code>; this project → <code>&lt;project&gt;/.bob/rules/</code>; one mode or vertical → <code>.bob/rules-{slug}/</code> (note that <code>rules-{slug}</code> at the top of <code>.bob/</code> is <em>mode-specific</em>).</p>
+<p><strong>RULE definition of done:</strong></p>
+<ul>
+<li>[ ] Short, imperative, <strong>testable</strong> statements (yes/no per line); whole file ≈ &lt; 15 lines.</li>
+<li>[ ] Correct <strong>scope</strong> chosen (global / workspace / mode-specific) and reflected in the metadata line.</li>
+<li>[ ] <strong>No product knowledge</strong> embedded — references a skill for any how-to.</li>
+<li>[ ] No secrets or credentials.</li>
+<li>[ ] <code>Owner</code> + <code>Last-reviewed</code> date filled in; one concern per file.</li>
+</ul>
+<p>The fifteen-line ceiling is not a stylistic preference — it is the context window economics of <strong>Module 4.1</strong> expressed as policy. Every line of an always-on Rule is paid for on every turn, in every session, by every user who inherits it.</p>
+<hr />
+<h2 id="vi-the-golden-rule-all-templates-enforce"><strong>vi. The golden rule all templates enforce</strong></h2>
+<hr />
+<div class="admonition note">
+<p class="admonition-title">KNOWLEDGE LIVES ONCE; RULES CONSTRAIN, THEY DON'T TEACH</p>
+<p>Modes reference skills; skills are the single source of truth for product knowledge; MCPs are the last-resort reach; rules state always-on constraints and <em>point</em> to skills for the how. If you're tempted to paste CLI flags or schemas into a mode or a rule, that content is a skill — put it there and reference it.</p>
+</div>
+<p>For a worked example of each asset type done correctly, study <code>SKILLS/watsonx-orchestrate/</code> — a correctly-factored, version-verified Skill — alongside the <code>rules/</code> directory for correctly-factored, constraint-only Rules. Reviewing one well-authored instance of each will teach more than any checklist.</p>
+<hr />
+<h2 id="vii-key-takeaways"><strong>vii. Key takeaways</strong></h2>
+<hr />
+<ul>
+<li>Templates are the <strong>executable form of the strategy</strong> — author from them, and conformance comes by construction, not review.</li>
+<li><strong>Choose the asset type first</strong> via the decision tree; the most expensive mistake is the wrong template filled in beautifully.</li>
+<li>Modes stay <strong>thin</strong> (method + references); skills carry the <strong>knowledge</strong> (verified, stamped, single-responsibility); rules stay <strong>short</strong> (&lt; 15 lines, testable, scoped).</li>
+<li>Names matter mechanically: mode slugs and skill names must never collide, and a skill's <code>description</code> is what makes it discoverable at all.</li>
+<li><strong>Knowledge lives once.</strong> When a fact changes, update the skill; when a standard changes, update the rule — everything that references them inherits the fix automatically.</li>
+</ul>
+<p></br>
+As this module closes out, step back and trace the shape of the journey one final time. You began this course accepting Bob's suggestions one keystroke at a time; you conclude it equipped not only to <em>use</em> an organizationally-scaled AI partner, but to <em>extend</em> the very asset library that makes it one. Carry that progression into every conversation and demonstration you have with clients about IBM Bob: an organization whose best engineering judgment scales — where Bob performs the work, and the humans make the decisions.</p>
+<hr />
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../5/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 5. Strategies for building better demos with Bob" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              5. Strategies for building better demos with Bob
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 IBM
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "content.code.annotate", "content.code.copy", "content.code.select", "navigation.footer"], "search": "../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      
+        <script src="../../js/print-site.js"></script>
+      
+        <script src="../../_static/hide-toc-nav.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
