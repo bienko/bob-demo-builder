@@ -619,8 +619,8 @@
 <ol>
 <li><strong>Knowledge lives once.</strong> Deep product, command-line interface (CLI), and application programming interface (API) knowledge belongs in a <strong>Skill</strong>, never duplicated into a mode. Modes <em>reference</em> Skills. <em>(If you find yourself pasting CLI flags or YAML schemas into a mode, stop. That's a skill.)</em></li>
 <li><strong>Modes are method, not memory.</strong> Modes carry a persona, build lifecycles, provide non-negotiables, serve as decision gates, and give <em>pointers</em> to the Skills it relies on.</li>
-<li><strong>MCP is the last resort, not the first.</strong> Prefer a native <strong>SDK or CLI</strong> where possible, as these are deterministic, testable, and versionable. Build or adopt an MCP <em>only</em> when no SDK/CLI exists, or if it isn't available in the user's environment.</li>
-<li><strong>Rules constrain, they don't teach.</strong> Rules are short, always-on imperatives ("synthetic data only", "Carbon for all UI"). Product <em>know-how</em> stays in a Skill (that the Rule may point to.) If a Rule grows flags, schemas, or how-to, it has become a Skill — move it. Every line in an always-on Rule is paid for on <em>every</em> cycle, so the global set stays lean.</li>
+<li><strong>MCP as a last resort.</strong> Prefer a native <strong>SDK or CLI</strong> where possible, as these are deterministic, testable, and versionable. Build or adopt an MCP <em>only</em> when no SDK/CLI exists, or if it isn't available in the user's environment.</li>
+<li><strong>Rules constrain but they cannot teach.</strong> Rules are short, always-on imperatives ("synthetic data only", "Carbon for all UI"). Product <em>know-how</em> stays in a Skill (that the Rule may point to.) If a Rule grows flags, schemas, or how-to, it has become a Skill — move it. Every line in an always-on Rule is paid for on <em>every</em> cycle, so the global set stays lean.</li>
 <li><strong>Every asset is verified against reality, not model memory.</strong> Assets are stamped with the product version (Skills/Modes/MCPs) or owner + review date (Rules).</li>
 <li><strong>One source of distribution.</strong> Assets ship through the EMEA Bob Box (<code>https://ibm.biz/emea-bob-box</code>); the authoring source is the repo.</li>
 </ol>
@@ -667,7 +667,7 @@
 <p class="admonition-title">RULE OF THUMB</p>
 <p><strong>Switch to an <em>Industry Mode</em></strong> when the demo's credibility depends on domain depth in areas such as regulatory mapping, standards, or sub-vertical templates. Don't fork an Industry Mode for a one-off. Instead, extend it via a <em>Skill</em>.</p>
 </div>
-<p>Every <em>Mode</em>— general or industry —must satisfy a shared <strong>core contract</strong>:</p>
+<p>Every <em>Mode</em> (general or industry) must satisfy a shared <strong>core contract</strong>:</p>
 <ul>
 <li>A clear persona and engagement class;</li>
 <li>The shared build lifecycle (intake → solution mapping → build → document → verify/compliance → hand-off);</li>
@@ -676,11 +676,10 @@
 <li>References <em>to</em> (and never duplications <em>of</em>) the <em>Skills</em> it depends on;</li>
 <li>A self-check script (<code>check-compliance.sh</code> / <code>check-carveouts.sh</code>) that can fail the build.</li>
 </ul>
-<p>The next chapter will demonstrate for you how the <em>Templates</em> enforce this contract by construction.</p>
 <hr />
 <h2 id="vi-skills-and-rules"><strong>vi. Skills and Rules</strong></h2>
 <hr />
-<p><strong>A <em>Skill</em></strong> is a portable, verified knowledge and capability pack. <em>Skills</em> are essentially how Bob "knows" a product, an ingestion contract, an API, or how to drive an MCP.</p>
+<p><strong><em>Skills</em></strong> are portable and repeatable patterns of capabilities and best-practice knowledge. <em>Skills</em> are essentially how Bob "knows" a product, an ingestion contract, an API, or how to drive an MCP.</p>
 <p>Its design principles will feel familiar from the previous chapter:</p>
 <ul>
 <li>Single responsibility (one product per <em>Skill</em>, no mega-<em>Skills</em>);</li>
@@ -690,7 +689,7 @@
 <li><strong>Pairing with</strong>, and not merging into, any MCP it drives.</li>
 </ul>
 <hr />
-<p><strong>A <em>Rule</em></strong> is a short, always-on constraint that holds regardless of <em>Mode</em> or task. Whereas all <em>Modes</em>, <em>Skills</em>, and <em>MCPs</em> are <strong>pulled</strong>, <em>Rules</em> are <strong>pushed</strong>. Bob loads them automatically for their scope and applies them to every response. <em>Rules</em> are the mechanism that makes trust ubiquitous across a project: present even in a quick edit, not just inside a formal mode.</p>
+<p><strong><em>Rules</em></strong> are short, always-on constraints that hold regardless of <em>Mode</em> or task. Whereas all <em>Modes</em>, <em>Skills</em>, and <em>MCPs</em> are <strong>pulled</strong>, <em>Rules</em> are <strong>pushed</strong>. Bob loads them automatically for their scope and applies them to every response. <em>Rules</em> are the mechanism that makes trust ubiquitous across a project: present even in a quick edit, not just inside a formal mode.</p>
 <hr />
 <p><strong>Scope</strong>, therefore, becomes a deliberate choice and design point.</p>
 <table>
@@ -794,7 +793,7 @@
 <li><strong>Honest capability claims.</strong> Never oversell, but rather flag product gaps explicitly.</li>
 <li><strong>Secrets via environment only.</strong> Mock <em>Mode</em> runs with zero credentials.</li>
 </ul>
-<p>For a seller, this section provides the answer to the hardest question in any C-suite AI conversation: <em>"how do we trust it?"</em> The answer offered here is not a promise, but rather it is an architecture.</p>
+<p>For a seller, this section provides the answer to the hardest question in any C-suite AI conversation: <em>"how do we trust it?"</em></p>
 <hr />
 <h2 id="ix-key-takeaways"><strong>ix. Key takeaways</strong></h2>
 <hr />
