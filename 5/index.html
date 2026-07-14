@@ -560,15 +560,21 @@
 <li>No secrets; credentials via env/connection patterns only.</li>
 </ol>
 </div>
-<div class="admonition quote">
+<hr />
 <p><strong>Two of these items deserve special attention.</strong></p>
+<ul>
+<li>
 <p>The <strong>description</strong> is the single most important line in the file. It is what triggers auto-discovery, so write it in the form of <em>"use this whenever the user mentions or needs X"</em> and be generous with trigger terms.</p>
+</li>
+<li>
 <p>The <strong>verification stamp</strong>, meanwhile, is what separates a <em>structured field manual</em> from a disjointed <em>notes in the margins</em>: run the CLI, exercise the API, and then record the version and date that the content was verified against.</p>
-</div>
+</li>
+</ul>
+<hr />
 <h2 id="v-authoring-a-rule"><strong>v. Authoring a Rule</strong></h2>
 <hr />
-<p>A <em>Rule</em> is <strong>always-on and brief</strong>. It costs context on every invocation and for each reference back to an LLM's context window, so trim anything optional or redundant. The <em>Rule</em> must state <em>what needs to always hold</em>; it never teaches a product API (point to a <em>Skill</em> instead for that information). Each <em>Rule</em> lives in its own <code>rules-&lt;name&gt;/</code> folder so it can be copied individually into <code>.bob/rules/</code>.</p>
-<p>Pick the scope deliberately:</p>
+<p>A <em>Rule</em> is <strong>always-on and brief</strong>. It costs context on every invocation and for each reference back to an LLM's context window, so trim anything optional or redundant. The <em>Rule</em> must state <em>what needs to always hold</em>; it never teaches a product API (point to a <em>Skill</em> instead for that information).</p>
+<p>Each <em>Rule</em> lives in its own <code>rules-&lt;name&gt;/</code> folder so it can be copied individually into <code>.bob/rules/</code>. Pick the scope carefully:</p>
 <ul>
 <li>Org-wide → <code>~/.bob/rules/</code></li>
 <li>This project → <code>&lt;project&gt;/.bob/rules/</code></li>
