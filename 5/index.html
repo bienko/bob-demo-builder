@@ -352,8 +352,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vi-the-golden-rule-all-templates-enforce" class="md-nav__link">
-    vi. The golden rule all templates enforce
+  <a href="#vi-what-all-templates-should-enforce" class="md-nav__link">
+    vi. What all templates should enforce
   </a>
   
 </li>
@@ -435,8 +435,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#vi-the-golden-rule-all-templates-enforce" class="md-nav__link">
-    vi. The golden rule all templates enforce
+  <a href="#vi-what-all-templates-should-enforce" class="md-nav__link">
+    vi. What all templates should enforce
   </a>
   
 </li>
@@ -521,7 +521,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cp MODE.template.yaml MODES/&lt;your-mode&gt;.yaml
 </code></pre></div>
 </div>
-<p>Fill every <code>&lt;PLACEHOLDER&gt;</code> and delete every <code>[GUIDANCE]</code> note before crafting your own.</p>
+<p>Replace every <code>&lt;...&gt;</code> placeholder and tailor as necessary to your requirements.</p>
 <div class="admonition success">
 <p class="admonition-title"><em>MODE</em> CORE CONTRACT CHECKLIST</p>
 <ol>
@@ -531,7 +531,7 @@
 <li>Decision gates G0–G5 implemented as optioned questions; autonomous between gates.</li>
 <li><strong>References</strong> the skills it depends on — duplicates none of their content.</li>
 <li>Ships a self-check script (<code>check-compliance.sh</code>, plus <code>check-carveouts.sh</code> if it has guardrails).</li>
-<li><code>slug</code> is unique and <strong>does not equal any SKILL name</strong>.</li>
+<li><code>slug</code> is unique and <strong>does not equal any Skill name</strong>.</li>
 <li>Industry mode: states it <strong>replaces</strong> a named general mode; adds only vertical KB / guardrails / blueprints / components / stricter synthetic-data.</li>
 <li>File parses: <code>python3 -c "import yaml,sys; yaml.safe_load(open(sys.argv[1]))" MODES/&lt;your-mode&gt;.yaml</code></li>
 </ol>
@@ -541,30 +541,30 @@
 <h2 id="iv-authoring-a-skill"><strong>iv. Authoring a Skill</strong></h2>
 <hr />
 <p>The following information is the <strong>contract</strong>. You can execute the following instruction within a Terminal console to begin crafting your own (if you like).</p>
+<div class="admonition warning">
+<p class="admonition-title">TERMINAL</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mkdir SKILLS/&lt;name&gt; <span class="o">&amp;&amp;</span> cp SKILL.template.md SKILLS/&lt;name&gt;/SKILL.md
 </code></pre></div>
-<p>Fill every <code>&lt;PLACEHOLDER&gt;</code> and delete every <code>[GUIDANCE]</code> note before crafting your own.</p>
-<p><strong>Skill definition of completeness:</strong></p>
-<ul>
-<li>[ ] Valid cross-runtime frontmatter: <code>name</code>, <code>description</code>, <code>metadata.enabled: true</code>.</li>
-<li>[ ] <code>name</code> is unique and <strong>does not equal any MODE slug</strong>.</li>
-<li>[ ] <code>description</code> is rich with concrete <strong>trigger terms</strong> (drives auto-discovery).</li>
-<li>[ ] Single responsibility — one product/contract/capability.</li>
-<li>[ ] Content <strong>verified against a real product version</strong>; the "Verified against X, <date>" stamp is filled in.</li>
-<li>[ ] Depth pushed to <code>references/</code>; <code>SKILL.md</code> stays focused (progressive disclosure).</li>
-<li>[ ] States its paired <strong>MCP / SDK / CLI</strong> (or "none").</li>
-<li>[ ] No secrets; credentials via env/connection patterns only.</li>
-</ul>
-<p>Two of these items deserve special attention.</p>
+</div>
+<p>Replace every <code>&lt;...&gt;</code> placeholder and tailor as necessary to your requirements.</p>
+<div class="admonition success">
+<p class="admonition-title"><em>SKILL</em> DEFINITION OF COMPLETENESS</p>
 <ol>
-<li>
-<p>The <strong>description</strong> is the single most important line in the file. It is what triggers auto-discovery, so write it in the form of <em>"use this whenever the user mentions or needs X"</em> and be generous with trigger terms.</p>
-</li>
-<li>
-<p>The <strong>verification stamp</strong>, meanwhile, is what separates a <em>structured field manual</em> from a disjointed <em>notes in the margins</em>: run the CLI, exercise the API, and then record the version and date that the content was verified against.</p>
-</li>
+<li>Valid cross-runtime frontmatter: <code>name</code>, <code>description</code>, <code>metadata.enabled: true</code>.</li>
+<li><code>name</code> is unique and <strong>does not equal any Mode slug</strong>.</li>
+<li><code>description</code> is rich with concrete <strong>trigger terms</strong> (drives auto-discovery).</li>
+<li>Single responsibility — one product/contract/capability.</li>
+<li>Content <strong>verified against a real product version</strong>; the "Verified against X, <date>" stamp is filled in.</li>
+<li>Depth pushed to <code>references/</code>; <code>SKILL.md</code> stays focused (progressive disclosure).</li>
+<li>States its paired <strong>MCP / SDK / CLI</strong> (or "none").</li>
+<li>No secrets; credentials via env/connection patterns only.</li>
 </ol>
-<hr />
+</div>
+<div class="admonition quote">
+<p><strong>Two of these items deserve special attention.</strong></p>
+<p>The <strong>description</strong> is the single most important line in the file. It is what triggers auto-discovery, so write it in the form of <em>"use this whenever the user mentions or needs X"</em> and be generous with trigger terms.</p>
+<p>The <strong>verification stamp</strong>, meanwhile, is what separates a <em>structured field manual</em> from a disjointed <em>notes in the margins</em>: run the CLI, exercise the API, and then record the version and date that the content was verified against.</p>
+</div>
 <h2 id="v-authoring-a-rule"><strong>v. Authoring a Rule</strong></h2>
 <hr />
 <p>A <em>Rule</em> is <strong>always-on and brief</strong>. It costs context on every invocation and for each reference back to an LLM's context window, so trim anything optional or redundant. The <em>Rule</em> must state <em>what needs to always hold</em>; it never teaches a product API (point to a <em>Skill</em> instead for that information). Each <em>Rule</em> lives in its own <code>rules-&lt;name&gt;/</code> folder so it can be copied individually into <code>.bob/rules/</code>.</p>
@@ -575,23 +575,26 @@
 <li>One <em>Mode</em> or vertical → <code>.bob/rules-{slug}/</code> (note that <code>rules-{slug}</code> at the top of <code>.bob/</code> is <em>mode-specific</em>)</li>
 </ul>
 <p>The following information is the <strong>contract</strong>. You can execute the following instruction within a Terminal console to begin crafting your own (if you like).</p>
+<div class="admonition warning">
+<p class="admonition-title">TERMINAL</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mkdir rules/rules-&lt;name&gt; <span class="o">&amp;&amp;</span> cp RULE.template.md rules/rules-&lt;name&gt;/&lt;name&gt;.md
 </code></pre></div>
-<p>Fill every <code>&lt;PLACEHOLDER&gt;</code> and delete every <code>[GUIDANCE]</code> note before crafting your own.</p>
-<p><strong>Rule definition of completeness:</strong></p>
-<ul>
-<li>[ ] Short, imperative, <strong>testable</strong> statements (yes/no per line); whole file ≈ &lt; 15 lines.</li>
-<li>[ ] Correct <strong>scope</strong> chosen (global / workspace / mode-specific) and reflected in the metadata line.</li>
-<li>[ ] <strong>No product knowledge</strong> embedded — references a skill for any how-to.</li>
-<li>[ ] No secrets or credentials.</li>
-<li>[ ] <code>Owner</code> + <code>Last-reviewed</code> date filled in; one concern per file.</li>
-</ul>
-<p>The fifteen-line ceiling is not a stylistic preference — it is the context window economics of <strong>Module 4.1</strong> expressed as policy. Every line of an always-on Rule is paid for on every turn, in every session, by every user who inherits it.</p>
-<hr />
-<h2 id="vi-the-golden-rule-all-templates-enforce"><strong>vi. The golden rule all templates enforce</strong></h2>
+</div>
+<p>Replace every <code>&lt;...&gt;</code> placeholder and tailor as necessary to your requirements.</p>
+<div class="admonition success">
+<p class="admonition-title"><em>RULE</em> DEFINITION OF COMPLETENESS</p>
+<ol>
+<li>Short, imperative, <strong>testable</strong> statements (yes/no per line); whole file ≈ &lt; 15 lines.</li>
+<li>Correct <strong>scope</strong> chosen (global / workspace / mode-specific) and reflected in the metadata line.</li>
+<li><strong>No product knowledge</strong> embedded — references a skill for any how-to.</li>
+<li>No secrets or credentials.</li>
+<li><code>Owner</code> + <code>Last-reviewed</code> date filled in; one concern per file.</li>
+</ol>
+</div>
+<h2 id="vi-what-all-templates-should-enforce"><strong>vi. What all templates should enforce</strong></h2>
 <hr />
 <div class="admonition note">
-<p class="admonition-title">KNOWLEDGE LIVES ONCE; RULES CONSTRAIN, THEY DON'T TEACH</p>
+<p class="admonition-title">KNOWLEDGE LIVES ONCE; RULES CONSTRAIN, THEY DO NOT TEACH</p>
 <p>Modes reference skills; skills are the single source of truth for product knowledge; MCPs are the last-resort reach; rules state always-on constraints and <em>point</em> to skills for the how. If you're tempted to paste CLI flags or schemas into a mode or a rule, that content is a skill — put it there and reference it.</p>
 </div>
 <p>For a worked example of each asset type done correctly, study <code>SKILLS/watsonx-orchestrate/</code> — a correctly-factored, version-verified Skill — alongside the <code>rules/</code> directory for correctly-factored, constraint-only Rules. Reviewing one well-authored instance of each will teach more than any checklist.</p>
