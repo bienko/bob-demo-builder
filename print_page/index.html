@@ -2601,25 +2601,27 @@ One question remains: when the practitioner (you) wish to contribute to this lib
 <hr />
 <p>The following information is the <strong>contract</strong>. You can execute the following instruction within a Terminal console to begin crafting your own (if you like).</p>
 <div class="admonition warning">
+<p class="admonition-title">TERMINAL</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#5-__codelineno-1-1"></a>cp MODE.template.yaml MODES/&lt;your-mode&gt;.yaml
 </code></pre></div>
 </div>
 <p>Fill every <code>&lt;PLACEHOLDER&gt;</code> and delete every <code>[GUIDANCE]</code> note before crafting your own.</p>
-<div class="admonition failure">
+<div class="admonition success">
 <p class="admonition-title"><em>MODE</em> CORE CONTRACT CHECKLIST</p>
-<ul>
-<li>[ ] 1. Clear persona + engagement class (<code>roleDefinition</code>, <code>whenToUse</code>).</li>
-<li>[ ] 2. Shared build lifecycle present: intake → mapping → build → document → verify → hand-off.</li>
-<li>[ ] 3. Shared non-negotiables enforced (runnable artifacts; synthetic data; env secrets; mock works with zero deps; accessibility; honest claims; compliance-before-done).</li>
-<li>[ ] 4. Decision gates G0–G5 implemented as optioned questions; autonomous between gates.</li>
-<li>[ ] 5. <strong>References</strong> the skills it depends on — duplicates none of their content.</li>
-<li>[ ] 6. Ships a self-check script (<code>check-compliance.sh</code>, plus <code>check-carveouts.sh</code> if it has guardrails).</li>
-<li>[ ] <code>slug</code> is unique and <strong>does not equal any SKILL name</strong>.</li>
-<li>[ ] Industry mode: states it <strong>replaces</strong> a named general mode; adds only vertical KB / guardrails / blueprints / components / stricter synthetic-data.</li>
-<li>[ ] File parses: <code>python3 -c "import yaml,sys; yaml.safe_load(open(sys.argv[1]))" MODES/&lt;your-mode&gt;.yaml</code></li>
-</ul>
-<p>Make the final line a standing practice: run the parse check with every authoring pass. A Mode that fails to parse will fail silently in the field.</p>
+<ol>
+<li>Clear persona + engagement class (<code>roleDefinition</code>, <code>whenToUse</code>).</li>
+<li>Shared build lifecycle present: intake → mapping → build → document → verify → hand-off.</li>
+<li>Shared non-negotiables enforced (runnable artifacts; synthetic data; env secrets; mock works with zero deps; accessibility; honest claims; compliance-before-done).</li>
+<li>Decision gates G0–G5 implemented as optioned questions; autonomous between gates.</li>
+<li><strong>References</strong> the skills it depends on — duplicates none of their content.</li>
+<li>Ships a self-check script (<code>check-compliance.sh</code>, plus <code>check-carveouts.sh</code> if it has guardrails).</li>
+<li><code>slug</code> is unique and <strong>does not equal any SKILL name</strong>.</li>
+<li>Industry mode: states it <strong>replaces</strong> a named general mode; adds only vertical KB / guardrails / blueprints / components / stricter synthetic-data.</li>
+<li>File parses: <code>python3 -c "import yaml,sys; yaml.safe_load(open(sys.argv[1]))" MODES/&lt;your-mode&gt;.yaml</code></li>
+</ol>
 </div>
+<p>Make the final line a standing practice: run the parse check with every authoring pass. A <em>Mode</em> that fails to parse will fail silently in the field.</p>
+<hr />
 <h2 id="5-iv-authoring-a-skill"><strong>iv. Authoring a Skill</strong></h2>
 <hr />
 <p>The following information is the <strong>contract</strong>. You can execute the following instruction within a Terminal console to begin crafting your own (if you like).</p>
