@@ -332,21 +332,21 @@
       
         <li class="md-nav__item">
   <a href="#iii-authoring-a-mode" class="md-nav__link">
-    iii. Authoring a MODE
+    iii. Authoring a Mode
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#iv-authoring-a-skill" class="md-nav__link">
-    iv. Authoring a SKILL
+    iv. Authoring a Skill
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v-authoring-a-rule" class="md-nav__link">
-    v. Authoring a RULE
+    v. Authoring a Rule
   </a>
   
 </li>
@@ -415,21 +415,21 @@
       
         <li class="md-nav__item">
   <a href="#iii-authoring-a-mode" class="md-nav__link">
-    iii. Authoring a MODE
+    iii. Authoring a Mode
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#iv-authoring-a-skill" class="md-nav__link">
-    iv. Authoring a SKILL
+    iv. Authoring a Skill
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#v-authoring-a-rule" class="md-nav__link">
-    v. Authoring a RULE
+    v. Authoring a Rule
   </a>
   
 </li>
@@ -469,54 +469,56 @@
 <hr />
 <p>Up to this point in the hands-on materials, you have operated as a <em>consumer</em>: you installed the Demo Builder, briefed it well, and examined the strategy underneath. Sooner or later, however, every practitioner runs up against a gap in the inventory of Modes, Skills, or Rules available on-hand. It may be a vertical without a Mode, a product without a Skill, or a team convention with no Rule holding it in place.</p>
 <p>In these circumstances, <strong>Asset Templates</strong> are the mechanism for filling that gap <em>without breaking the discipline and organizational rigor</em> documented in the previous chapters.</p>
-<p>Asset templates are the <strong>executable form of the strategy</strong>. Each one encodes its corresponding contract: the <em>Mode</em> core contract; the <em>Skill</em> design principles and definition of what "completeness" looks like; and the <em>Rule</em> principles and definition of "done." In essence, it provides a <strong>boilerplate</strong> that ensures the assets created conform to an organization's strategy <em>by construction</em>, rather than by after-the-fact review.</p>
+<p>Asset templates are the <strong>executable form of the strategy</strong>. Each one encodes its corresponding contract:</p>
+<ul>
+<li>The <em>Mode</em> core contract</li>
+<li>The <em>Skill</em> design principles and definition of what "completeness" looks like</li>
+<li>The <em>Rule</em> principles and definition of what "completeness" looks like</li>
+</ul>
+<p>In essence, it provides a <strong>boilerplate</strong> that ensures the assets created conform to an organization's strategy <em>by construction</em>, rather than by after-the-fact review.</p>
 <table>
 <thead>
 <tr>
 <th>TEMPLATE</th>
 <th>USE IT TO CREATE</th>
-<th>CONFORMS TO</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>MODE.template.yaml</code></td>
 <td>a new general or industry mode → <code>MODES/…</code></td>
-<td>the Mode core contract</td>
 </tr>
 <tr>
 <td><code>SKILL.template.md</code></td>
 <td>a new skill → <code>SKILLS/&lt;name&gt;/SKILL.md</code></td>
-<td>the Skill principles + definition of done</td>
 </tr>
 <tr>
 <td><code>RULE.template.md</code></td>
 <td>a new ambient rule → <code>rules/rules-&lt;name&gt;/&lt;name&gt;.md</code></td>
-<td>the Rule principles + definition of done</td>
 </tr>
 </tbody>
 </table>
-<div class="admonition quote">
+<div class="admonition note">
 <p class="admonition-title">NAMING CONVENTIONS</p>
 <p>Why <code>MODE</code> versus <code>Mode</code> versus <code>mode</code>? Naming conventions in how IBM Bob generates and records <em>asset templates</em> means that you will often see the <em>ALL-CAPS</em> spelling within the IDE. Colloquially and in written documentation, the various forms carry the same meaning.</p>
 </div>
 <h2 id="ii-deciding-which-asset-to-build"><strong>ii. Deciding which asset to build</strong></h2>
 <hr />
-<p>The most common authoring mistake is not filling a template in poorly — it is selecting the wrong template entirely. Before copying anything, run your idea through the decision tree:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&quot;A constraint that must always hold (any mode, any task)?&quot; → RULE  (global / workspace / mode-specific by scope; needs flags/schemas? → it&#39;s a SKILL)
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&quot;How to approach an engagement class&quot;?            → MODE   (vertical &amp; deep? → Industry MODE, replaces a general one)
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>&quot;How to use a product / contract / capability&quot;?   → SKILL  (drives an MCP? → SKILL paired with that MCP)
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>&quot;How to reach a system from Bob&quot;?                 → SDK/CLI exists &amp; available? yes → use it (document in a SKILL)
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                                                                                no  → MCP (last resort) + paired SKILL
+<p>The most common authoring mistake is not filling a template in poorly, but rather is from incorrectly choosing the wrong template to begin with. Before copying anything, run your idea through the decision tree:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&quot;A constraint must always hold (any mode, task)?&quot; → RULE  (global/workspace/mode?)      → SKILL
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&quot;How to approach an engagement class&quot;?            → MODE   (vertical &amp; deep?)           → Industry MODE, replaces a general one)
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>&quot;How to use a product / contract / capability&quot;?   → SKILL  (drives an MCP?)             → SKILL paired with that MCP)
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>&quot;How to reach a system from Bob&quot;?                 → SDK/CLI (exists &amp; available?)   yes → use it (document in a SKILL)
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                                                                                    no  → MCP (last resort) + paired SKILL
 </code></pre></div>
-<p>Recall the litmus tests from the strategy chapter. If a constraint should hold even when nobody asked for it, it is a Rule. If it constitutes method for a whole engagement class, it is a Mode. If it is product knowledge carrying depth, it is a Skill. And reach is documented first as a Skill describing an SDK or CLI — with an MCP built only as the last resort.</p>
+<p>Recall the litmus tests from the strategy chapter. If a constraint should hold even when nobody asked for it, it is a <em>Rule</em>. If it constitutes method for a whole engagement class, it is a <em>Mode</em>. If it is product knowledge carrying depth, it is a <em>Skill</em>. And reach is documented first as a <em>Skill</em> describing an SDK or CLI — with an <em>MCP</em> built only as the last resort.</p>
 <hr />
-<h2 id="iii-authoring-a-mode"><strong>iii. Authoring a MODE</strong></h2>
+<h2 id="iii-authoring-a-mode"><strong>iii. Authoring a Mode</strong></h2>
 <hr />
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cp MODE.template.yaml MODES/&lt;your-mode&gt;.yaml
 </code></pre></div>
-<p>Fill every <code>&lt;PLACEHOLDER&gt;</code>, delete every <code>[GUIDANCE]</code> note, and keep the section skeleton — <em>it is the contract</em>. Remember the strategy's second golden rule as you write: a mode is <strong>thin</strong>. Persona + lifecycle + gates + non-negotiables + <strong>references to skills</strong> — never duplicated product knowledge.</p>
-<p><strong>MODE core contract checklist:</strong></p>
+<p>The following information is the <strong>contract</strong>. Fill every <code>&lt;PLACEHOLDER&gt;</code>, delete every <code>[GUIDANCE]</code> note, and keep the section skeleton.</p>
+<p><strong>Mode core contract checklist:</strong></p>
 <ul>
 <li>[ ] 1. Clear persona + engagement class (<code>roleDefinition</code>, <code>whenToUse</code>).</li>
 <li>[ ] 2. Shared build lifecycle present: intake → mapping → build → document → verify → hand-off.</li>
@@ -530,11 +532,11 @@
 </ul>
 <p>Make the final line a standing practice: run the parse check with every authoring pass. A Mode that fails to parse will fail silently in the field.</p>
 <hr />
-<h2 id="iv-authoring-a-skill"><strong>iv. Authoring a SKILL</strong></h2>
+<h2 id="iv-authoring-a-skill"><strong>iv. Authoring a Skill</strong></h2>
 <hr />
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>mkdir SKILLS/&lt;name&gt; <span class="o">&amp;&amp;</span> cp SKILL.template.md SKILLS/&lt;name&gt;/SKILL.md
 </code></pre></div>
-<p><strong>SKILL definition of done:</strong></p>
+<p><strong>Skill definition of completeness:</strong></p>
 <ul>
 <li>[ ] Valid cross-runtime frontmatter: <code>name</code>, <code>description</code>, <code>metadata.enabled: true</code>.</li>
 <li>[ ] <code>name</code> is unique and <strong>does not equal any MODE slug</strong>.</li>
@@ -547,13 +549,13 @@
 </ul>
 <p>Two of these items deserve special attention. The <strong>description</strong> is the single most important line in the file — it is what triggers auto-discovery, so write it in the form of "use this whenever the user mentions or needs X" and be generous with trigger terms. The <strong>verification stamp</strong>, meanwhile, is what separates a field manual from folklore: run the CLI, exercise the API, and then record the version and date that the content was verified against.</p>
 <hr />
-<h2 id="v-authoring-a-rule"><strong>v. Authoring a RULE</strong></h2>
+<h2 id="v-authoring-a-rule"><strong>v. Authoring a Rule</strong></h2>
 <hr />
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>mkdir rules/rules-&lt;name&gt; <span class="o">&amp;&amp;</span> cp RULE.template.md rules/rules-&lt;name&gt;/&lt;name&gt;.md
 </code></pre></div>
 <p>A rule is <strong>always-on and short</strong> — it costs context on every turn, so cut anything optional. It states <em>what must always hold</em>; it never teaches a product API (point to a skill instead). Each rule lives in its own <code>rules-&lt;name&gt;/</code> folder so it can be copied individually into <code>.bob/rules/</code>.</p>
 <p>Pick the scope deliberately: org-wide → <code>~/.bob/rules/</code>; this project → <code>&lt;project&gt;/.bob/rules/</code>; one mode or vertical → <code>.bob/rules-{slug}/</code> (note that <code>rules-{slug}</code> at the top of <code>.bob/</code> is <em>mode-specific</em>).</p>
-<p><strong>RULE definition of done:</strong></p>
+<p><strong>Rule definition of completeness:</strong></p>
 <ul>
 <li>[ ] Short, imperative, <strong>testable</strong> statements (yes/no per line); whole file ≈ &lt; 15 lines.</li>
 <li>[ ] Correct <strong>scope</strong> chosen (global / workspace / mode-specific) and reflected in the metadata line.</li>
