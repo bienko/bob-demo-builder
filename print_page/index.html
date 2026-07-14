@@ -2366,7 +2366,7 @@ In the chapter ahead, you will look beneath the surface at <em>why</em> the Demo
 <li><strong>Every asset is verified against reality, not model memory.</strong> Assets are stamped with the product version (Skills/Modes/MCPs) or owner + review date (Rules).</li>
 <li><strong>One source of distribution.</strong> Assets ship through the EMEA Bob Box (<code>https://ibm.biz/emea-bob-box</code>); the authoring source is the repo.</li>
 </ol>
-<div class="admonition warning">
+<div class="admonition note">
 <p class="admonition-title">THE LITMUS TEST FOR PREVENTING TWO COMMON MISTAKES</p>
 <p><em>Mode vs Skill:</em> method/persona for a whole engagement class → <strong>MODE</strong>; reusable product knowledge → <strong>SKILL</strong>.</p>
 <p><em>Skill vs Rule:</em> "Should this apply even when nobody asked and no trigger fired?" → <strong>RULE</strong> (ambient, by scope). "Does it only matter when a specific product/task comes up, and need depth?" → <strong>SKILL</strong> (pulled by relevance).</p>
@@ -2434,6 +2434,7 @@ In the chapter ahead, you will look beneath the surface at <em>why</em> the Demo
 <p><strong><em>Rules</em></strong> are short, always-on constraints that hold regardless of <em>Mode</em> or task. Whereas all <em>Modes</em>, <em>Skills</em>, and <em>MCPs</em> are <strong>pulled</strong>, <em>Rules</em> are <strong>pushed</strong>. Bob loads them automatically for their scope and applies them to every response. <em>Rules</em> are the mechanism that makes trust ubiquitous across a project: present even in a quick edit, not just inside a formal mode.</p>
 <hr />
 <p><strong>Scope</strong>, therefore, becomes a deliberate choice and design point.</p>
+<p><em>Rules</em> and self-check scripts are <strong>defense in depth</strong>, not redundancy. The <em>Rule</em> keeps the constraint in front of Bob continuously, shaping every action. The script <em>fails the build</em> if the constraint is violated. One "reminds," while the other "blocks."</p>
 <table>
 <thead>
 <tr>
@@ -2465,10 +2466,6 @@ In the chapter ahead, you will look beneath the surface at <em>why</em> the Demo
 </tr>
 </tbody>
 </table>
-<div class="admonition note">
-<p class="admonition-title">"DEFENSE IN DEPTH</p>
-<p><em>Rules</em> and self-check scripts are <strong>defense in depth</strong>, not redundancy. The <em>Rule</em> keeps the constraint in front of Bob continuously, shaping every action. The script <em>fails the build</em> if the constraint is violated. One "reminds," while the other "blocks."</p>
-</div>
 <h2 id="4-vii-decision-gates"><strong>vii. Decision gates</strong></h2>
 <hr />
 <p>The <strong>decision gate model</strong> is the thread that ties this entire strategy back to the <strong>AI Maturity Curve</strong>. Bob runs the build whilst the human steers at <strong>gates</strong>. Each gate a crisp, optioned question (where the recommended option is presented first), after which Bob proceeds autonomously until the next such gate is reached.</p>
@@ -2543,7 +2540,7 @@ In the chapter ahead, you will look beneath the surface at <em>why</em> the Demo
 <li><strong>Bob does the building; humans-in-the-loop make the call</strong>: expertise scaled as assets, instead of as headcount.</li>
 <li>Four asset types, cleanly separated: <strong>Modes</strong> (method), <strong>Skills</strong> (knowledge), <strong>MCPs</strong> (reach), and <strong>Rules</strong> (standards).</li>
 <li><strong>Decision gates</strong> generalize the plan-approval discipline to whole engagements, lend control at the branch points, and provide Bob-led autonomy for the stages in-between.</li>
-<li>Trust is <strong>by construction</strong>: ambient rules remind; self-check scripts block. That <em>architecture</em> (in lieu of any <em>promise</em>) is the enterprise answer to <em>"how do we trust it?"</em></li>
+<li>Trust is <strong>by construction</strong>: ambient rules remind; self-check scripts block. That <em>architecture</em> (in lieu of any <em>promise</em>) is the enterprise answer to <em>"how do we trust AI?"</em></li>
 </ul>
 <p></br>
 One question remains: when the practitioner (you) wish to contribute to this library— with a new <em>Mode</em> for your industry, a new <em>Skill</em> for your product, or a new <em>Rule</em> for your team —how is that done without breaking the discipline documented here? The <strong>asset templates</strong> in the chapter ahead exist for precisely this purpose.</p>
