@@ -2241,57 +2241,59 @@ In the chapter ahead, you will learn to author the demo brief yourself according
 <ol start="46">
 <li>
 <p>Within the <code>/demos</code> directory you should see a newly-created <code>/new-demo</code> subdirectory. Double-click it to expose the contents.</p>
-<p><em>Your subfolder may carry a slightly different name — simply search around within this IBM-Pre-Sales-Demo-Builder folder.</em></p>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/2efa71d0-f8d1-4277-b81e-aa472b7b7900/File_f33e9301e867406fa311936d8eb76184_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/2efa71d0-f8d1-4277-b81e-aa472b7b7900/File_f33e9301e867406fa311936d8eb76184_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
 </li>
 </ol>
 <hr />
-<ol start="50">
+<ol start="47">
 <li>
-<p>Found it! In this example, IBM Bob created a script called <strong>START_DEMO.bat</strong> for a Windows machine. The file name and type you receive will differ, though the naming will likely be similar — look for something carrying <em>START</em> or similar.</p>
+<p>In this example, IBM Bob created a script called <strong><code>START_DEMO.bat</code></strong> for a Windows machine. The file name and type you receive will differ, though the naming will likely be similar. Look for something carrying <em>START</em> or similar.</p>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/96dc48fa-9807-4641-8856-321514762fa2/File_b13ece5de0af4576b8b145b6e84b37be_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/96dc48fa-9807-4641-8856-321514762fa2/File_b13ece5de0af4576b8b145b6e84b37be_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
 </li>
 </ol>
 <hr />
-<ol start="51">
+<ol start="48">
 <li>
-<p>Run the demo script.</p>
-<p>Here, some of the Terminal windows that open appear troublesome, with error logs — but Bob built in fallbacks to address this. If your quickstart script crashes, take a screenshot (or copy and paste the console output) and send it to Bob.</p>
+<p><strong>Run</strong> (double-click) the demo script <code>.BAT</code> file.</p>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/086b10bf-84d2-4a64-8e06-d69f74de301d/File_bd45a393e6f8479c9bc1500823afffae_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/086b10bf-84d2-4a64-8e06-d69f74de301d/File_bd45a393e6f8479c9bc1500823afffae_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
+<details class="warning">
+<summary>TROUBLESHOOTING</summary>
+<p>Here, some of the Terminal windows that open appear troublesome, with error logs — but Bob built in fallbacks to address this. If your quickstart script crashes, take a screenshot (or copy and paste the console output) and send it to Bob.</p>
+</details>
 </li>
-</ol>
-<hr />
-<ol start="52">
 <li>
-<p>The quickstart script continues. You may experience completely different behaviour — expect multiple terminal windows to open. <strong>Do not close them</strong>; leave them running while you access the demo app.</p>
+<p>The quickstart script continues. You may experience completely different behaviour.</p>
+<p>Expect multiple Terminal windows to open. <strong>Do not close them</strong>. Leave them running while you access the demo app.</p>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/347bbf70-6764-4029-8511-b806161dd60d/File_606b165cb9084200b99b853ce5579909_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/347bbf70-6764-4029-8511-b806161dd60d/File_606b165cb9084200b99b853ce5579909_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
 </li>
 </ol>
 <hr />
-<ol start="53">
+<ol start="50">
 <li>
-<p>Another demo script window opens. Depending on how your quickstart script is wired, the app may open automatically — or you may need to click it yourself.</p>
-<p>Look for a line reading <code>http://localhost:517x/...</code>, then hold <span class="keys"><kbd class="key-control">Ctrl</kbd></span> and click it.</p>
-<p><em>In this specific example, the app started on port 5175, since other ports were already in use. On a fresh run-through, your app will typically sit at</em> <code>http://localhost:5173</code>.</p>
+<p>Another demo script window opens. Depending on how your quickstart script is wired, the app may open automatically or you may need to click it yourself.</p>
+<ul>
+<li>Look for a line reading <code>http://localhost:517x/...</code>, then hold <span class="keys"><kbd class="key-control">Ctrl</kbd></span> and <strong>click</strong> it</li>
+<li>In this specific example, the app started on port 5175, since other ports were already in use</li>
+<li>On a fresh run-through, your app will typically sit at* <code>http://localhost:5173</code></li>
+</ul>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/679e0c78-6871-4525-8931-c6b134e4733d/File_4ed05fb6895545efa8a91119cc7f709f_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/679e0c78-6871-4525-8931-c6b134e4733d/File_4ed05fb6895545efa8a91119cc7f709f_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
 </li>
 </ol>
-<hr />
 <h2 id="3-viii-explore-the-demo"><strong>viii. Explore the demo</strong></h2>
 <hr />
-<ol start="54">
+<ol start="51">
 <li>
-<p>Back at that localhost URL, the demo app appears once again. Click and scroll around, exploring the app to make sure no bugs are lurking.</p>
+<p>Back at the <code>localhost</code> URL within a web browser, the demo app appears once again. Click and scroll around, exploring the app to make sure no bugs are lurking.</p>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/26290f01-aa1c-46fa-a6e3-ec467ac47d75/File_b4e871b88d264ebb9e1ea3cfdab0f264_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/26290f01-aa1c-46fa-a6e3-ec467ac47d75/File_b4e871b88d264ebb9e1ea3cfdab0f264_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
