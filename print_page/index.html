@@ -1708,6 +1708,687 @@ With the environment assembled and validated, you will next put Bob to work: tra
 </ul>
 <p></br>
 In the chapter ahead, you will learn to author the demo brief yourself according to best practices (the six things every prompt must answer) to produce demos that are expertly tailored to a specific client, industry, and audience.</p>
+<hr /></section><section class="print-page" id="3"><p><strong>BOB DEMO-BUILDER MODE</strong></p>
+<h1 id="3-deploying-with-demo-builder-business-partners"><strong>DEPLOYING WITH DEMO BUILDER: BUSINESS PARTNERS</strong></h1>
+<hr />
+<div class="admonition note">
+<p class="admonition-title">AUDIENCE: BUSINESS PARTNERS</p>
+<p>This chapter is the <strong>Business Partner</strong> path to a working Demo Builder deployment, and it is fully self-contained: the internal CE Bob Marketplace, GitHub PAT, and MCP credential steps documented in Chapters 1 and 2 are <strong>not required</strong> here. Instead, the Demo Builder arrives as a packaged download from IBM Seismic, with everything pre-loaded and ready to use. <strong>IBMers</strong> should follow <em>Chapter 1 | Setup and registration</em> and <em>Chapter 2 | Deploying with Demo Builder</em> instead — both paths arrive at the same working demonstration.</p>
+</div>
+<h2 id="3-i-the-business-partner-path"><strong>i. The Business Partner path</strong></h2>
+<hr />
+<p>The previous chapter carried an IBMer from a one-sentence use case to a running, client-ready demonstration. This chapter delivers the same outcome for <strong>Business Partners</strong> — via a deliberately simpler road. Rather than assembling the environment piece by piece (Marketplace extension, access token, MCP credentials), you will download a single packaged folder, open it within the Bob IDE, and find the <strong>IBM Pre-Sales Demo Builder</strong> mode already loaded and waiting. From there, the workflow mirrors what an IBM seller experiences: a guided intake, an autonomous build, a local launch, a review-and-refine pass, and a generated demo script.</p>
+<div class="admonition success">
+<p class="admonition-title">PRE-REQUISITES</p>
+<ul>
+<li><strong>IBM Bob</strong> is installed and open</li>
+<li>You can access the <strong>IBM Seismic</strong> download link provided in the steps below</li>
+</ul>
+<p>Because this flow builds in <strong>mock mode</strong>— no functional credentials are needed and the environment is fully offline (running locally only) —nothing beyond the package itself is required.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">EXPECT VARIATION THROUGHOUT THIS FLOW</p>
+<p>Recall that generative AI is <em>non-deterministic</em>. The intake questions you receive, the options presented, the generated file and folder names, the startup commands, and the finished demo's appearance may all differ from the captures shown here — and that is expected, not a defect. The <em>sequence</em> is what matters: acquire, brief, build, launch, refine, present. If your run drifts from this guide, follow the sequence and let Bob handle the specifics.</p>
+</div>
+<h2 id="3-ii-why-this-matters"><strong>ii. Why this matters</strong></h2>
+<hr />
+<p>Take note of the division of labor as you work through this chapter, because it is the discipline this entire course reinforces: <strong>Bob does the building; the human (you) does the deciding.</strong> The intake questions posed at the start — build approach, audience, environment, deployment target — are genuine decision points, presented as optioned questions with a recommended answer first. Between those decisions, Bob works autonomously: scaffolding the project, generating the backend and frontend in parallel, and (as you will witness first-hand) reviewing and correcting its own work before declaring the build complete.</p>
+<p>There is a practical dimension worth internalizing as well. The full build consumes roughly <strong>20 minutes</strong> of wall-clock time and approximately <strong>15–20 Bobcoins</strong> — and even in mock mode, with no live model behind it, the result is a complete, navigable, Carbon-styled application with preset AI scenarios, auto-generated work orders, an architecture view, and a client-ready walkthrough script. For a Business Partner, that means a credible IBM demonstration no longer requires provisioned environments, credentials, or weeks of scarce technical talent as its price of admission.</p>
+<hr />
+<h2 id="3-iii-hands-on-acquire-and-open-the-demo-builder"><strong>iii. Hands-on: Acquire and open the Demo Builder</strong></h2>
+<hr />
+<ol>
+<li>
+<p>Download the <strong>IBM-Pre-Sales-Demo-Builder.zip</strong> file from the following location:</p>
+<p><a href="https://ibm.seismic.com/Link/Content/DCMhGH8HMFdJ2G4QRdFjDJT6m438">https://ibm.seismic.com/Link/Content/DCMhGH8HMFdJ2G4QRdFjDJT6m438</a></p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/d96d5c0a-a332-44c3-b7d9-c46452e7db50/File_616042947f984c9497dbd53ac11230e7_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/d96d5c0a-a332-44c3-b7d9-c46452e7db50/File_616042947f984c9497dbd53ac11230e7_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="2">
+<li>
+<p>The <code>.zip</code> file downloads. Open it within your File Explorer.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/f585bd64-49ec-499c-b56d-c1c85504f0e3/File_4579f42867024ede8fc9862c0633e804_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/f585bd64-49ec-499c-b56d-c1c85504f0e3/File_4579f42867024ede8fc9862c0633e804_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="3">
+<li>
+<p>Extract the <strong>IBM-Pre-Sales-Demo-Builder</strong> <code>.zip</code> file.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/1c34005c-b997-4786-9eb1-388c684a4089/File_f846771a2f8e4e358517510d9bc953f9_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/1c34005c-b997-4786-9eb1-388c684a4089/File_f846771a2f8e4e358517510d9bc953f9_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="4">
+<li>
+<p>Finish extracting the <code>.zip</code> folder.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/ed4936af-069b-4f57-8707-bb782e033e20/File_17751802253b4036b55f460d8b9a7890_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/ed4936af-069b-4f57-8707-bb782e033e20/File_17751802253b4036b55f460d8b9a7890_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="5">
+<li>
+<p>Return to IBM Bob.</p>
+<p>If it is not already open, click <strong>Explorer</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-e">E</kbd></span>) to open the file explorer panel within the IDE.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/7a59a191-3a32-4e62-8c8b-4d83018eb191/File_1c7379806f774fa7b23b16d0620ccc7d_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/7a59a191-3a32-4e62-8c8b-4d83018eb191/File_1c7379806f774fa7b23b16d0620ccc7d_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="6">
+<li>
+<p>Click <strong>Open Folder</strong>.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/f6d6c124-7268-497e-af5c-d2ddc8505a80/File_1e4df02901234562a1c37d5d231fa88d_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/f6d6c124-7268-497e-af5c-d2ddc8505a80/File_1e4df02901234562a1c37d5d231fa88d_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="7">
+<li>
+<p>Upon clicking <strong>Open Folder</strong>, your file explorer view opens. Locate the unzipped version of the Pre-Sales Demo Builder and select it — on Windows, this most likely landed within your <em>Downloads</em> folder.</p>
+<div class="admonition warning">
+<p class="admonition-title">SELECT THE UNZIPPED VERSION</p>
+<p>Ensure you select the <strong>unzipped</strong> version — the resulting folder produced after you pressed <em>Extract all</em> — or this will not work!</p>
+</div>
+<p>Click <strong>"Select folder"</strong>.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/8bf8c14c-4c21-4e27-a026-1f92dd55ab51/File_68c93ddcc05a40859963fc73e36b6684_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/8bf8c14c-4c21-4e27-a026-1f92dd55ab51/File_68c93ddcc05a40859963fc73e36b6684_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="8">
+<li>
+<p>With the unzipped folder now open within the IBM Bob IDE, click the <strong>mode selector</strong> button to expand the window. You will find <strong>IBM Pre-Sales Demo Builder</strong> automatically loaded and ready to use.</p>
+<p>Select <strong>IBM Pre-Sales Demo Builder</strong> mode.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/5961a517-e0e9-40e8-aa9d-a248eb1b1152/File_9589f86eab35443c9ecd02fdeebf77ca_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/5961a517-e0e9-40e8-aa9d-a248eb1b1152/File_9589f86eab35443c9ecd02fdeebf77ca_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<h2 id="3-iv-hands-on-brief-the-demo-builder"><strong>iv. Hands-on: Brief the Demo Builder</strong></h2>
+<hr />
+<ol start="9">
+<li>
+<p>With IBM Bob in <em>IBM Pre-Sales Demo Builder</em> mode, paste the following prompt in the Agentic Sidebar chat window:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#3-__codelineno-0-1"></a>I need a demo of an AI agent that monitors IoT sensor data from factory equipment, predicts failures before they happen, and automatically creates maintenance work orders with recommended parts and technicians.
+</code></pre></div>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/015763b0-638d-482e-8fc1-c53d66e1b5e8/File_164f8c229b9c40479b97607e056c4b99_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/015763b0-638d-482e-8fc1-c53d66e1b5e8/File_164f8c229b9c40479b97607e056c4b99_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="10">
+<li>
+<p>IBM Bob's Pre-Sales Demo Builder mode asks its first question: how should the AI agent for this app be built? In future builds, you may select whichever option best fits the product you are demoing — for this example, and for ease of use, choose watsonx.ai.</p>
+<p>Click <strong>"Use suggestion: watsonx.ai App demo (RECOMMENDED) — LangGraph ReAct agent in FastAPI, Carbon dashboard with real-time sensor charts, anomaly det..."</strong></p>
+<div class="admonition note">
+<p class="admonition-title">YOUR OPTIONS WILL LIKELY DIFFER</p>
+<p>The exact options presented will very likely be different in your run — the key is simply to select the option carrying <strong>watsonx.ai</strong>. The watsonx Orchestrate demo setup is more advanced; additional details can be found here: <a href="https://github.ibm.com/ClientEngineering/bob/blob/main/Pre-Sales-Demo-Builder/Sample-Reciepies/07-Predictive-Maintenance-Agent.md?utm_source=skills_network&amp;utm_content=in_lab_content_link&amp;utm_id=Lab-Bob+Demo+Builder+L3+v1+-+Business+Partner+Flow+Only-v3+-+Full+BP+section+detailed+steps">https://github.ibm.com/ClientEngineering/bob/blob/main/Pre-Sales-Demo-Builder/Sample-Reciepies/07-Predictive-Maintenance-Agent.md</a></p>
+</div>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/985f624b-a93e-4c2c-8144-be3728fccb01/user_cropped_screenshot_3cc8471a103d4b2fad942eefe0878b0c_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/985f624b-a93e-4c2c-8144-be3728fccb01/user_cropped_screenshot_3cc8471a103d4b2fad942eefe0878b0c_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="11">
+<li>
+<p>Next, you may be asked what audience the demonstration should be presented to. The selection does not particularly matter for this exercise — here, we chose:</p>
+<p><strong>"C-suite / VP of Operations / Plant Director — 15-minute executive overview [...]"</strong></p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/14c43e31-0dc5-4f29-a9e4-99a3a7c6adf0/File_2b84040111734773a256134761a51411_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/14c43e31-0dc5-4f29-a9e4-99a3a7c6adf0/File_2b84040111734773a256134761a51411_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="12">
+<li>
+<p>Next, you are asked whether you actually have a live watsonx.ai environment.</p>
+<p><strong>This selection is crucial</strong> — select <strong>"Mock mode only [...]"</strong>.</p>
+<p><em>In real engagements, you can incorporate live watsonx.ai API keys (or other IBM products) to add genuine functionality to your demo via IBM Pre-Sales Demo Builder mode. For the example presented within this guide, however, you will work in mock mode — and as you will see, realistic and impressive results are achievable even upon purely synthetic data.</em></p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/81ca0aeb-cbe5-4286-80ae-225640706d7b/File_f80a8b9be3714f1bad4fe942ac9a4071_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/81ca0aeb-cbe5-4286-80ae-225640706d7b/File_f80a8b9be3714f1bad4fe942ac9a4071_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="13">
+<li>
+<p>Similarly, this next selection is also crucial. You are asked how you wish to deploy the app — for now, you must select an option that allows the demo to run locally.</p>
+<p>In this case, select <strong>"Use suggestion: Run locally first (RECOMMENDED default) [...]"</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">SELECT THE LOCAL OPTION</p>
+<p>The wording on your options is likely different — the key is to select the <strong>run local</strong> option, and to avoid Docker where possible.</p>
+</div>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/8388f14c-2515-44e5-a4ef-ae8d00c07bc3/File_0c333815e37547da9cb6725258a44c83_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/8388f14c-2515-44e5-a4ef-ae8d00c07bc3/File_0c333815e37547da9cb6725258a44c83_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="14">
+<li>
+<p>Finally, IBM Pre-Sales Demo Builder mode simply wants to confirm that all of the details you have provided are accurate.</p>
+<p>Press the option that allows the build to proceed — in this case: <strong>"No - proceed with the build [...]"</strong></p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/51428004-37a1-4f51-909b-00985fcdef55/File_7367ca07b4164fb391eb2e52ebb6b6d5_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/51428004-37a1-4f51-909b-00985fcdef55/File_7367ca07b4164fb391eb2e52ebb6b6d5_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="15">
+<li>
+<p>With every question answered, consider the <strong>Auto-approve Permissions</strong> you wish to grant Bob. Press the <strong>Shield (Permissions)</strong> icon next to the mode selector to open these settings.</p>
+<p>In this example — for ease of use, and to avoid repetitive clicking — we enabled <strong>Auto-approve</strong> and toggled all permissions on.</p>
+<div class="admonition note">
+<p class="admonition-title">CONSIDER THE CONTROL YOU HAND OVER</p>
+<p>Weigh the level of control you are comfortable delegating to IBM Bob. If auto-approvals sit uneasily with you, this flow can be completed perfectly well with every auto-approval disabled and purely manual approvals — you will simply need to click <strong>"Approve"</strong> or <strong>"Approve for Task"</strong> quite a few more times throughout the lab.</p>
+</div>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/09fce4b7-4b97-4a32-8156-8f3a7b64d498/File_da4948a24ec24562915e769c56b53fcc_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/09fce4b7-4b97-4a32-8156-8f3a7b64d498/File_da4948a24ec24562915e769c56b53fcc_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<h2 id="3-v-the-autonomous-build"><strong>v. The autonomous build</strong></h2>
+<hr />
+<p>With auto-approve enabled, the build now proceeds without interruption — your role across the following steps is to observe. What you are watching is the Demo Builder's methodology executing end-to-end: a structured build plan, parallel generation, and a self-review pass that catches and repairs issues before the work is declared complete.</p>
+<hr />
+<ol start="16">
+<li>
+<p>Success — IBM Bob starts working! At this point the setup is done; the remaining task is to wait while Bob's Pre-Sales Demo Builder mode finishes.</p>
+<p>Creating the actual demo will take around <strong>20 minutes</strong> and approximately <strong>15–20 Bobcoins</strong>.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/da1d06c0-ca61-43ab-86ae-01488d231097/File_743d8ca0968c46b5b90e1dc421386688_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/da1d06c0-ca61-43ab-86ae-01488d231097/File_743d8ca0968c46b5b90e1dc421386688_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="17">
+<li>
+<p>IBM Bob has begun building the demo. Within the Agentic Sidebar you can see it has laid out a 5-step build plan: scaffold and environment setup; synthetic data generator; backend (FastAPI + LangGraph agent); frontend (Carbon React, 5 pages); and Docker/scripts/docs. Bob works through these in parallel wherever no file dependencies exist.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/a3f15506-8685-4322-88ae-b268e8054081/File_2f48e79e6c3a427198961ed6eabbe5c2_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/a3f15506-8685-4322-88ae-b268e8054081/File_2f48e79e6c3a427198961ed6eabbe5c2_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="18">
+<li>
+<p>Bob confirms the scaffold is in place and begins generating all files simultaneously. You can see it writing <code>demos/new-demo/.env.example</code> and starting on the backend in parallel.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/cca1fa4d-a27f-41c9-b361-0f382c48b99b/File_916cf5bc76184220af250571eac0862d_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/cca1fa4d-a27f-41c9-b361-0f382c48b99b/File_916cf5bc76184220af250571eac0862d_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="19">
+<li>
+<p>Bob is actively writing all backend files — <code>config.py</code>, <code>requirements.txt</code>, the synthetic data service, and the watsonx service are all being created within <code>demos/new-demo/backend/</code>.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/44ea5410-9055-40f7-9049-acd67ea2b6c9/File_22f05736fed94790bc83335a1a2f1805_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/44ea5410-9055-40f7-9049-acd67ea2b6c9/File_22f05736fed94790bc83335a1a2f1805_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="20">
+<li>
+<p>With the backend complete, Bob moves on to building the full React/Carbon frontend. You can see it writing <code>package.json</code>, <code>vite.config.js</code>, and <code>index.html</code> for the frontend — 14 files changed so far.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/b758cdda-49e1-4aaa-b15f-fa59c38a7414/File_150aec07ec3a444ca425483f5c593198_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/b758cdda-49e1-4aaa-b15f-fa59c38a7414/File_150aec07ec3a444ca425483f5c593198_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="21">
+<li>
+<p>Bob continues building the frontend, writing all 5 pages and shared components. You can also see it generating the Dockerfiles, startup scripts, and documentation files (README, PILOT_PLAN.md, ARCHITECTURE.md, DEMO_SCRIPT.md) in parallel — 26 files changed.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/efb82e82-51f6-42b8-b6b9-ddd862bdc7d6/File_8f264250ee0944b29268c506a714dd5f_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/efb82e82-51f6-42b8-b6b9-ddd862bdc7d6/File_8f264250ee0944b29268c506a714dd5f_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="22">
+<li>
+<p>Bob has finished generating all files and is now self-reviewing for issues. It has identified a known Carbon icon compatibility problem — some <code>@carbon/react</code> Sass imports and icon names need to be validated against the Carbon v11 specification before the app can build cleanly.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/d85dd666-e454-4987-8827-4d47cf73f409/File_e3cb3ac4d1534d0fae2b04177aacbd15_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/d85dd666-e454-4987-8827-4d47cf73f409/File_e3cb3ac4d1534d0fae2b04177aacbd15_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="23">
+<li>
+<p>Bob resolves the Carbon icon issues autonomously — searching through the frontend source files for uncertain icon names and replacing them with confirmed valid <code>@carbon/icons-react</code> v11 alternatives.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/db866891-f05b-4ab9-9fa4-7e3b78235ea4/File_abe4829c107b4a5880f56e24080ccabb_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/db866891-f05b-4ab9-9fa4-7e3b78235ea4/File_abe4829c107b4a5880f56e24080ccabb_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="24">
+<li>
+<p>Bob continues the icon sweep, applying targeted diffs to <code>ProblemPage.jsx</code>, <code>SolutionPage.jsx</code>, and <code>App.jsx</code> to replace any icon references that may not exist in Carbon v11 with known-safe alternatives.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/2e51038a-d610-402c-af1f-60d536e6f71f/File_123a4a18c7c540039c2fdc6508e482ad_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/2e51038a-d610-402c-af1f-60d536e6f71f/File_123a4a18c7c540039c2fdc6508e482ad_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="25">
+<li>
+<p>Bob consolidates all Carbon icon imports to a verified safe set, confirming each icon name against the <code>@carbon/icons-react</code> v11 library. This self-correction step is what ensures the app will build without errors.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/ee439486-ab85-42c4-87e1-97cda434bc48/File_7becb17ff1be479992b3009e2efe64bf_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/ee439486-ab85-42c4-87e1-97cda434bc48/File_7becb17ff1be479992b3009e2efe64bf_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="26">
+<li>
+<p>Bob performs a final sweep — verifying icon imports across all frontend source files, cleaning up unused imports, and running a last structural check on <code>backend/main.py</code> before wrapping up.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/4eedb378-9b09-41cc-9cbb-b0b8f82f78a3/File_bd78b305deba49ac822f5464a3982cfd_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/4eedb378-9b09-41cc-9cbb-b0b8f82f78a3/File_bd78b305deba49ac822f5464a3982cfd_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="27">
+<li>
+<p>Bob continues its self-review: cleaning up unused imports within <code>SolutionPage.jsx</code> and verifying that the <code>ChartMultitype</code> and <code>Diagram</code> references in <code>App.jsx</code> are valid Carbon v11 components. It replaces any uncertain names with confirmed safe alternatives such as <code>BarChart</code> and <code>Document</code>, then runs a final search across all frontend source files to confirm no remaining icon issues exist — 42 files changed at this point.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/b7d1c0db-2bf3-4101-9d4e-3b03bbd87206/File_8c274140dbe14fc99f6d956fb6c2f2a8_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/b7d1c0db-2bf3-4101-9d4e-3b03bbd87206/File_8c274140dbe14fc99f6d956fb6c2f2a8_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="28">
+<li>
+<p>Bob wraps up its quality pass. All icon imports are consolidated to a verified safe set (<code>File</code>, <code>Icons</code>, <code>Safety</code>, and others confirmed valid within <code>@carbon/icons-react</code> v11). Bob confirms the backend <code>main.py</code> has no missing module references, and that the project structure is complete and ready to run.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/6b1019e2-f8d0-40ad-ab07-a0f91550472c/File_67020c541a704f978a40388fbfef4e15_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/6b1019e2-f8d0-40ad-ab07-a0f91550472c/File_67020c541a704f978a40388fbfef4e15_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="29">
+<li>
+<p>Bob finishes and presents the completed build summary within the Agentic Sidebar. Look for the <strong>"To Start Now"</strong> section in the chat output — it contains the exact terminal commands needed to run the app locally. The build consumed approximately 15 Bobcoins and modified 42 files.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/960c9260-c2d0-4d2c-ae8e-b11340de8a47/File_2bf74e5080144bddaba07bb544bdcb51_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/960c9260-c2d0-4d2c-ae8e-b11340de8a47/File_2bf74e5080144bddaba07bb544bdcb51_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<h2 id="3-vi-start-and-test-the-demo"><strong>vi. Start and test the demo</strong></h2>
+<hr />
+<ol start="30">
+<li>
+<p>In the IBM Bob IDE menu bar, click <strong>Terminal</strong> to open the Terminal menu. An integrated terminal is needed to run the startup commands Bob provided.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/88e7c78c-6621-4882-9554-4eff00695c42/File_3c20e325ded148ba9d3341ad229ae73d_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/88e7c78c-6621-4882-9554-4eff00695c42/File_3c20e325ded148ba9d3341ad229ae73d_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="31">
+<li>
+<p>Click <strong>New Terminal</strong> (or press <code>Ctrl+Shift+</code> <code>`</code>) to open an integrated terminal panel at the bottom of the IDE. This is where the startup commands will run.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/03fac0bc-fde3-4144-8f0f-8d1fb8679714/File_c6cf9d365e464ebbbde751d0f0a0257c_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/03fac0bc-fde3-4144-8f0f-8d1fb8679714/File_c6cf9d365e464ebbbde751d0f0a0257c_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="32">
+<li>
+<p>Occasionally, the startup steps you initially receive for your app may not work. Whether it proves a simple syntax issue or a larger problem, getting past it is straightforward: in natural language, tell IBM Bob there is an error, and paste the entire console log.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/be64b168-f835-405a-8367-66d6e45439e5/File_3eee74d65583434881714670be5d8d2a_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/be64b168-f835-405a-8367-66d6e45439e5/File_3eee74d65583434881714670be5d8d2a_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="33">
+<li>
+<p>When an error surfaces, Bob will find a solution quickly. If the provided solution does not work on the first attempt, keep iterating in the same fashion — simply copy and paste the console output into the Agentic Sidebar.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/b3d68e98-df0c-4b2c-bf9d-0533545c10d2/File_c24dbdf75e2e4609b8fd325f774ec5cc_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/b3d68e98-df0c-4b2c-bf9d-0533545c10d2/File_c24dbdf75e2e4609b8fd325f774ec5cc_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="34">
+<li>
+<p>Bob has now provided new commands to start the app. The commands you receive will differ — what is likely to remain consistent is that you will work in <strong>two separate Terminal windows</strong>, one each for the backend and the frontend.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/057dcd55-4461-48fe-a54e-58f728d3d9ac/File_5fbc849cbf4049459c9a71d6aaa819fb_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/057dcd55-4461-48fe-a54e-58f728d3d9ac/File_5fbc849cbf4049459c9a71d6aaa819fb_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="35">
+<li>
+<p>In the backend terminal, run the first backend command provided by Bob — in this example, <code>cd</code> into the <code>demos/new-demo/backend</code> directory. Your path will reflect your own Downloads location.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/1d5b848a-ee79-4cce-af1c-93161deae10f/File_944fc644d9094948bf1cb7003873eb1a_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/1d5b848a-ee79-4cce-af1c-93161deae10f/File_944fc644d9094948bf1cb7003873eb1a_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="36">
+<li>
+<p>Run the second backend command: activate the Python virtual environment by running <code>.\venv\Scripts\Activate.ps1</code>. Once active, your terminal prompt will show <code>(venv)</code> to confirm the environment is ready.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/91778551-0e79-4ab8-9bc1-27746a2831c8/user_cropped_screenshot_a4b5611a391e4cbf98089ed81a0ef8fc_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/91778551-0e79-4ab8-9bc1-27746a2831c8/user_cropped_screenshot_a4b5611a391e4cbf98089ed81a0ef8fc_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="37">
+<li>
+<p>Run the final backend command: <code>uvicorn main:app --reload --port 8000</code>. You should see Uvicorn report that it is running on <code>http://127.0.0.1:8000</code> — confirming the FastAPI backend is live and watching for changes.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/d3d95ae1-1987-440c-9f86-c665ca256455/File_7d2d654a54c049dc93324aba39711e57_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/d3d95ae1-1987-440c-9f86-c665ca256455/File_7d2d654a54c049dc93324aba39711e57_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="38">
+<li>
+<p>Open a second terminal tab for the frontend. Run the first frontend command to <code>cd</code> into the <code>demos/new-demo/frontend</code> directory.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/3512d265-443e-406a-9793-b677e2f6a73e/File_f03953474f1a4b2987eb1ce7f8101a38_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/3512d265-443e-406a-9793-b677e2f6a73e/File_f03953474f1a4b2987eb1ce7f8101a38_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="39">
+<li>
+<p>Run <code>npm install</code> to install all frontend dependencies. You should see output confirming that packages were audited with no vulnerabilities.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/3039233e-db46-4949-a63b-0994c8084c0e/File_208a1cbef9a5414d9488d5e1f5fd227c_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/3039233e-db46-4949-a63b-0994c8084c0e/File_208a1cbef9a5414d9488d5e1f5fd227c_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="40">
+<li>
+<p>Run <code>npm run dev</code> to start the Vite development server. When it finishes, you will see a <code>Local: http://localhost:5173/</code> (or similar port) link within the terminal output — this is the URL for your demo app.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/bbcdf614-83c5-4dfc-aa6b-4e8b9beec418/File_36be0a4eda2949bfb1be8a07b267ef84_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/bbcdf614-83c5-4dfc-aa6b-4e8b9beec418/File_36be0a4eda2949bfb1be8a07b267ef84_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="41">
+<li>
+<p>Hold <span class="keys"><kbd class="key-control">Ctrl</kbd></span> and click the <code>http://localhost:517x/</code> link that appeared in the frontend terminal output to open the demo app within your browser.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/3ca78f4c-e791-4580-85bf-a46386e6de7f/File_057dda163bdc4d39b1dac31dc1837a8e_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/3ca78f4c-e791-4580-85bf-a46386e6de7f/File_057dda163bdc4d39b1dac31dc1837a8e_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="42">
+<li>
+<p>Upon accessing the site, you may initially see a white screen. Wait 1–2 minutes for the site to load. If the white screen persists, refresh or switch browsers — and if it persists still, take a screenshot and describe the issue to Bob in the Agentic Sidebar, as practiced previously.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/832c533f-6083-4848-869a-51df2e49d60b/File_d3dbd51bb1d9416c98665550dbae805a_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/832c533f-6083-4848-869a-51df2e49d60b/File_d3dbd51bb1d9416c98665550dbae805a_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="43">
+<li>
+<p>Success — the demo loaded!</p>
+<p>Notice any issues? Fixing them is simple: take a screenshot and send it to IBM Bob. Here, the sidebar panel is stuck.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/0715d1c8-df42-485a-82f7-06240b5d4542/File_2f29935355c8443bbe56f394ac1f74b7_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/0715d1c8-df42-485a-82f7-06240b5d4542/File_2f29935355c8443bbe56f394ac1f74b7_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="44">
+<li>
+<p>Time to fix the stuck sidebar panel. Simply describe the issue in natural language — providing a screenshot where possible — and Bob will fix it.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/5e4c8120-2e21-4b67-b11d-ac48af74ba74/File_fb58265abf194fb49a2799db38c0a522_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/5e4c8120-2e21-4b67-b11d-ac48af74ba74/File_fb58265abf194fb49a2799db38c0a522_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="45">
+<li>
+<p>Fixed! Solve any issues you may experience with your app (a complete crash, poor aesthetics, and so on) in a similar fashion: describe the problem in natural language and provide screenshots.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/d9e14811-a4f8-42b8-9435-9a802847cb01/File_7f834722b60e4609af520769bfc8e16b_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/d9e14811-a4f8-42b8-9435-9a802847cb01/File_7f834722b60e4609af520769bfc8e16b_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<h2 id="3-vii-the-one-click-quickstart-script"><strong>vii. The one-click quickstart script</strong></h2>
+<hr />
+<ol start="46">
+<li>
+<p>To avoid the manual startup sequence in the future, simply ask Bob to make a quickstart script, like so:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#3-__codelineno-1-1"></a>Create a quickstart script so I can start my demo in one click, no terminal windows
+</code></pre></div>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/4257d628-1c6a-48e8-8dd4-6a6e05242106/File_b7171cce88654d0dbdfdb3b5c2e892bd_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/4257d628-1c6a-48e8-8dd4-6a6e05242106/File_b7171cce88654d0dbdfdb3b5c2e892bd_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="47">
+<li>
+<p>Bob made the script! To locate it quickly, right-click any of the files on the IBM Bob sidebar and press <strong>"Reveal in File Explorer"</strong>.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/ed813b9d-daa6-48e6-8f16-3638807a2272/File_90b804b66a6347de98d1f86583f2bbf9_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/ed813b9d-daa6-48e6-8f16-3638807a2272/File_90b804b66a6347de98d1f86583f2bbf9_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="48">
+<li>
+<p>Look for the folder — it will sit within the <strong>"demos"</strong> subfolder, inside the same <strong>IBM-Pre-Sales-Demo-Builder</strong> folder you unzipped at the start of the lab.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/e802f561-d5a1-4a03-ad33-bdf0cbe7e819/File_8b89c6074b794c3eb2467ed6d400de09_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/e802f561-d5a1-4a03-ad33-bdf0cbe7e819/File_8b89c6074b794c3eb2467ed6d400de09_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="49">
+<li>
+<p>Inside <strong>"demos"</strong>, you will find a <strong>"new-demo"</strong> subfolder. Click it.</p>
+<p><em>Your subfolder may carry a slightly different name — simply search around within this IBM-Pre-Sales-Demo-Builder folder.</em></p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/2efa71d0-f8d1-4277-b81e-aa472b7b7900/File_f33e9301e867406fa311936d8eb76184_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/2efa71d0-f8d1-4277-b81e-aa472b7b7900/File_f33e9301e867406fa311936d8eb76184_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="50">
+<li>
+<p>Found it! In this example, IBM Bob created a script called <strong>START_DEMO.bat</strong> for a Windows machine. The file name and type you receive will differ, though the naming will likely be similar — look for something carrying <em>START</em> or similar.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/96dc48fa-9807-4641-8856-321514762fa2/File_b13ece5de0af4576b8b145b6e84b37be_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/96dc48fa-9807-4641-8856-321514762fa2/File_b13ece5de0af4576b8b145b6e84b37be_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="51">
+<li>
+<p>Run the demo script.</p>
+<p>Here, some of the Terminal windows that open appear troublesome, with error logs — but Bob built in fallbacks to address this. If your quickstart script crashes, take a screenshot (or copy and paste the console output) and send it to Bob.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/086b10bf-84d2-4a64-8e06-d69f74de301d/File_bd45a393e6f8479c9bc1500823afffae_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/086b10bf-84d2-4a64-8e06-d69f74de301d/File_bd45a393e6f8479c9bc1500823afffae_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="52">
+<li>
+<p>The quickstart script continues. You may experience completely different behaviour — expect multiple terminal windows to open. <strong>Do not close them</strong>; leave them running while you access the demo app.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/347bbf70-6764-4029-8511-b806161dd60d/File_606b165cb9084200b99b853ce5579909_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/347bbf70-6764-4029-8511-b806161dd60d/File_606b165cb9084200b99b853ce5579909_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="53">
+<li>
+<p>Another demo script window opens. Depending on how your quickstart script is wired, the app may open automatically — or you may need to click it yourself.</p>
+<p>Look for a line reading <code>http://localhost:517x/...</code>, then hold <span class="keys"><kbd class="key-control">Ctrl</kbd></span> and click it.</p>
+<p><em>In this specific example, the app started on port 5175, since other ports were already in use. On a fresh run-through, your app will typically sit at</em> <code>http://localhost:5173</code>.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/679e0c78-6871-4525-8931-c6b134e4733d/File_4ed05fb6895545efa8a91119cc7f709f_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/679e0c78-6871-4525-8931-c6b134e4733d/File_4ed05fb6895545efa8a91119cc7f709f_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<h2 id="3-viii-explore-the-demo"><strong>viii. Explore the demo</strong></h2>
+<hr />
+<ol start="54">
+<li>
+<p>Back at that localhost URL, the demo app appears once again. Click and scroll around, exploring the app to make sure no bugs are lurking.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/26290f01-aa1c-46fa-a6e3-ec467ac47d75/File_b4e871b88d264ebb9e1ea3cfdab0f264_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/26290f01-aa1c-46fa-a6e3-ec467ac47d75/File_b4e871b88d264ebb9e1ea3cfdab0f264_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="55">
+<li>
+<p>The current page of the demo app looks correct. Continue clicking through the other pages to verify there are no broken layouts or missing data before proceeding.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/28bfc12d-67f4-4356-b5ed-14b0b958e1e2/File_52ad6e8d2a294557bbf8996da042a15c_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/28bfc12d-67f4-4356-b5ed-14b0b958e1e2/File_52ad6e8d2a294557bbf8996da042a15c_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="56">
+<li>
+<p>Here is the AI Agent! You may have a similar web app with multiple tabs — or everything may sit on one page. You will return here shortly; continue exploring for now.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/6c9b1cc9-a75c-4602-85e2-bfdb5ee000fa/File_83bac357b9a34a37a758b29bdc3c0d39_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/6c9b1cc9-a75c-4602-85e2-bfdb5ee000fa/File_83bac357b9a34a37a758b29bdc3c0d39_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="57">
+<li>
+<p>The architecture diagram looks good. Return to the AI Agent.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/110fab57-ba9d-476c-904c-1480537f56d9/File_4a2ae4f36cb0443782a6c4971f7c3939_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/110fab57-ba9d-476c-904c-1480537f56d9/File_4a2ae4f36cb0443782a6c4971f7c3939_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="58">
+<li>
+<p>Select one of the scenarios. Here, we selected the <strong>CNC Spindle Bearing Wear</strong> scenario.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/a4557e65-5db2-4024-91d1-6866103ef3ec/File_a3800a9ee8284fc0997287e0582f9a6e_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/a4557e65-5db2-4024-91d1-6866103ef3ec/File_a3800a9ee8284fc0997287e0582f9a6e_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="59">
+<li>
+<p>The moment of truth: click <strong>Analyze Equipment</strong> (or a similar blue button) to run the AI analysis demo.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/e3c41b35-a870-45d4-8c49-4e47e2e7ca54/File_417ee3c4c88044c4a0000a7b47cfbf48_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/e3c41b35-a870-45d4-8c49-4e47e2e7ca54/File_417ee3c4c88044c4a0000a7b47cfbf48_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="60">
+<li>
+<p>Success! Review the analysis.</p>
+<p>If you experience errors here, simply screenshot them and send them to Bob, as before.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/2c4b2ae1-b215-4b95-a8b4-9c4cc5454d54/user_cropped_screenshot_93c9e48826474e57aa81213b9687de74_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/2c4b2ae1-b215-4b95-a8b4-9c4cc5454d54/user_cropped_screenshot_93c9e48826474e57aa81213b9687de74_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="61">
+<li>
+<p>Try another scenario — <strong>Hydraulic Press Seal Failure</strong>. Here, an option appears to auto-create a (mock) <strong>work order</strong>. Try it.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/c70363d7-f5cd-42bc-adec-97ff1aeb9f7b/File_a1a6e38d2a9b4fa7b853ef7ad2dd5cfc_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/c70363d7-f5cd-42bc-adec-97ff1aeb9f7b/File_a1a6e38d2a9b4fa7b853ef7ad2dd5cfc_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="62">
+<li>
+<p>Success — work order created!</p>
+<p>Feel free to continue exploring your demo app, refining it as you wish. With a functioning demonstration in hand, the core of this lab is complete.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/f91c299c-9e21-4e7f-9986-9a2027a44dd8/File_82595ff53a6c427b8ff4383ae3fc06ce_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/f91c299c-9e21-4e7f-9986-9a2027a44dd8/File_82595ff53a6c427b8ff4383ae3fc06ce_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<h2 id="3-ix-present-it-the-demo-script"><strong>ix. Present it: the demo script</strong></h2>
+<hr />
+<ol start="63">
+<li>
+<p>Back within IBM Bob, look inside the <strong>"demos"</strong> folder. You will see a Markdown file named something similar to <strong>DEMO_SCRIPT.md</strong> — click on it.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/37ec9f95-9f54-4f50-b728-fc9b1669fb5c/File_789731b122194d67afe65e8ae210dfb6_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/37ec9f95-9f54-4f50-b728-fc9b1669fb5c/File_789731b122194d67afe65e8ae210dfb6_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="64">
+<li>
+<p>Right-click and press <strong>"Open Preview"</strong> within IBM Bob to see a formatted version of the script.</p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/896181ec-c4f0-40a7-bcdd-c7e68445938e/File_6e49f741078d4801a44ca26c81e89719_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/896181ec-c4f0-40a7-bcdd-c7e68445938e/File_6e49f741078d4801a44ca26c81e89719_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<ol start="65">
+<li>
+<p>Finally, observe that IBM Bob's Pre-Sales Demo Builder mode created an accompanying preflight checklist and verbal presentation script to sit alongside your demo app. To modify it, simply describe the desired changes to Bob.</p>
+<p><strong>Congratulations — you have now built a demo with IBM Bob!</strong></p>
+<p><p align="left">
+<a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/dd719cbd-ce41-4217-9b32-a929b889619f/File_61c5ec2b74294a5f8bbce8b20e8e80e8_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/dd719cbd-ce41-4217-9b32-a929b889619f/File_61c5ec2b74294a5f8bbce8b20e8e80e8_text_export.jpeg" alt="" width="600" /></a>
+</p></p>
+</li>
+</ol>
+<hr />
+<h2 id="3-x-key-takeaways"><strong>x. Key takeaways</strong></h2>
+<hr />
+<ul>
+<li>The Business Partner path is <strong>fully self-contained</strong>: a packaged download from Seismic, unzipped and opened within the Bob IDE, with the <em>IBM Pre-Sales Demo Builder</em> mode pre-loaded — no Marketplace, tokens, or MCP credentials required</li>
+<li>The intake questions are genuine decision points — build approach, audience, environment, deployment — with <strong>mock mode</strong> and <strong>run locally</strong> as the crucial selections for this flow</li>
+<li>The <strong>Shield (Permissions)</strong> icon governs auto-approval: full auto-approve keeps the build uninterrupted, while manual approvals preserve step-by-step control at the cost of more clicking</li>
+<li>A complete build takes roughly <strong>20 minutes</strong> and <strong>15–20 Bobcoins</strong>, and includes a self-review pass in which Bob validates and repairs its own work (the Carbon v11 icon sweep) before declaring completion</li>
+<li>The <strong>error-iteration pattern</strong> — paste the console log or a screenshot into the Agentic Sidebar, in natural language — is the universal remedy for startup issues, bugs, and aesthetic refinements alike</li>
+<li>A Bob-generated <strong>quickstart script</strong> collapses the two-terminal startup sequence into a single click</li>
+<li><strong>DEMO_SCRIPT.md</strong> turns the build into a presentation: a preflight checklist plus a verbal walkthrough, modifiable on request</li>
+</ul>
+<p></br>
+In the chapter ahead, you will learn to author the demo brief yourself according to best practices (the six things every prompt must answer) to produce demos that are expertly tailored to a specific client, industry, and audience.</p>
 <hr /></section><h1 class='nav-section-title-end'>Ended: Hands-on (pick one)</h1>
                         <h1 class='nav-section-title' id='section-practitioners-guide'>
                             Practitioners guide <a class='headerlink' href='#section-practitioners-guide' title='Permanent link'>↵</a>
