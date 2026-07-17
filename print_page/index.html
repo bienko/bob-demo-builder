@@ -1287,10 +1287,6 @@ With the environment assembled and validated, you will next put Bob to work: tra
 <p>IBM Bob is powered by generative AI and LLMs, and a defining trait of these systems is that they are <em>non-deterministic</em> — unlike the <em>deterministic</em> tools most developers are accustomed to. In practice, that means the same prompt can produce different code from one run to the next. This is both a strength and a quirk of the technology, and it is something to work <em>with</em> rather than against.</p>
 <p><strong>Precision is what tips the odds in your favor.</strong> The more clearly you describe what you want, the more closely Bob's output will mirror your intent; conversely, the smallest change in wording can meaningfully change the generated code. Throughout this lab, your results may differ from the solutions shown — and that is expected, not a defect. Whenever an output diverges, you have three good options: refine the prompt and try again, edit the generated code by hand, or simply proceed if the variation still compiles and runs. Human review remains essential at every step, and never more so than while you are still learning the tool.</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">WANT TO GO DEEPER?</p>
-<p>As prefaced earlier, there is an <em>optional</em> <strong>"advanced"</strong> form of this workflow that is also documented within the same module. Those of you wishing to go hands-on with deploying real-world environments and live services will greatly enjoy the materials. However, due to the potential of significant Bob token consumption and limitations on the number of environments IBM Technology Zone can allocate to IBM sellers at any one time, the "advanced" section is optional material not required for accreditation of this Level 3 courseware.</p>
-</div>
 <h2 id="2-iii-briefing-the-builder"><strong>iii. Briefing the builder</strong></h2>
 <hr />
 <ol>
@@ -1709,7 +1705,7 @@ With the environment assembled and validated, you will next put Bob to work: tra
 <li>Leverage <strong>DEMO_SCRIPT.md</strong> for turning your application into a scripted presentation (or ask Bob to generate one for you)</li>
 </ul>
 <p></br>
-In the chapter ahead, you will learn to author the demo brief yourself according to best practices (the six things every prompt must answer) to produce demos that are expertly tailored to a specific client, industry, and audience.</p>
+The following chapter provides an alternate path for Business Partners to deliver the same demo build and deployment workflow with IBM Bob.</p>
 <hr /></section><section class="print-page" id="3"><p><strong>BOB DEMO-BUILDER MODE</strong></p>
 <h1 id="3-business-partners-deploying-with-demo-builder"><strong>BUSINESS PARTNERS | DEPLOYING WITH DEMO BUILDER</strong></h1>
 <div class="admonition note">
@@ -2300,7 +2296,7 @@ In the chapter ahead, you will learn to author the demo brief yourself according
 </li>
 </ol>
 <hr />
-<ol start="55">
+<ol start="52">
 <li>
 <p>The current page of the demo app looks correct. Continue clicking through the other pages to verify there are no broken layouts or missing data before proceeding.</p>
 <p><p align="left">
@@ -2309,16 +2305,16 @@ In the chapter ahead, you will learn to author the demo brief yourself according
 </li>
 </ol>
 <hr />
-<ol start="56">
+<ol start="53">
 <li>
-<p>Here is the AI Agent! You may have a similar web app with multiple tabs — or everything may sit on one page. You will return here shortly; continue exploring for now.</p>
+<p>Here is the fully-realized AI Agent. You may have a similar web app with multiple tabs (or everything might sit on one page.) You will return here shortly; continue exploring for now.</p>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/6c9b1cc9-a75c-4602-85e2-bfdb5ee000fa/File_83bac357b9a34a37a758b29bdc3c0d39_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/6c9b1cc9-a75c-4602-85e2-bfdb5ee000fa/File_83bac357b9a34a37a758b29bdc3c0d39_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
 </li>
 </ol>
 <hr />
-<ol start="57">
+<ol start="54">
 <li>
 <p>The architecture diagram looks good. Return to the AI Agent.</p>
 <p><p align="left">
@@ -2327,7 +2323,7 @@ In the chapter ahead, you will learn to author the demo brief yourself according
 </li>
 </ol>
 <hr />
-<ol start="58">
+<ol start="55">
 <li>
 <p>Select one of the scenarios. Here, we selected the <strong>CNC Spindle Bearing Wear</strong> scenario.</p>
 <p><p align="left">
@@ -2336,7 +2332,7 @@ In the chapter ahead, you will learn to author the demo brief yourself according
 </li>
 </ol>
 <hr />
-<ol start="59">
+<ol start="56">
 <li>
 <p>The moment of truth: click <strong>Analyze Equipment</strong> (or a similar blue button) to run the AI analysis demo.</p>
 <p><p align="left">
@@ -2345,7 +2341,7 @@ In the chapter ahead, you will learn to author the demo brief yourself according
 </li>
 </ol>
 <hr />
-<ol start="60">
+<ol start="57">
 <li>
 <p>Success! Review the analysis.</p>
 <p>If you experience errors here, simply screenshot them and send them to Bob, as before.</p>
@@ -2355,7 +2351,7 @@ In the chapter ahead, you will learn to author the demo brief yourself according
 </li>
 </ol>
 <hr />
-<ol start="61">
+<ol start="58">
 <li>
 <p>Try another scenario — <strong>Hydraulic Press Seal Failure</strong>. Here, an option appears to auto-create a (mock) <strong>work order</strong>. Try it.</p>
 <p><p align="left">
@@ -2364,7 +2360,7 @@ In the chapter ahead, you will learn to author the demo brief yourself according
 </li>
 </ol>
 <hr />
-<ol start="62">
+<ol start="59">
 <li>
 <p>Success — work order created!</p>
 <p>Feel free to continue exploring your demo app, refining it as you wish. With a functioning demonstration in hand, the core of this lab is complete.</p>
@@ -2376,16 +2372,17 @@ In the chapter ahead, you will learn to author the demo brief yourself according
 <hr />
 <h2 id="3-ix-present-it-the-demo-script"><strong>ix. Present it: the demo script</strong></h2>
 <hr />
-<ol start="63">
+<ol start="60">
 <li>
-<p>Back within IBM Bob, look inside the <strong>"demos"</strong> folder. You will see a Markdown file named something similar to <strong>DEMO_SCRIPT.md</strong> — click on it.</p>
+<p>Back within the IBM Bob IDE, look inside the <strong><code>/demos</code></strong> folder.</p>
+<p>You will see a Markdown file named something similar to <strong><code>DEMO_SCRIPT.md</code></strong> — click on it.</p>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/37ec9f95-9f54-4f50-b728-fc9b1669fb5c/File_789731b122194d67afe65e8ae210dfb6_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/37ec9f95-9f54-4f50-b728-fc9b1669fb5c/File_789731b122194d67afe65e8ae210dfb6_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
 </li>
 </ol>
 <hr />
-<ol start="64">
+<ol start="61">
 <li>
 <p>Right-click and press <strong>"Open Preview"</strong> within IBM Bob to see a formatted version of the script.</p>
 <p><p align="left">
@@ -2394,7 +2391,7 @@ In the chapter ahead, you will learn to author the demo brief yourself according
 </li>
 </ol>
 <hr />
-<ol start="65">
+<ol start="62">
 <li>
 <p>Finally, observe that IBM Bob's Pre-Sales Demo Builder mode created an accompanying preflight checklist and verbal presentation script to sit alongside your demo app. To modify it, simply describe the desired changes to Bob.</p>
 <p><strong>Congratulations — you have now built a demo with IBM Bob!</strong></p>
@@ -2407,13 +2404,12 @@ In the chapter ahead, you will learn to author the demo brief yourself according
 <h2 id="3-x-key-takeaways"><strong>x. Key takeaways</strong></h2>
 <hr />
 <ul>
-<li>The Business Partner path is <strong>fully self-contained</strong>: a packaged download from Seismic, unzipped and opened within the Bob IDE, with the <em>IBM Pre-Sales Demo Builder</em> mode pre-loaded — no Marketplace, tokens, or MCP credentials required</li>
-<li>The intake questions are genuine decision points — build approach, audience, environment, deployment — with <strong>mock mode</strong> and <strong>run locally</strong> as the crucial selections for this flow</li>
+<li>The Business Partner path is <strong>fully self-contained</strong>: a packaged download from Seismic, unzipped and opened within the Bob IDE, with the <em>IBM Pre-Sales Demo Builder</em> mode pre-loaded (no Marketplace, tokens, or MCP credentials required)</li>
 <li>The <strong>Shield (Permissions)</strong> icon governs auto-approval: full auto-approve keeps the build uninterrupted, while manual approvals preserve step-by-step control at the cost of more clicking</li>
 <li>A complete build takes roughly <strong>20 minutes</strong> and <strong>15–20 Bobcoins</strong>, and includes a self-review pass in which Bob validates and repairs its own work (the Carbon v11 icon sweep) before declaring completion</li>
-<li>The <strong>error-iteration pattern</strong> — paste the console log or a screenshot into the Agentic Sidebar, in natural language — is the universal remedy for startup issues, bugs, and aesthetic refinements alike</li>
+<li>The <strong>error-iteration pattern</strong> (pasting the console log or a screenshot into the Agentic Sidebar, in natural language) is the recommended remedy for startup issues, bugs, and aesthetic refinements alike</li>
 <li>A Bob-generated <strong>quickstart script</strong> collapses the two-terminal startup sequence into a single click</li>
-<li><strong>DEMO_SCRIPT.md</strong> turns the build into a presentation: a preflight checklist plus a verbal walkthrough, modifiable on request</li>
+<li><strong><code>DEMO_SCRIPT.md</code></strong> turns the build into a presentation: a preflight checklist plus a verbal walkthrough, modifiable on request</li>
 </ul>
 <p></br>
 In the chapter ahead, you will learn to author the demo brief yourself according to best practices (the six things every prompt must answer) to produce demos that are expertly tailored to a specific client, industry, and audience.</p>
