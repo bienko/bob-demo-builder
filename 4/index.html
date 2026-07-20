@@ -670,13 +670,13 @@
 <hr />
 <p>The single biggest cause of weak demos is a vague problem statement. The Demo Builder's Phase-1 intake expects a <strong>structured brief</strong>, so front-load it where possible.</p>
 <p><strong>Click to expand</strong> on the following best practices.</p>
-<details class="note">
+<details class="info">
 <summary>#1: Lead with the business pain, not the technology.</summary>
 <p>❌ "Build a watsonx.ai demo for a bank."</p>
 <p>✅ "A retail bank loses ~$4M/year on false-positive fraud alerts that block legitimate cardholders. Show how Granite 3 + a transaction-context RAG cuts false positives 40% while keeping recall ≥ 99.2%."</p>
 <p>The first version forces Bob to invent a problem. The second pins the KPI, the baseline, and the target — which then drive the Dashboard KPIs, the <code>ResultsPage</code> before and after, as well as the <code>PILOT_PLAN</code> success metrics. One sentence of business pain propagates through the entire artifact set.</p>
 </details>
-<details class="abstract">
+<details class="info">
 <summary>#2: Name the persona <em>and</em> the demo audience, separately.</summary>
 <p>These are not the same. The <strong>persona</strong> is who uses the app on screen; the <strong>audience</strong> is who's watching the demo.</p>
 <blockquote>
@@ -701,13 +701,13 @@
 <hr />
 <p>The Demo Builder <strong>always</strong> uses synthetic data: a non-negotiable that ships as an ambient Rule. The user's (your) responsibility is to shape that synthetic data so that the demonstration emulates the client's world and business environment.</p>
 <p><strong>Click to expand</strong> on the following best practices.</p>
-<details class="note">
+<details class="info">
 <summary>#1: Describe data shape, not just data type.</summary>
 <p>❌ "Generate transaction data."</p>
 <p>✅ "500 synthetic card transactions over the last 90 days, fields: <code>tx_id</code>, <code>cardholder_id</code>, <code>merchant_category</code> (MCC), <code>amount_usd</code>, <code>country_code</code>, <code>device_fingerprint</code>, <code>is_flagged</code>. ~3% should be flagged. Include 5 'edge case' rows we can demo on (geo-velocity, MCC mismatch, amount anomaly, new-device, fast burst)."</p>
 <p>This maps cleanly to <code>synthetic_data_service.py</code> (Faker seed=42) and hands Bob the exact preset scenarios for the SolutionPage.</p>
 </details>
-<details class="abstract">
+<details class="info">
 <summary>#2: Call out integration <em>boundaries</em>, not implementations.</summary>
 <p>Tell Bob what the demo <em>pretends</em> to integrate with, so the architecture diagram and mock services are believable:</p>
 <blockquote>
@@ -726,14 +726,14 @@
 <hr />
 <p>This is the criteria that many users will miss (or intentionally skip). It's also the single biggest accelerator. Bob will happily build everything — your responsibility is to tell Bob what <em>not</em> to do.</p>
 <p><strong>Click to expand</strong> on the following best practices.</p>
-<details class="note">
+<details class="info">
 <summary>#1: Cap the surface area: 5 pages, 3 scenarios, 1 wow moment.</summary>
 <p>The Demo Builder's defaults are a 5-page React shell (Dashboard, Problem, Solution, Results, Architecture) plus 3 preset scenarios. <strong>Don't expand this for a first build.</strong></p>
 <blockquote>
 <p><em>Scope: the 5 standard pages only. No login screen, no admin panel, no multi-tenant. 3 preset scenarios on <code>SolutionPage</code>. No user-typed input during live demo.</em></p>
 </blockquote>
 </details>
-<details class="abstract">
+<details class="info">
 <summary>#2: Explicitly defer <em>real</em> integrations to the pilot.</summary>
 <p>Anything requiring real credentials, real data, or real customer systems belongs in <code>PILOT_PLAN.md</code>, not in the demo build:</p>
 <blockquote>
@@ -752,14 +752,14 @@
 <hr />
 <p>The Demo Builder covers the full IBM portfolio. Be deliberate about which products are <strong>primary</strong> (what you intend to <em>demo</em>) versus <strong>expansion</strong> (what will <em>appear</em> within architecture diagrams and carry the land-and-expand story).</p>
 <p><strong>Click to expand</strong> on the following best practices.</p>
-<details class="note">
+<details class="info">
 <summary>#1: Pick 1–2 primary products, maximum.</summary>
 <p>A 20-minute demo cannot do justice to four products. Pick the hero, name a co-star, and let everything else live in the architecture diagram:</p>
 <blockquote>
 <p><em>Primary: watsonx.ai (Granite 3-8B-instruct) for inference. Co-star: watsonx.data (Iceberg + Milvus) for the RAG context. Expansion-only (architecture diagram, not built): watsonx.governance (FactSheets), Instana (observability), CP4BA (case routing).</em></p>
 </blockquote>
 </details>
-<details class="abstract">
+<details class="info">
 <summary>#2: Specify the model and region, don't let Bob default.</summary>
 <p>The default <code>ibm/granite-3-8b-instruct</code> on <code>us-south</code> is fine for most demos, but be explicit when you have a reason:</p>
 <blockquote>
@@ -778,14 +778,14 @@
 <hr />
 <p>The Demo Builder runs <code>check-compliance.sh</code> at the end of a build. Ask for it explicitly, then read the output to verify.</p>
 <p><strong>Click to expand</strong> on the following best practices.</p>
-<details class="note">
+<details class="info">
 <summary>#1: Demand the compliance run, then read it.</summary>
 <blockquote>
 <p><em>After the build, run <code>scripts/check-compliance.sh</code> and paste the output. I want to see: no PII, no hardcoded keys, Carbon v11 in deps, UBI 9 base images, DemoBanner present, all 4 docs present (README, ARCHITECTURE, PILOT_PLAN, DEMO_SCRIPT).</em></p>
 </blockquote>
 <p>If Bob skips a check, push back: <em>"Re-run check-compliance.sh and confirm item X."</em></p>
 </details>
-<details class="abstract">
+<details class="info">
 <summary>#2: Test the three <em>must work</em> flows yourself.</summary>
 <p>Before declaring done, manually verify:</p>
 <ol>
@@ -806,14 +806,14 @@
 <hr />
 <p>Set the bar at the <em>top</em> of the prompt so that Bob correctly calibrates from the onset.</p>
 <p><strong>Click to expand</strong> on the following best practices.</p>
-<details class="note">
+<details class="info">
 <summary>#1: Anchor on the <em>Client Engineering pilot in 3–4 weeks</em> close.</summary>
 <p>The demo's job is to land the pilot, which makes <code>PILOT_PLAN.md</code> the most important document in the package:</p>
 <blockquote>
 <p><em>Close the demo with the line: "Working pilot in 3–4 weeks with IBM Client Engineering." PILOT_PLAN.md must show: Sprint 0 (env+access), Sprint 1 (data+model), Sprint 2 (integration+governance), Sprint 3 (E2E+handover). Team: 1 Tech Sales, 1–2 Client Engineers, 1 Data Eng, 1 AI Eng, 1 PM.</em></p>
 </blockquote>
 </details>
-<details class="abstract">
+<details class="info">
 <summary>#2: Demand IBM-grade UI fidelity.</summary>
 <blockquote>
 <p><em>All UI must use @carbon/react v11. Theme g90. IBM Plex fonts. Color scale: Blue 60 (#0f62fe) for primary, Purple 60 (#6929c4) for watsonx.data accents, Teal 70 (#005d5d) for governance. Branding: "Built with IBM watsonx" — never "Powered by Watson".</em></p>
