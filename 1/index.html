@@ -614,14 +614,14 @@
 <hr />
 <ol start="5">
 <li>
-<p>Back on the <strong>README</strong> page, scroll down until you reach <em>Step 2 - Create a GitHub API Token</em>.</p>
+<p>Back on the <strong>README</strong> page, scroll down until you reach the <strong>Configure Marketplace Authentication</strong> header.</p>
 <p><a class="glightbox" href="../_attachments/setup-iii-5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../_attachments/setup-iii-5.png" /></a></p>
 </li>
 </ol>
 <hr />
 <ol start="6">
 <li>
-<p><strong>Click the link:</strong> <a href="https://github.ibm.com/settings/tokens/new?utm_source=skills_network&amp;utm_content=in_lab_content_link&amp;utm_id=Lab-Bob+Demo+Builder+L3+v1-v1">https://github.ibm.com/settings/tokens/new</a></p>
+<p><strong>Click the link</strong> for <em>Create a GitHub API Token</em>: <a href="https://github.ibm.com/settings/tokens/new?utm_source=skills_network&amp;utm_content=in_lab_content_link&amp;utm_id=Lab-Bob+Demo+Builder+L3+v1-v1">https://github.ibm.com/settings/tokens/new</a></p>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/a926b748-bb6e-43ed-a93d-2b907be9e82b/File_7f1e65418ce247dfa28c931f9fec303c_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/a926b748-bb6e-43ed-a93d-2b907be9e82b/File_7f1e65418ce247dfa28c931f9fec303c_text_export.jpeg" alt="" width="600" /></a>
 </p></p>
@@ -630,7 +630,7 @@
 <hr />
 <ol start="7">
 <li>
-<p>Assign your <strong>GitHub PAT</strong> a name that you will recognize later.</p>
+<p>Assign your <strong>GitHub Personal Access Token (PAT)</strong> a name that you will recognize later.</p>
 <p>Populate the <strong>Note</strong> field with <code>Bob Marketplace</code> or something similar.</p>
 <p><p align="left">
 <a class="glightbox" href="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/bf21c83a-baaa-4a8f-aece-141c25fdf20a/File_5982113a0bcf495392e8fec0578a6bcd_text_export.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-06-29/bf21c83a-baaa-4a8f-aece-141c25fdf20a/File_5982113a0bcf495392e8fec0578a6bcd_text_export.jpeg" alt="" width="600" /></a>
@@ -721,9 +721,13 @@
 <hr />
 <ol start="16">
 <li>
-<p><strong>Client Engineering Bob Marketplace</strong> should now appear within the <em>Installed</em> section of the <strong>Extensions</strong> panel.</p>
-<p>Take note that a Marketplace icon has also appeared along the tabs on the left-hand sidebar of the Bob IDE.</p>
+<p><strong>CE Bob Marketplace</strong> should now appear within the <em>Installed</em> section of the <strong>Extensions</strong> panel.</p>
 <p><a class="glightbox" href="../_attachments/setup-iii-16.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../_attachments/setup-iii-16.png" /></a></p>
+<div class="highlight"><pre><span></span><code>!!! warning &quot;TROUBLESHOOTING: Authentication failed...&quot;
+If the CE Bob Marketplace panel is littered with `Authentication failed...` messages (like in the screenshot above), don&#39;t panic. This is **expected.** You will need to provide the extension with the GitHub PAT recorded in the previous steps before the extension successfully authenticates.
+
+Instructions for how to do so are covered in the steps ahead - let&#39;s keep going.
+</code></pre></div>
 </li>
 </ol>
 <hr />
@@ -747,11 +751,8 @@
 <hr />
 <ol start="19">
 <li>
-<p>The <strong>IBM Pre-Sales Demo Builder</strong> extension will appear under the <em>Collections</em> dropdown. <strong>Double-click</strong> it to open a detailed panel view.</p>
-<ul>
-<li>Before the extension can be installed, register the GitHub PAT created earlier</li>
-<li>Click the small <strong>key icon</strong> (<em>Bob Marketplace: Set Repository Token</em>) near the top of the CE Bob Marketplace panel</li>
-</ul>
+<p>The <em>IBM Pre-Sales Demo Builder</em> extension will appear under the <em>Collections</em> dropdown. <strong>Double-click</strong> it to open a detailed panel view.</p>
+<p>To remove the <code>Authentication failed...</code> errors, click the <strong>Bob Marketplace: Set Repository Token</strong> (the <em>small key</em> icon) in the top-right corner of the <em>CE Bob Marketplace</em> panel.</p>
 <p><a class="glightbox" href="../_attachments/setup-iii-19.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../_attachments/setup-iii-19.png" /></a></p>
 </li>
 </ol>
@@ -759,13 +760,18 @@
 <ol start="20">
 <li>
 <p>An input window expands at the top of your screen, within the IBM Bob search bar.</p>
+<p>Left-click (or highlight with your up and down arrow keys followed by the <span class="keys"><kbd class="key-enter">Enter</kbd></span> key) the following option:</p>
+<div class="admonition warning">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>https://github.ibm.com/ClientEngineering/bob
+</code></pre></div>
+</div>
 <p><a class="glightbox" href="../_attachments/setup-iii-20.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../_attachments/setup-iii-20.png" /></a></p>
 </li>
 </ol>
 <hr />
 <ol start="21">
 <li>
-<p>Copy and paste the GitHub PAT into the input window and press <span class="keys"><kbd class="key-enter">Enter</kbd></span> to continue.</p>
+<p>Copy and paste your <em>GitHub PAT</em> (recorded earlier in Step 12) into the input window and press <span class="keys"><kbd class="key-enter">Enter</kbd></span> to confirm.</p>
 <p><a class="glightbox" href="../_attachments/setup-iii-21.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../_attachments/setup-iii-21.png" /></a></p>
 </li>
 </ol>
@@ -781,8 +787,8 @@
 <hr />
 <ol start="23">
 <li>
-<p>Next, a project workspace must be established.</p>
-<p>Click the <strong>Explorer</strong> tab from the Bob IDE sidebar.</p>
+<p>With the GitHub PAT successfully authenticated within the CE Bob Marketplace extension, all previous <code>Authentication failed...</code> errors should have disappeared and been replaced with catalogs of IBM-curated CE Bob marketplace assets.</p>
+<p>Next, a project workspace must be established. Click the <strong>Explorer</strong> tab from the Bob IDE sidebar.</p>
 <p><a class="glightbox" href="../_attachments/setup-iii-23.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../_attachments/setup-iii-23.png" /></a></p>
 </li>
 </ol>
@@ -1075,13 +1081,13 @@
 <li>
 <p>Copy the following prompt to your clipboard. Before executing the instruction within the Agentic Sidebar, <strong>modify Lines 2 through 4</strong> to replace each <code>your-key</code> placeholder with the actual credentials gathered and stored earlier.</p>
 <p>When ready, paste the modified prompt into the Agentic Sidebar and press <span class="keys"><kbd class="key-enter">Enter</kbd></span> to execute the instruction.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span>
-<span class="normal"><a href="#__codelineno-0-3">3</a></span>
-<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>Help me setup the Carbon and TechZone MCP servers. Here are my credentials:
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="hll">Carbon Authorization Code: your-key
-</span><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="hll">Carbon Session ID: your-key
-</span><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="hll">TechZone API Key: your-key
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>Help me setup the Carbon and TechZone MCP servers. Here are my credentials:
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="hll">Carbon Authorization Code: your-key
+</span><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="hll">Carbon Session ID: your-key
+</span><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="hll">TechZone API Key: your-key
 </span></code></pre></div></td></tr></table></div>
 <p><em>If you have past experience with configuring and using MCP with Bob, you can also add your credentials to the <code>mcp.json</code> file manually.</em></p>
 <details class="warning">
@@ -1142,7 +1148,7 @@
 <ol start="51">
 <li>
 <p>Finally, refresh IBM Bob to ensure the MCP servers will work for the tasks ahead. In the top search bar, type:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&gt; reload window
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&gt; reload window
 </code></pre></div>
 <p>Click the <strong>"Developer: Reload Window"</strong> button from the drop-down options.</p>
 <p><p align="left">
