@@ -603,21 +603,42 @@
 </div>
 <h2 id="1-ii-before-you-start"><strong>ii. Before you start</strong></h2>
 <hr />
-<div class="admonition success">
-<p class="admonition-title">PRE-REQUISITES</p>
-<ul>
-<li><strong>IBM Bob</strong> is installed and open</li>
-<li>You can sign in to <a href="http://github.ibm.com/?utm_source=skills_network&amp;utm_content=in_lab_content_link&amp;utm_id=Lab-Bob+Demo+Builder+L3+v1-v1">github.ibm.com</a></li>
-<li>Your <strong>IBMid</strong> credentials are at hand</li>
-<li>You are connected to the <strong>IBM Intranet</strong> (or via Cisco AnyConnect VPN)</li>
-<li>A local folder is available to serve as your Bob project workspace</li>
-</ul>
-<p>No additional downloads or staged files are required before you begin.</p>
-</div>
+<p>Ensure that you have completed <strong>all</strong> of the following pre-requisites before embarking on the lab setup. Two minutes of checks now will save you an hour of troubleshooting later.</p>
+<ol>
+<li>
+<p><strong>IBM Bob IDE</strong> has been installed on your local machine.</p>
+</li>
+<li>
+<p>Your machine is connected via a Cisco AnyConnect VPN to the <strong>IBM Intranet</strong>. <em>Without a VPN or Intranet connection, the CE Bob Marketplace extension will not display the necessary collections and pages of this lab documentation will remain inaccessible.</em></p>
+</li>
+<li>
+<p>You possess an <strong>IBM GitHub</strong> account — or have requested to link your <em>personal</em> GitHub account to the <em>IBM</em> GitHub (enterprise) organization.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">LINK A PERSONAL GITHUB ACCOUNT TO THE IBM GITHUB ORGANIZATION</p>
+<p>Personal accounts on GitHub will not be able to access repositories stored on the IBM GitHub (enterprise) organization without first requesting access.</p>
+<p>To link a personal GitHub account to the IBM GitHub organization, you will require valid <strong>IBMid</strong> credentials.</p>
+<ol>
+<li>
+<p>In order to request access, first visit the following website (ensure your VPN connection is active):</p>
 <div class="admonition warning">
-<p class="admonition-title">A WORD ON WORKING WITH GENERATIVE AI</p>
-<p>IBM Bob is powered by generative AI and LLMs, and a defining trait of these systems is that they are <em>non-deterministic</em> — unlike the <em>deterministic</em> tools most developers are accustomed to. In practice, that means the same prompt can produce different code from one run to the next. This is both a strength and a quirk of the technology, and it is something to work <em>with</em> rather than against.</p>
-<p><strong>Precision is what tips the odds in your favor.</strong> The more clearly you describe what you want, the more closely Bob's output will mirror your intent; conversely, the smallest change in wording can meaningfully change the generated code. Throughout this lab, your results may differ from the solutions shown — and that is expected, not a defect. Whenever an output diverges, you have three good options: refine the prompt and try again, edit the generated code by hand, or simply proceed if the variation still compiles and runs. Human review remains essential at every step, and never more so than while you are still learning the tool.</p>
+<p><strong><a href="#1-ibm.biz-gh-user-mapper" target="_blank">ibm.biz/gh-user-mapper</a></strong></p>
+</div>
+</li>
+<li>
+<p>Under the <strong>Account Linking</strong> header, locate the <em>IBM GitHub Enterprise</em> tile.</p>
+</li>
+<li>
+<p>Click the blue <strong>Authenticate</strong> button and supply your IBMid credentials, as well as details about your personal GitHub account name.</p>
+</li>
+<li>
+<p>You may be emailed to join the IBM GitHub organization, if you were not previously a member. Please accept the invitation and await confirmation before atempting to log in.</p>
+</li>
+</ol>
+<div class="admonition quote">
+<p><em>NOTE:</em> <strong>Two-factor authentication</strong> (2FA) must be enabled under your <em>GitHub security settings</em> before you can join an IBM organization.</p>
+</div>
 </div>
 <h2 id="1-iii-install-ce-bob-marketplace-demo-builder"><strong>iii. Install CE Bob Marketplace &amp; Demo Builder</strong></h2>
 <hr />
@@ -949,6 +970,11 @@
 <li>Skills are visible</li>
 <li>MCP Servers are visible</li>
 </ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">A WORD ON WORKING WITH GENERATIVE AI</p>
+<p>IBM Bob is powered by generative AI and LLMs, and a defining trait of these systems is that they are <em>non-deterministic</em> — unlike the <em>deterministic</em> tools most developers are accustomed to. In practice, that means the same prompt can produce different code from one run to the next. This is both a strength and a quirk of the technology, and it is something to work <em>with</em> rather than against.</p>
+<p><strong>Precision is what tips the odds in your favor.</strong> The more clearly you describe what you want, the more closely Bob's output will mirror your intent; conversely, the smallest change in wording can meaningfully change the generated code. Throughout this lab, your results may differ from the solutions shown — and that is expected, not a defect. Whenever an output diverges, you have three good options: refine the prompt and try again, edit the generated code by hand, or simply proceed if the variation still compiles and runs. Human review remains essential at every step, and never more so than while you are still learning the tool.</p>
 </div>
 <h2 id="1-v-connect-the-mcp-servers"><strong>v. Connect the MCP servers</strong></h2>
 <hr />
