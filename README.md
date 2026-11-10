@@ -1,2 +1,2 @@
 # bob-demo-builder
-IBM Bob Demo-Builder Mode
+IBM Bob Demo Builder

@@ -1,0 +1,1283 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Bob Demo-Builder Mode">
+      
+      
+        <meta name="author" content="Christopher Bienko (cdbienko@us.ibm.com)">
+      
+      
+      
+        <link rel="prev" href="../3/">
+      
+      
+        <link rel="next" href="../5/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>4. Deployment strategies - Bob Demo-Builder Mode</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../styles/override-print.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#deployment-strategies" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Bob Demo-Builder Mode" class="md-header__button md-logo" aria-label="Bob Demo-Builder Mode" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bob Demo-Builder Mode
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4. Deployment strategies
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Bob Demo-Builder Mode" class="md-nav__button md-logo" aria-label="Bob Demo-Builder Mode" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Bob Demo-Builder Mode
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Table of Contents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Setup and registration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1. Setup and registration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For IBM regular employees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For IBM Business Partners
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Deploying with demo builder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practitioners guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Practitioners guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Prompting best practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Deployment strategies
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Deployment strategies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#i-scaling-the-ai-maturity-curve-across-an-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        i. Scaling the AI Maturity Curve across an organization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-the-operating-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ii. The operating philosophy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-the-asset-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        iii. The asset model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-asset-model-coherence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        iv. Asset model coherence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v. Modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-skills-and-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vi. Skills and Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vii-decision-gates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vii. Decision gates
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viii-trust-and-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        viii. Trust and compliance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ix-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ix. Key takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Leveraging asset templates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#i-scaling-the-ai-maturity-curve-across-an-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        i. Scaling the AI Maturity Curve across an organization
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-the-operating-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ii. The operating philosophy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-the-asset-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        iii. The asset model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-asset-model-coherence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        iv. Asset model coherence
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v. Modes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-skills-and-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vi. Skills and Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vii-decision-gates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vii. Decision gates
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viii-trust-and-compliance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        viii. Trust and compliance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ix-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ix. Key takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div><p><strong>BOB DEMO-BUILDER MODE</strong></p>
+<h1 id="deployment-strategies"><strong>DEPLOYMENT STRATEGIES</strong></h1>
+<hr>
+<h2 id="i-scaling-the-ai-maturity-curve-across-an-organization"><strong>i. Scaling the AI Maturity Curve across an organization</strong></h2>
+<p></p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" controls="" alt="type:video"><source src="../_videos/L3-Demo-Builder-Deployment.mp4" type="video/mp4"></video></div><p></p>
+<div class="admonition note">
+<p>Christopher Bienko <em>(AI Enablement GTM Product Manager)</em> provides an overview of the <em>Deployment Strategies</em> curriculum for Bob Demo Builder hands-on enablement. <strong><a href="https://ibm.seismic.com/Link/Content/DC3VhTF4FQVGdGWCC2H77MBcqRmj" target="_blank">[2 min]</a></strong></p>
+</div>
+<p>IBM sellers and technical sales teams (and business partners alike) are at their greatest effectiveness when they are able to scale expertise as reusable and version-verified assets. Those assets pattern a software engineer's best <em>methods</em> (<strong>Modes</strong>) and <em>knowledge</em> (<strong>Skills</strong>), as well as their <em>reach</em> (<strong>MCPs</strong>) and <em>standards</em> (<strong>Rules</strong>).</p>
+<div class="admonition note">
+<p><strong>This is the storyline that a C-suite audience needs to hear about scaling AI beyond isolated pilots</strong>. The strategy takes what an individual developer learns to do by hand and converts it into an organizational asset.</p>
+</div>
+<p>Consider these statements relative to the <strong>AI Maturity Curve</strong> for a moment, and notice that every stage of your journey is represented within it. Everything you have practiced across these hands-on modules represents an <em>individual</em> progression along the <strong>AI Maturity Curve</strong> — from accepting Bob-generated code suggestions and approving plans through to encoding rules and governing tools:</p>
+<ul>
+<li><em>Method</em> is the plan-first discipline of <strong><a href="https://ibm.github.io/bob-l3/delegate/2-1/" target="_blank">Module 2 | Delegate</a></strong>, packaged as an asset.</li>
+<li><em>Standards</em> are the Rules of <strong><a href="https://ibm.github.io/bob-l3/tailor/3-2/" target="_blank">Module 3 | Tailor</a></strong>, made repeatable.</li>
+<li><em>Reach</em> is the MCP of <strong><a href="https://ibm.github.io/bob-l3/scale/4-3/" target="_blank">Module 4 | Scale &amp; Extend</a></strong>, with applied governance.</li>
+</ul>
+<p>This chapter examines what happens when an <em>organization</em> (rather than an <em>individual)</em> deliberately undertakes same AI Maturity progression.</p>
+<hr>
+<h2 id="ii-the-operating-philosophy"><strong>ii. The operating philosophy</strong></h2>
+<hr>
+<p>The experience this strategy delivers is that of working with a senior engineer who does the heavy lifting (<em>not</em> a code generator the human supervises.) The division of labor is explicit:</p>
+<table>
+<thead>
+<tr>
+<th>THE HUMAN'S JOB</th>
+<th>BOB'S JOB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frame the problem &amp; business intent</td>
+<td>Translate intent into a working solution</td>
+</tr>
+<tr>
+<td>Choose between options at <strong>decision gates</strong></td>
+<td>Surface the options, with trade-offs</td>
+</tr>
+<tr>
+<td>Approve architecture, product fit, compliance</td>
+<td>Generate complete, runnable artifacts</td>
+</tr>
+<tr>
+<td>Own the client relationship &amp; the narrative</td>
+<td>Build, run, test, and self-correct</td>
+</tr>
+<tr>
+<td>Determines "go / no-go"</td>
+<td>Report outcomes faithfully (incl. failures)</td>
+</tr>
+</tbody>
+</table>
+<p>Equally important are the <strong>anti-patterns that the strategy explicitly designs out</strong>, each one representing a regression toward a less mature posture along the Curve:</p>
+<div class="admonition failure">
+<p class="admonition-title">ANTI-PATTERNS</p>
+<ul>
+<li>Human copy-pastes code from Bob and runs it manually</li>
+<li>Human debugs Bob's output line-by-line</li>
+<li>Bob asks the human to perform steps Bob can perform itself</li>
+<li>Bob produces descriptions or pseudocode instead of runnable artifacts</li>
+</ul>
+</div>
+<p>The standard to hold: <strong>if a step can be automated or verified (or simply looked up), Bob does it.</strong> The human's time is spent only where judgment is required. In the cases where Bob requires a human-in-the-loop to make a judgement call, it will ask crisp, optioned questions before proceeding to execute the task.</p>
+<hr>
+<h2 id="iii-the-asset-model"><strong>iii. The asset model</strong></h2>
+<hr>
+<p><strong>THREE COMPOSABLE ASSETS, ONE AMBIENT LAYER</strong></p>
+<p>Everything built for Bob under this strategy is one of four asset types. Three are <strong>pulled</strong> on demand — MODE, SKILL and MCP — and one is <strong>pushed</strong> and always on for its scope: the RULE. Keeping them cleanly separated is the core governance rule of the entire strategy.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  ┌─────────────────────────────────────────────────────────────────────┐
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  │  RULE  AMBIENT GUARDRAILS &amp; HOUSE STYLE — always on, by scope        │  "the standards"
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  │  non-negotiables · conventions · client carve-outs   (pushed)        │
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  │  ┌───────────────────────────────────────────────────────────────┐  │
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  │  │  MODE  METHOD &amp; PERSONA — how to think and sequence the work   │  │  "the know-how"
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  │  │  build lifecycle · non-negotiables · decision gates            │  │
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  │  │             │ references                 │ uses                │  │
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  │  │  ┌──────────▼───────────────┐   ┌────────▼──────────────────┐  │  │
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  │  │  │ SKILL KNOWLEDGE &amp; CAPAB.  │   │  MCP  INTEGRATION BRIDGE   │  │  │
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  │  │  │ product/CLI/contract know │   │  reach a system when no    │  │  │
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  │  │  │ verified, single-source   │◄──┤  SDK/CLI is available      │  │  │
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  │  │  │ "the playbook"            │   │  "the hands"               │  │  │
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>  │  │  └───────────────────────────┘   └───────────────────────────┘  │  │
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  │  └───────────────────────────────────────────────────────────────┘  │
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>  └─────────────────────────────────────────────────────────────────────┘
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>   pulled on demand:  MODE (selected) · SKILL (by relevance) · MCP (invoked)
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>   pushed always-on:  RULE (by scope) — wraps and constrains everything above
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>LAYER</th>
+<th>ANSWERS</th>
+<th>LIVES ONCE IN…</th>
+<th>ANALOGY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MODE</strong></td>
+<td><em>How do we approach this class of engagement?</em></td>
+<td>a <code>customModes</code> YAML</td>
+<td>The senior engineer's playbook + judgment</td>
+</tr>
+<tr>
+<td><strong>SKILL</strong></td>
+<td><em>What do I need to know to use product/capability X correctly?</em></td>
+<td>a <code>SKILL.md</code> (+ <code>references/</code>)</td>
+<td>A verified field manual</td>
+</tr>
+<tr>
+<td><strong>MCP</strong></td>
+<td><em>How do I actually reach system Y from Bob?</em></td>
+<td>an MCP server</td>
+<td>A tool plugged into Bob's hands</td>
+</tr>
+<tr>
+<td><strong>RULE</strong></td>
+<td><em>What must always hold, regardless of task or mode?</em></td>
+<td>a <code>.bob/rules/</code> file (or <code>AGENTS.md</code>)</td>
+<td>The team's standing orders / house rules</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p>You have encountered every one of these previously as an individual practitioner. Custom Modes were the subject of <strong><a href="https://ibm.github.io/bob-l3/tailor/3-3/" target="_blank">Module 3.3</a></strong>; Rules the subject of <strong><a href="https://ibm.github.io/bob-l3/tailor/3-2/" target="_blank">Module 3.2</a></strong>; MCP the subject of <strong><a href="https://ibm.github.io/bob-l3/scale/4-3/" target="_blank">Module 4.3</a></strong>. What the asset model contributes is the <em>organizational</em> discipline layered above them: who owns each asset type, where each fact lives, and how the layers compose without duplication.</p>
+</div>
+<h2 id="iv-asset-model-coherence"><strong>iv. Asset model coherence</strong></h2>
+<hr>
+<p>Six non-negotiables keep the asset model coherent as it scales past a dozen modes and skills:</p>
+<ol>
+<li><strong>Knowledge lives once.</strong> Deep product knowledge belongs in a <strong>Skill</strong> and is never duplicated into a mode. The same holds for command-line interface (CLI) and application programming interface (API) knowledge. Modes <em>reference</em> Skills. <em>(If you find yourself pasting CLI flags or YAML schemas into a mode, stop. That's a skill.)</em></li>
+<li><strong>Modes are method rather than memory.</strong> A Mode carries a persona and a build lifecycle. It provides the non-negotiables and the decision gates, and it gives <em>pointers</em> to the Skills it relies on.</li>
+<li><strong>MCP as a last resort.</strong> Prefer a native <strong>SDK or CLI</strong> where possible: these are deterministic and testable, and they can be versioned. Build or adopt an MCP <em>only</em> when no SDK/CLI exists, or if it isn't available in the user's environment.</li>
+<li><strong>Rules constrain but they cannot teach.</strong> Rules are short, always-on imperatives ("synthetic data only", "Carbon for all UI"). Product <em>know-how</em> stays in a Skill (that the Rule may point to.) If a Rule grows flags or schemas (or any how-to), it has become a Skill — move it. Every line in an always-on Rule is paid for on <em>every</em> cycle, so the global set stays lean.</li>
+<li><strong>Every asset is verified against reality, not model memory.</strong> Assets are stamped with the product version (Skills/Modes/MCPs) or owner + review date (Rules).</li>
+<li><strong>One source of distribution.</strong> Assets ship through the EMEA Bob Box (<code>https://ibm.biz/emea-bob-box</code>); the authoring source is the repo.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">THE LITMUS TEST FOR PREVENTING TWO COMMON MISTAKES</p>
+<p><em>Mode vs Skill:</em> method/persona for a whole engagement class → <strong>MODE</strong>; reusable product knowledge → <strong>SKILL</strong>.</p>
+<p><em>Skill vs Rule:</em> "Should this apply even when nobody asked and no trigger fired?" → <strong>RULE</strong> (ambient, by scope). "Does it only matter when a specific product/task comes up, and need depth?" → <strong>SKILL</strong> (pulled by relevance).</p>
+</div>
+<p>Observe how directly <strong>Rule 4</strong> restates the context window economics of <strong><a href="https://ibm.github.io/bob-l3/scale/4-1/" target="_blank">Module 4.1</a></strong>: always-on text competes for the same finite attention budget as everything else within a session. The strategy converts that lesson into standing policy.</p>
+<hr>
+<h2 id="v-modes"><strong>v. Modes</strong></h2>
+<hr>
+<p><strong>THREE GENERAL METHODS AND INDUSTRY SPECIALIZATIONS</strong></p>
+<p>A <em>Mode</em> is a <strong>strategic asset</strong>, or put another way, the codified know-how of how a senior engineer approaches a class of work (potentially carrying IBM IP.) A session runs in exactly one Mode. Three general (horizontal) <em>Modes</em> form the method backbone:</p>
+<table>
+<thead>
+<tr>
+<th>MODE</th>
+<th>SLUG</th>
+<th>PURPOSE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>General Solution Builder</strong></td>
+<td><code>ibm-presales-demo-builder</code></td>
+<td>Embed IBM platforms into a <em>real</em> full-stack solution <em>(Carbon frontend + FastAPI backend + synthetic data + DevOps)</em> that runs in mock or live mode. This is the default approach.</td>
+</tr>
+<tr>
+<td><strong>Application Modernization</strong></td>
+<td><code>ibm-presales-java-modernization</code></td>
+<td>Modernize/refactor application estates <em>(JSphere Suite + Bob)</em>: Java/runtime modernization, dependency &amp; CVE remediation, OpenShift targeting.</td>
+</tr>
+<tr>
+<td><strong>Infrastructure</strong></td>
+<td><code>ibm-presales-infrastructure-builder</code></td>
+<td>Showcase IBM Automation, Integration, Observability, Security, and Asset/Operations platforms when the story is infrastructure, not an app.</td>
+</tr>
+</tbody>
+</table>
+<p>Beyond these sit the <strong>Industry Modes</strong>:</p>
+<ul>
+<li>Financial Services</li>
+<li>Telco</li>
+<li>Healthcare</li>
+<li>Energy</li>
+<li>Manufacturing</li>
+<li>Automotive (plus Connected-Vehicle/SDV and EV &amp; Mobility variants)</li>
+<li>Defense/DIB</li>
+<li>Public Sector</li>
+</ul>
+<p>The critical design decision hinges on the fact that <em>Industry Modes</em> are <strong>replacements, not add-ons</strong>. You select the vertical mode <em>instead of</em> the general one when the engagement is clearly in that domain and depth matters. <em>Industry Modes</em> inherit the general mode's method and add only the vertical layer:</p>
+<ul>
+<li>The vertical knowledge base (standards and regulations, plus the integration landscape)</li>
+<li>Guardrails and carve-outs carried as <em>Mode</em>-specific rules</li>
+<li>Use-case blueprints and mandatory domain artifacts</li>
+<li>Stricter synthetic-data rigor</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">RULE OF THUMB</p>
+<p><strong>Switch to an <em>Industry Mode</em></strong> when the demo's credibility depends on domain depth in areas such as regulatory mapping, standards, or sub-vertical templates. Don't fork an Industry Mode for a one-off. Instead, extend it via a <em>Skill</em>.</p>
+</div>
+<p>Every <em>Mode</em> (general or industry) must satisfy a shared <strong>core contract</strong>:</p>
+<ul>
+<li>A clear persona and engagement class;</li>
+<li>The shared build lifecycle (intake → solution mapping → build → document → verify/compliance → hand-off);</li>
+<li>The shared non-negotiables:<ul>
+<li>Runnable artifacts only</li>
+<li>Synthetic data only</li>
+<li>Secrets via env vars</li>
+<li>Mock-mode with zero external dependencies</li>
+<li>Accessibility</li>
+<li>Honest capability claims</li>
+<li>Compliance checklist before "done"</li>
+</ul>
+</li>
+<li>Decision gates implemented as optioned questions;</li>
+<li>References <em>to</em> (and never duplications <em>of</em>) the <em>Skills</em> it depends on;</li>
+<li>A self-check script (<code>check-compliance.sh</code> / <code>check-carveouts.sh</code>) that can fail the build.</li>
+</ul>
+<hr>
+<h2 id="vi-skills-and-rules"><strong>vi. Skills and Rules</strong></h2>
+<hr>
+<p><strong><em>Skills</em></strong> are portable and repeatable patterns of capabilities and best-practice knowledge. <em>Skills</em> are essentially how Bob "knows" a product, an ingestion contract, an API, or how to drive an MCP.</p>
+<p>Its design principles will feel familiar from the previous chapter:</p>
+<ul>
+<li>Single responsibility (one product per <em>Skill</em>, no mega-<em>Skills</em>);</li>
+<li><strong>Description-driven discovery</strong> where the <code>description</code> field is what triggers the <em>Skill</em>;</li>
+<li><strong>Progressive disclosure</strong> keeps the <code>SKILL.md</code> focused and pushes depth into <code>references/*.md</code>, which can be loaded on-demand;</li>
+<li><strong>Verification</strong> against reality by running the CLI, hitting the API, and then stamping the version and date;</li>
+<li><strong>Pairing with</strong>, and not merging into, any MCP it drives.</li>
+</ul>
+<hr>
+<p><strong><em>Rules</em></strong> are short, always-on constraints that hold regardless of <em>Mode</em> or task. Whereas all <em>Modes</em>, <em>Skills</em>, and <em>MCPs</em> are <strong>pulled</strong>, <em>Rules</em> are <strong>pushed</strong>. Bob loads them automatically for their scope and applies them to every response. <em>Rules</em> are the mechanism that makes trust ubiquitous across a project: present in a quick edit as much as inside a formal mode.</p>
+<hr>
+<p><strong>Scope</strong>, therefore, becomes a deliberate choice and design point.</p>
+<p><em>Rules</em> and self-check scripts are <strong>defense in depth</strong>, not redundancy. The <em>Rule</em> keeps the constraint in front of Bob continuously, shaping every action. The script <em>fails the build</em> if the constraint is violated. One "reminds," while the other "blocks."</p>
+<table>
+<thead>
+<tr>
+<th>SCOPE</th>
+<th>PATH</th>
+<th>USE FOR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Global</strong></td>
+<td><code>~/.bob/rules/</code></td>
+<td>Org-wide standards that include the non-negotiables, security/debug/db hygiene</td>
+</tr>
+<tr>
+<td><strong>Workspace</strong></td>
+<td><code>&lt;project&gt;/.bob/rules/</code></td>
+<td>This project or client's conventions</td>
+</tr>
+<tr>
+<td><strong>Mode-specific</strong></td>
+<td><code>&lt;project&gt;/.bob/rules-{slug}/</code></td>
+<td>Guard-rails owned by one <em>Mode</em>/vertical (e.g. FSI data rigor, Defense carve-outs)</td>
+</tr>
+<tr>
+<td><strong>Team standard</strong></td>
+<td><code>AGENTS.md</code> (workspace root)</td>
+<td>Cross-tool team standards, auto-loaded</td>
+</tr>
+</tbody>
+</table>
+<h2 id="vii-decision-gates"><strong>vii. Decision gates</strong></h2>
+<hr>
+<p>The <strong>decision gate model</strong> is the thread that ties this entire strategy back to the <strong>AI Maturity Curve</strong>. Bob runs the build whilst the human steers at <strong>gates</strong>. Each gate a crisp, optioned question (where the recommended option is presented first), after which Bob proceeds autonomously until the next such gate is reached.</p>
+<table>
+<thead>
+<tr>
+<th>GATE</th>
+<th>WHEN</th>
+<th>THE HUMAN DECIDES</th>
+<th>BOB THEN…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>G0 Intake</strong></td>
+<td>Start</td>
+<td>Use case, industry, audience, duration</td>
+<td>Formalizes the <strong>use case brief</strong></td>
+</tr>
+<tr>
+<td><strong>G1 Product fit</strong></td>
+<td>After intake</td>
+<td>Which IBM products to feature</td>
+<td>Maps use case → products, shows expansion path</td>
+</tr>
+<tr>
+<td><strong>G2 Environment</strong></td>
+<td>Before build</td>
+<td>Mock vs live; which credentials/instance</td>
+<td>Configures dual-mode; wires SDK/CLI/MCP</td>
+</tr>
+<tr>
+<td><strong>G3 Build path</strong></td>
+<td>Phase 3</td>
+<td>App / Agent / Infra / Hybrid</td>
+<td>Generates the right artifact set</td>
+</tr>
+<tr>
+<td><strong>G4 Compliance</strong></td>
+<td>Before "done"</td>
+<td>Accepts guardrail/carve-out posture</td>
+<td>Runs the self-check script, fixes issues</td>
+</tr>
+<tr>
+<td><strong>G5 Hand-off</strong></td>
+<td>End</td>
+<td>Go/no-go; next step (pilot)</td>
+<td>Produces docs, demo script, pilot plan</td>
+</tr>
+</tbody>
+</table>
+<p>Between gates Bob is autonomous: it generates and runs the code, then tests and debugs it before reporting back. Bob <em>does not</em> hand back work that it could perform itself (per the 6 rules described earlier.)</p>
+<p>Where <strong><a href="https://ibm.github.io/bob-l3/delegate/2-1/" target="_blank">Module 2 | Delegate</a></strong> taught you to approve <em>the plan</em>, the <strong>decision gate model</strong> generalizes that same discipline across an entire engagement. Control is concentrated at the moments where human-in-the-loop judgment matters most, with autonomy everywhere in-between. This transpires at the right-most portion along of the <strong>AI Maturity Curve</strong>, operating as designed.</p>
+<hr>
+<h2 id="viii-trust-and-compliance"><strong>viii. Trust and compliance</strong></h2>
+<hr>
+<p>The most differentiated <em>Modes</em> in the portfolio— Defense/DIB and Public Sector —demonstrate a principle that applies to every <em>Mode</em>: <strong>guard-rails are part of the asset, not an afterthought.</strong></p>
+<p>The pillar is delivered through <strong>Rules</strong> (ambient and active for every session) and backed by self-check scripts (build-time gates):</p>
+<ul>
+<li><strong>Carve-outs are declared in the persona and enforced by a script.</strong> Prohibited use cases (weapons/targeting and offensive cyber attacks, unlawful surveillance and the like) are refused regardless of framing and checked as part of an early build stage. Should the prohibited features appear, <code>check-carveouts.sh</code> will fail the build stage.</li>
+<li><strong>Synthetic data only</strong>, with vertical-specific rigor (reserved ID ranges and clearly-fake codes; no real client data or PII) plus a visible disclaimer banner.</li>
+<li><strong>AI never makes the determination, an authorized human does.</strong> Human-in-the-loop enforcement in both UI and backend.</li>
+<li><strong>Accessibility is a requirement</strong> (WCAG 2.1 AA / Section 508), with its own check.</li>
+<li><strong>Honest capability claims.</strong> Never oversell, but rather flag product gaps explicitly.</li>
+<li><strong>Secrets via environment only.</strong> Mock <em>Mode</em> runs with zero credentials.</li>
+</ul>
+<p>For a seller, this provides answers to one of the hardest questions in any C-suite AI conversation: <em>"how do we trust it?"</em></p>
+<hr>
+<h2 id="ix-key-takeaways"><strong>ix. Key takeaways</strong></h2>
+<hr>
+<ul>
+<li><strong>Bob does the building; humans-in-the-loop make the call</strong>: expertise scaled as assets, instead of as headcount.</li>
+<li>Four asset types, cleanly separated: <strong>Modes</strong> (method) and <strong>Skills</strong> (knowledge); <strong>MCPs</strong> (reach) and <strong>Rules</strong> (standards).</li>
+<li><strong>Decision gates</strong> generalize the plan-approval discipline to whole engagements, lend control at the branch points, and provide Bob-led autonomy for the stages in-between.</li>
+<li>Trust is <strong>by construction</strong>: ambient rules remind; self-check scripts block. That <em>architecture</em> (in lieu of any <em>promise</em>) is the enterprise answer to <em>"how do we trust AI?"</em></li>
+</ul>
+<p>
+One question remains: when the practitioner (you) wish to contribute to this library— with a new <em>Mode</em> for your industry, a new <em>Skill</em> for your product, or a new <em>Rule</em> for your team —how is that done without breaking the discipline documented here? The <strong>asset templates</strong> in the chapter ahead exist for exactly this purpose.</p>
+<hr></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../3/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 3. Prompting best practices">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                3. Prompting best practices
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../5/" class="md-footer__link md-footer__link--next" aria-label="Next: 5. Leveraging asset templates">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                5. Leveraging asset templates
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "content.code.annotate", "content.code.copy", "content.code.select", "navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+        <script src="../_static/hide-toc-nav.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
