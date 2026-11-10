@@ -1,0 +1,1827 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Bob Demo-Builder Mode">
+      
+      
+        <meta name="author" content="Christopher Bienko (cdbienko@us.ibm.com)">
+      
+      
+      
+        <link rel="prev" href="../1-2/">
+      
+      
+        <link rel="next" href="../3/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>2. Deploying with demo builder - Bob Demo-Builder Mode</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../styles/override-print.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#deploying-with-demo-builder" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Bob Demo-Builder Mode" class="md-header__button md-logo" aria-label="Bob Demo-Builder Mode" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bob Demo-Builder Mode
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2. Deploying with demo builder
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix="">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Bob Demo-Builder Mode" class="md-nav__button md-logo" aria-label="Bob Demo-Builder Mode" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+
+    </a>
+    Bob Demo-Builder Mode
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../toc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Table of Contents
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Setup and registration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1. Setup and registration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For IBM regular employees
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For IBM Business Partners
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Deploying with demo builder
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Deploying with demo builder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#i-from-concept-to-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        i. From concept to demo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ii. Why this matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-briefing-the-demo-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        iii. Briefing the demo builder
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-the-autonomous-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        iv. The autonomous build
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-launch-the-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v. Launch the demo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-the-one-click-quickstart-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vi. The one-click quickstart script
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vii-explore-and-refine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vii. Explore and refine
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viii-pitching-the-demo-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        viii. Pitching the demo script
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ix-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ix. Key takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practitioners guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Practitioners guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Prompting best practices
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Deployment strategies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Leveraging asset templates
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#i-from-concept-to-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        i. From concept to demo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ii. Why this matters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iii-briefing-the-demo-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        iii. Briefing the demo builder
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iv-the-autonomous-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        iv. The autonomous build
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v-launch-the-demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        v. Launch the demo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vi-the-one-click-quickstart-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vi. The one-click quickstart script
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vii-explore-and-refine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vii. Explore and refine
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viii-pitching-the-demo-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        viii. Pitching the demo script
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ix-key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ix. Key takeaways
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div><p><strong>BOB DEMO-BUILDER MODE</strong></p>
+<h1 id="deploying-with-demo-builder"><strong>DEPLOYING WITH DEMO BUILDER</strong></h1>
+<hr>
+<h2 id="i-from-concept-to-demo"><strong>i. From concept to demo</strong></h2>
+<p></p><div class="video-container"><video style="position:relative;width:100%;height:22.172vw" controls="" alt="type:video"><source src="../_videos/L3-Demo-Builder-IBMers.mp4" type="video/mp4"></video></div><p></p>
+<div class="admonition note">
+<p>Christopher Bienko <em>(AI Enablement GTM Product Manager)</em> provides an overview of deploying with the Bob Demo Builder hands-on enablement. <strong><a href="https://ibm.seismic.com/Link/Content/DCXmmFJXQXhVdGMPXpTRjFgc2RmP" target="_blank">[3 min]</a></strong></p>
+</div>
+<p>Before continuing, a brief recap on where things stand and the work you've carried out so far:</p>
+<div class="admonition success">
+<p class="admonition-title">PRE-REQUISITES</p>
+<ol>
+<li>
+<p>IBM Bob is installed and authenticated (Chapter 1 — the Setup page for your audience)</p>
+</li>
+<li>
+<p>The IBM Pre-Sales Demo Builder is in place within your workspace — installed from the CE Bob Marketplace (IBMers) or unpacked from the Seismic package (Business Partners)</p>
+</li>
+<li>
+<p>The workspace has been verified and the <em>IBM Pre-Sales Demo Builder</em> mode is visible within the Agentic Sidebar</p>
+</li>
+</ol>
+</div>
+<p>Now it's time to put this preparation into practice. In the chapter ahead, you will take a one-sentence use case — <em>an AI agent that watches factory equipment and heads off failures before they occur</em> — and carry it through the Demo Builder's full lifecycle:</p>
+<div class="admonition warning">
+<p class="admonition-title">TO-DO'S</p>
+<ol>
+<li>
+<p>Guided intake</p>
+</li>
+<li>
+<p>Autonomous build</p>
+</li>
+<li>
+<p>Local launch</p>
+</li>
+<li>
+<p>One-click quickstart script</p>
+</li>
+<li>
+<p>Review-and-refine pass</p>
+</li>
+<li>
+<p>Client-ready demo script</p>
+</li>
+</ol>
+</div>
+<p>The flow documented could be described as a <strong>"simplified"</strong> example and it's been intentionally designed as such to minimize the complexity of your first hands-on experience with this process. It also keeps the Bob tokens consumption to a <strong>minimum</strong>. For those wanting a more elaborate and resource-intensive example, you will have the opportunity to practice this in the chapters ahead.</p>
+<p>For now, with the simplified example of this chapter, you will build in <strong>mock mode</strong>. This approach requires zero credentials and works fully offline. There is no watsonx.ai environment to provision and no API key to supply; the workspace you configured in the previous chapter is all that is needed. The purpose is to experience the complete arc of the Demo Builder methodology end-to-end, and to establish repeatable patterns that you can apply (with fuller briefs and real environments) to potential client opportunities at a later time.</p>
+<hr>
+<h2 id="ii-why-this-matters"><strong>ii. Why this matters</strong></h2>
+<p>The division of labor in this chapter is the discipline this course has been reinforcing from the beginning: <strong>Bob does the building; the human-in-the-loop (you) makes the final decisions and calls the shots.</strong> The intake questions that the Demo Builder poses at the start are critical decision points that <em>you</em> must answer:</p>
+<ul>
+<li>The build approach</li>
+<li>The environment</li>
+<li>The deployment target</li>
+<li>The industry scenario</li>
+</ul>
+<p>Once those decisions have been recorded and sanctioned, Bob executes those instructions autonomously. It generates the code and then verifies and tests it. As you will witness first-hand, it also catches and repairs its own bugs along the way. Throughout this process you maintain your role as the principal arbiter: approving additional actions and validating the results, then advancing (or re-orienting) the workflow.</p>
+<p>There is a second lesson embedded here as well. Despite "mock mode" having no live models or real environments backing it, the finalized demonstration is a complete and navigable Carbon-styled application. It ships with preset AI scenarios and a results view. It includes an architecture view and a generated walkthrough script. For engagements where you are short on time (or short on Bob tokens before the month rolls over), these types of lightweight demonstrations can be immensely valuable in a pinch.</p>
+<p>Finally, there is a practical dimension worth internalizing. The full build consumes roughly <strong>20 minutes</strong> of time and approximately <strong>15–20 Bobcoins</strong>. For a <strong>Business Partner</strong> especially, that means a credible IBM demonstration no longer requires provisioned environments or weeks of scarce technical talent as its price of admission.</p>
+<hr>
+<h2 id="iii-briefing-the-demo-builder"><strong>iii. Briefing the demo builder</strong></h2>
+<div class="admonition quote">
+<p class="admonition-title">A WORD ON WORKING WITH GENERATIVE AI</p>
+<p>IBM Bob is powered by generative AI and LLMs, and a defining trait of these systems is that they are <em>non-deterministic</em> — unlike the <em>deterministic</em> tools most developers are accustomed to. In practice, that means the same prompt can produce different code from one run to the next. This is both a strength and a quirk of the technology, and it is something to work <em>with</em> rather than against.</p>
+<p><strong>Precision is what tips the odds in your favor.</strong> The more clearly you describe what you want, the more closely Bob's output will mirror your intent; conversely, the smallest change in wording can meaningfully change the generated code. Throughout this lab, your results may differ from the solutions shown — and that is expected, not a defect. Whenever an output diverges, you have three good options: refine the prompt and try again, edit the generated code by hand, or simply proceed if the variation still compiles and runs. Human review remains essential at every step, and never more so than while you are still learning the tool.</p>
+</div>
+<p>The first stage of any Demo Builder engagement is switching into the correct mode and handing Bob a one-sentence use case. From there, Bob will run pre-flight checks and walk you through a short guided intake, where each of Bob's questions is a decision point <em>you</em> must answer.</p>
+<hr>
+<ol>
+<li>
+<p>Within the Agentic Sidebar, click the <strong>Modes</strong> selector (which is likely displaying <em>Agent</em> mode at this time) to expose more options:</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/6f4df407-1aee-4fc2-9e53-fa4a4ab6b1a8/user_cropped_screenshot_4fbd8851da6c44efa1b218557dce0e8b_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/6f4df407-1aee-4fc2-9e53-fa4a4ab6b1a8/user_cropped_screenshot_4fbd8851da6c44efa1b218557dce0e8b_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="2">
+<li>
+<p>From the drop-down list, switch to the <strong>IBM Pre-Sales Demo Builder</strong> mode.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/60f1f9b3-1cef-46a7-bd68-8e61d40d222b/user_cropped_screenshot_9cfe9ad8bb714542a4314903d9671231_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/60f1f9b3-1cef-46a7-bd68-8e61d40d222b/user_cropped_screenshot_9cfe9ad8bb714542a4314903d9671231_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="3">
+<li>
+<p>With IBM Bob now in <em>IBM Pre-Sales Demo Builder</em> mode, paste the following prompt into the Agentic Sidebar and press <span class="keys"><kbd class="key-enter">Enter</kbd></span> to execute.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>I need a demo of an AI agent that monitors IoT sensor data from factory equipment, predicts failures before they happen, and automatically creates maintenance work orders with recommended parts and technicians.
+</code></pre></div>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/01f39876-7a18-4df1-8c44-81ef53898d68/user_cropped_screenshot_903cb6c6f9fe417b8bced4d1df3e6fad_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/01f39876-7a18-4df1-8c44-81ef53898d68/user_cropped_screenshot_903cb6c6f9fe417b8bced4d1df3e6fad_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="4">
+<li>
+<p>IBM Pre-Sales Demo Builder mode will first run pre-flight checks to ensure everything is prepared and then begins the intake process.</p>
+<ul>
+<li><strong>Approve</strong> the MCP tool prompt</li>
+<li>Click the <strong>Approve for task</strong> toggle to reduce the amount of manual approvals required later in the flow</li>
+</ul>
+<div class="admonition note">
+<p>In the Business Partner run, no MCP tool prompt appeared at this stage and Bob moved directly into the intake questions. If that is what you see, simply carry on.</p>
+</div>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/8d360330-1e36-4910-ac40-de0b3ebbb554/user_cropped_screenshot_296cea4d15ee4fb788cea00bc2001232_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/8d360330-1e36-4910-ac40-de0b3ebbb554/user_cropped_screenshot_296cea4d15ee4fb788cea00bc2001232_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<p><strong>SEQUENCING THE INTAKE</strong></p>
+<p>In the steps ahead, you will answer a short series of intake questions that shape the build. Each decision determines a different facet of your finished demo, from the technology stack and environment mode through to the deployment target and industry scenario. The exact set (and order) of questions varies from one run to the next: the two documented runs between them produced the seven decision points described below. Treat any question your run skips as a decision Bob has made for you — and review it at the final confirmation.</p>
+<hr>
+<div class="admonition tip">
+<p class="admonition-title">Intake 1: Build Approach</p>
+<p>Bob asks how the AI agent should be built. This selection determines whether the demo uses watsonx.ai (a LangGraph ReAct agent running in a FastAPI backend) or one of the alternative build approaches, such as watsonx Orchestrate. For this walkthrough, choose the <strong>watsonx.ai</strong> option.</p>
+</div>
+<ol start="5">
+<li>
+<p>Once the pre-flight checks are completed, the Pre-Sales Demo Builder mode will present a short sequence of questions in order to tailor the demo to your requirements.</p>
+<p>First, it asks <em>"How should the AI agent be built? [...]"</em>. Select the top option:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>watsonx.ai (RECOMMENDED) — A LangGraph ReAct agent running in a FastAPI backend.
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">YOUR OPTIONS WILL LIKELY DIFFER</p>
+<p>The exact options presented will very likely be different in your run — the key is simply to select the option carrying <strong>watsonx.ai</strong>. In the Business Partner run, for example, the same choice was labelled as follows:</p>
+<p><em>"Use suggestion: watsonx.ai App demo (RECOMMENDED) — LangGraph ReAct agent in FastAPI, Carbon dashboard with real-time sensor charts, anomaly det..."</em></p>
+<p>The watsonx Orchestrate demo setup is more advanced; additional details can be found here: <strong><a href="https://github.ibm.com/ClientEngineering/bob/blob/main/Pre-Sales-Demo-Builder/Sample-Reciepies/07-Predictive-Maintenance-Agent.md" target="_blank">https://github.ibm.com/ClientEngineering/bob/blob/main/Pre-Sales-Demo-Builder/Sample-Reciepies/07-Predictive-Maintenance-Agent.md</a></strong></p>
+</div>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/2b05099f-fc4b-4aec-b593-2db1a334d239/user_cropped_screenshot_5d90f5cf408740d1aaba65e5811369b3_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/2b05099f-fc4b-4aec-b593-2db1a334d239/user_cropped_screenshot_5d90f5cf408740d1aaba65e5811369b3_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<div class="admonition tip">
+<p class="admonition-title">Intake 2: Target Audience</p>
+<p>Bob may ask who the demonstration will be presented to. This selection tailors the framing, level of detail, and pitch length. For this walkthrough, the specific choice does not impact the build.</p>
+</div>
+<ol start="6">
+<li>
+<p>Next, you may be asked what audience the demonstration should be presented to. This question surfaced in the Business Partner run and was skipped in the IBMer run.</p>
+<p>The selection does not particularly matter for this exercise — here, we chose:
+<strong>"C-suite / VP of Operations / Plant Director — 15-minute executive overview [...]"</strong></p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/14c43e31-0dc5-4f29-a9e4-99a3a7c6adf0/File_2b84040111734773a256134761a51411_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/14c43e31-0dc5-4f29-a9e4-99a3a7c6adf0/File_2b84040111734773a256134761a51411_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<div class="admonition tip">
+<p class="admonition-title">Intake 3: Environment Mode</p>
+<p>Bob asks whether you have a live watsonx.ai environment provisioned. In real engagements, live API keys can be provided to power genuine model responses. For this walkthrough, you will use <strong>mock mode</strong>, which produces impressive results with zero credentials and works fully offline.</p>
+</div>
+<ol start="7">
+<li>
+<p>Next, Pre-Sales Demo Builder mode asks whether you already have a watsonx.ai environment provisioned.</p>
+<div class="admonition warning">
+<p class="admonition-title">THIS SELECTION IS CRUCIAL</p>
+<p>Select: <strong>"No — build in mock mode only (zero credentials needed, works fully offline)"</strong> — or whichever option in your run carries <strong>mock mode only</strong>.</p>
+</div>
+<p><em>In a future section, you will explore how this mode operates when an environment actually is provisioned. For now, mock mode presents the complete overview of the capabilities — with none of the credential overhead. As you will see, realistic and impressive results are achievable even upon purely synthetic data.</em></p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/1acef333-013e-4ff8-b056-75914ff7865e/user_cropped_screenshot_0974ed80cf9b4496abd90987fa4f195b_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/1acef333-013e-4ff8-b056-75914ff7865e/user_cropped_screenshot_0974ed80cf9b4496abd90987fa4f195b_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<div class="admonition tip">
+<p class="admonition-title">Intake 4: Deployment Target</p>
+<p>Bob asks how the app should be deployed. Selecting the <strong>run locally</strong> option ensures the demo can be launched from your machine without Docker or Podman — the simplest path for a client meeting.</p>
+</div>
+<ol start="8">
+<li>
+<p>Next, you are asked <em>"How do you want to run and deploy this demo"</em>.</p>
+<p>Select the <strong>"Run locally"</strong> option that fits your specific operating system — typically one of the top two responses. For example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Run locally first — I'm on Intel/AMD (amd64) Mac, Linux, or Windows
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">SELECT THE LOCAL OPTION</p>
+<p>The wording on your options is likely different. In the Business Partner run it read <em>"Use suggestion: Run locally first (RECOMMENDED default) [...]"</em>. The key is to select the <strong>run local</strong> option and to avoid Docker or Podman.</p>
+</div>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/eba41f32-99f1-4086-a31f-751ec0c4d585/user_cropped_screenshot_0eb35b73a8e44c7699197b29e3a0b93f_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/eba41f32-99f1-4086-a31f-751ec0c4d585/user_cropped_screenshot_0eb35b73a8e44c7699197b29e3a0b93f_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<div class="admonition tip">
+<p class="admonition-title">Intake 5: Industry Scenario</p>
+<p>Bob may ask which specific factory equipment scenario should be showcased. This selection defines the demo's narrative — the equipment types, the sensor data, and the failure modes that will drive the walkthrough. For this walkthrough, choose the industrial CNC/conveyor/HVAC scenario.</p>
+</div>
+<ol start="9">
+<li>
+<p>Next, it may ask <em>"What specific factory equipment scenario should be showcased?"</em> This question surfaced in the IBMer run and was skipped in the Business Partner run.</p>
+<p>Click the top option:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Industrial CNC machines + conveyor belts + HVAC systems \[...\]
+</code></pre></div>
+<div class="admonition note">
+<p>Here you have more flexibility. If a listed industry or scenario aligns better with your own experience or interests, you are welcome to select it. However, in practice your results may drift further from the captures shown in this guide should you opt to do so.</p>
+</div>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/fbffd1ff-a6c7-4574-84a7-1b6af20e1ab1/user_cropped_screenshot_6fa8a952a1a9417dab0187f9e6f8c620_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/fbffd1ff-a6c7-4574-84a7-1b6af20e1ab1/user_cropped_screenshot_6fa8a952a1a9417dab0187f9e6f8c620_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<div class="admonition tip">
+<p class="admonition-title">Intake 6: Final Confirmation</p>
+<p>Bob asks for a final confirmation that the recorded intake selections are correct. Approving here commits the plan and hands execution over to Bob for the autonomous build.</p>
+</div>
+<ol start="10">
+<li>
+<p>Finally, Pre-Sales Demo Builder mode requests a final confirmation that everything is in order.</p>
+<p>Select the following option to conclude the fact-gathering phase and move ahead with the build instructions:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>No — we have everything, start building now!
+</code></pre></div>
+<div class="admonition note">
+<p>In the Business Partner run, the equivalent option read <em>"No - proceed with the build [...]"</em>. Whatever the wording, select the option that allows the build to proceed.</p>
+</div>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/2c4bcecd-eead-49f9-b911-9e58e59d9821/user_cropped_screenshot_11822e8a0d5b4b5b8b32b0baadffcafc_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/2c4bcecd-eead-49f9-b911-9e58e59d9821/user_cropped_screenshot_11822e8a0d5b4b5b8b32b0baadffcafc_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<div class="admonition tip">
+<p class="admonition-title">Intake 7: Auto-Approve Permissions</p>
+<p>Before the build begins, decide how much autonomy Bob receives. Enabling <strong>Auto-approve</strong> eliminates repetitive clicking during the 20-minute build, at the cost of stepping back from each individual action.</p>
+</div>
+<ol start="11">
+<li>
+<p>With every question answered, consider the <strong>Auto-approve Permissions</strong> you wish to grant Bob. Press the <strong>Shield (Permissions)</strong> icon next to the mode selector to open these settings.</p>
+<p>For ease of use, and to avoid repetitive clicking, the Business Partner run enabled <strong>Auto-approve</strong> and toggled all permissions on. The IBMer run left auto-approve off and relied on <strong>Approve for task</strong> at each checkpoint instead; the steps ahead document that run.</p>
+<div class="admonition note">
+<p class="admonition-title">CONSIDER THE CONTROL YOU HAND OVER</p>
+<p>Weigh the level of control you are comfortable delegating to IBM Bob. If auto-approvals sit uneasily with you, this flow can be completed perfectly well with every auto-approval disabled and purely manual approvals. You will simply need to click <strong>"Approve"</strong> or <strong>"Approve for Task"</strong> quite a few more times throughout the lab.</p>
+</div>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/09fce4b7-4b97-4a32-8156-8f3a7b64d498/File_da4948a24ec24562915e769c56b53fcc_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/09fce4b7-4b97-4a32-8156-8f3a7b64d498/File_da4948a24ec24562915e769c56b53fcc_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<h2 id="iv-the-autonomous-build"><strong>iv. The autonomous build</strong></h2>
+<p>With the intake complete, the balance of the work shifts to Bob. Your role across the following steps encompasses oversight and steering: review what Bob proposes and either approve the workflow or course-correct as necessary.</p>
+<p>Bob will execute the build across the following (or similar) sub-tasks:</p>
+<table>
+<thead>
+<tr>
+<th>TASK</th>
+<th>OBJECTIVES</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sub-Task 1</strong></td>
+<td>Scaffold project subdirectories</td>
+</tr>
+<tr>
+<td><strong>Sub-Task 2</strong></td>
+<td>Build the back-end</td>
+</tr>
+<tr>
+<td><strong>Sub-Task 3</strong></td>
+<td>Run back-end verification</td>
+</tr>
+<tr>
+<td><strong>Sub-Task 4</strong></td>
+<td>Run back-end tests</td>
+</tr>
+<tr>
+<td><strong>Sub-Task 5</strong></td>
+<td>Build the front-end</td>
+</tr>
+<tr>
+<td><strong>Sub-Task 6</strong></td>
+<td>Run final compliance tests</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p>In the Business Partner run, Bob organized the same work as a 5-step build plan: scaffold and environment setup; a synthetic data generator; the back-end (FastAPI + LangGraph agent); the front-end (Carbon React, 5 pages); and <code>Docker/scripts/docs</code>. It worked through these in parallel wherever no file dependencies existed, then closed with a self-review pass. The destination is the same either way.</p>
+</div>
+<hr>
+<div class="admonition tip">
+<p class="admonition-title">Sub-Task 1: Initial Kickoff and Scaffolding</p>
+<p>Bob confirms the intake decisions and begins scaffolding the project. This includes creating the subdirectories that will store the front-end and back-end, along with the data and documentation for the demo.</p>
+</div>
+<ol start="12">
+<li>
+<p>Bob begins working. As usual, <strong>approve</strong> tasks when prompted (if you agree with Bob's recommended course of action.)</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/53608484-01e3-42f7-985c-93f58bd79fcf/user_cropped_screenshot_4f4416a13f214674b09ef4806504cf72_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/53608484-01e3-42f7-985c-93f58bd79fcf/user_cropped_screenshot_4f4416a13f214674b09ef4806504cf72_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<div class="admonition tip">
+<p class="admonition-title">Sub-Task 2: Build the Back-End</p>
+<div class="highlight"><pre><span></span><code>Bob creates the subdirectories and begins generating the back-end files: the configuration and the FastAPI service first, then the LangGraph agent and the synthetic data layer.
+</code></pre></div>
+</div>
+<ol start="13">
+<li>
+<p>Bob creates subdirectories that will store the project.</p>
+<ul>
+<li>Click <strong>"Approve for task"</strong></li>
+<li>Continue clicking through <strong>Approve once</strong> / <strong>Approve for task</strong> as prompted, until the <em>back-end build</em> has concluded</li>
+</ul>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/0cd7f0b1-1fd4-4412-8b84-18953746a133/user_cropped_screenshot_9ee526360d844a51a7545c0713b2dfd0_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/0cd7f0b1-1fd4-4412-8b84-18953746a133/user_cropped_screenshot_9ee526360d844a51a7545c0713b2dfd0_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/c9715c5f-5434-48e7-9aea-09d1cd85d050/File_7b0f0a00b55a4cb987b8bb42d15bb50c_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/c9715c5f-5434-48e7-9aea-09d1cd85d050/File_7b0f0a00b55a4cb987b8bb42d15bb50c_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<div class="admonition tip">
+<p class="admonition-title">Sub-Task 3: Run Back-End Verification</p>
+<div class="highlight"><pre><span></span><code>With the back-end files in place, Bob runs a verification pass to confirm the code is structurally sound before executing any tests.
+</code></pre></div>
+</div>
+<ol start="14">
+<li>
+<p>At last, the <em>back-end build</em> has completed and IBM Bob's Pre-Sales Demo Builder mode is now running the build verification.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/a24c808a-661b-428a-bbbc-6138ce3625e5/user_cropped_screenshot_6eb2136871314fe9953cc5c89c397c2d_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/a24c808a-661b-428a-bbbc-6138ce3625e5/user_cropped_screenshot_6eb2136871314fe9953cc5c89c397c2d_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<div class="admonition tip">
+<p class="admonition-title">Sub-Task 4: Run Back-End Tests</p>
+<div class="highlight"><pre><span></span><code>Bob executes the automated back-end tests. This step validates that the FastAPI service and the LangGraph agent behave as expected before the front-end build begins.
+</code></pre></div>
+</div>
+<ol start="15">
+<li>
+<p>Pre-Sales Demo Builder mode now runs the <em>back-end tests</em>.</p>
+<p>Click <strong>Approve for task</strong> once again.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/779d42d9-369d-421c-b519-268f580b65aa/user_cropped_screenshot_28004ec57a004878ba49634fe499a4ce_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/779d42d9-369d-421c-b519-268f580b65aa/user_cropped_screenshot_28004ec57a004878ba49634fe499a4ce_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/a2c72685-ab81-4b85-92d1-3f8872eb51b8/user_cropped_screenshot_7ad50d9ddb94493fa415b288a5426939_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/a2c72685-ab81-4b85-92d1-3f8872eb51b8/user_cropped_screenshot_7ad50d9ddb94493fa415b288a5426939_text_export.jpeg" alt="" width="600"></a>
+</p>
+<details class="warning">
+<summary>TROUBLESHOOTING</summary>
+<p>Should the Agentic Sidebar freeze or time out at any point, simply sending the prompt <code>continue</code> should get everything back on track.</p>
+<p>In this instance, after the <code>continue</code> prompt was sent, Bob understood exactly where it left off and resumed working intelligently. Continue clicking through <strong>Approve for task</strong>.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/ecc6a933-d90c-47b3-b4d4-04ea70a20094/user_cropped_screenshot_a29c89b585b344a8a856905d1f102b35_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/ecc6a933-d90c-47b3-b4d4-04ea70a20094/user_cropped_screenshot_a29c89b585b344a8a856905d1f102b35_text_export.jpeg" alt="" width="600"></a>
+</p>
+</details>
+</li>
+</ol>
+<hr>
+<div class="admonition tip">
+<p class="admonition-title">Sub-Task 5: Build the Front-End</p>
+<div class="highlight"><pre><span></span><code>With the back-end deployed and validated, Bob moves on to the front-end. It generates a full Vite + React application using IBM's Carbon Design System. The pages cover the AI agent and its results view, as well as the architecture diagram.
+</code></pre></div>
+</div>
+<ol start="16">
+<li>
+<p>Once the back-end deploy is ready, Bob will move on towards building the <em>front-end</em>.</p>
+<p>Continue clicking <strong>Approve for task</strong> to advance the workflow.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/e7cb6d7a-70c9-4bda-ace4-fcc37f0d4689/user_cropped_screenshot_ec2c26b1b8fd45288815e5e204c7c1d5_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/e7cb6d7a-70c9-4bda-ace4-fcc37f0d4689/user_cropped_screenshot_ec2c26b1b8fd45288815e5e204c7c1d5_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/697f0fe7-64f9-4ffb-bf86-f61c0153bdfa/user_cropped_screenshot_b5d190a1352f411d96c8860dc52deaad_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/697f0fe7-64f9-4ffb-bf86-f61c0153bdfa/user_cropped_screenshot_b5d190a1352f411d96c8860dc52deaad_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/f88af881-5757-4b39-9bad-90872c027e12/user_cropped_screenshot_59855436e39846e082023a8dbcd24267_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/f88af881-5757-4b39-9bad-90872c027e12/user_cropped_screenshot_59855436e39846e082023a8dbcd24267_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<div class="admonition tip">
+<p class="admonition-title">Sub-Task 6: Final Compliance Tests</p>
+<div class="highlight"><pre><span></span><code>Bob runs a final compliance pass across the completed build. This step is where Bob's self-review methodology shines — catching bugs autonomously, investigating them, and applying repairs before declaring the build complete.
+</code></pre></div>
+</div>
+<ol start="17">
+<li>
+<p>The build is nearly finished. IBM Pre-Sales Demo Builder mode now wants to run its final <em>compliance tests</em>.</p>
+<p>Continue clicking <strong>Approve for task</strong> to advance the workflow.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/ed089580-6c50-4a81-bf6d-e71d3b87c4bc/user_cropped_screenshot_8cd6c33fcc914ec19e6a8816844ce869_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/ed089580-6c50-4a81-bf6d-e71d3b87c4bc/user_cropped_screenshot_8cd6c33fcc914ec19e6a8816844ce869_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/afe6a62b-f74c-48e5-8f8d-d255b26c071e/user_cropped_screenshot_db76544699b64cde9e1ca67777dc721a_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/afe6a62b-f74c-48e5-8f8d-d255b26c071e/user_cropped_screenshot_db76544699b64cde9e1ca67777dc721a_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/fed7711a-1757-44ae-8b99-b95dcfd490af/user_cropped_screenshot_e4e6b4fa32ce4e89aece4fe8ace70062_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/fed7711a-1757-44ae-8b99-b95dcfd490af/user_cropped_screenshot_e4e6b4fa32ce4e89aece4fe8ace70062_text_export.jpeg" alt="" width="600"></a>
+</p>
+<details class="warning">
+<summary>TROUBLESHOOTING</summary>
+<ol>
+<li>
+<p>In this instance, Pre-Sales Demo Builder caught a bug during its compliance pass and begins investigating.</p>
+<p>Click <strong>Approve for task</strong>.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/0912f81b-0cea-4063-923c-6f3dc5110b46/user_cropped_screenshot_f103016dc24c47ec8e03bf65ce60c0bf_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/0912f81b-0cea-4063-923c-6f3dc5110b46/user_cropped_screenshot_f103016dc24c47ec8e03bf65ce60c0bf_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+<li>
+<p>IBM Pre-Sales Demo Builder mode attempts a different search method to locate the bug.</p>
+<p>Click <strong>Approve for task</strong>.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/818d77e3-3bc6-4997-a50e-c26c38f45214/user_cropped_screenshot_1e245467f7ed4a9482bd62bd4528b21d_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/818d77e3-3bc6-4997-a50e-c26c38f45214/user_cropped_screenshot_1e245467f7ed4a9482bd62bd4528b21d_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+<li>
+<p>Click <strong>"Approve for task"</strong>.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/d71b6315-584a-435c-bdbd-37ba6e96dc7c/user_cropped_screenshot_c83daa07498f48f8a576d7150f145b16_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/d71b6315-584a-435c-bdbd-37ba6e96dc7c/user_cropped_screenshot_c83daa07498f48f8a576d7150f145b16_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+</details>
+<details class="note">
+<summary>SELF-REVIEW IN ACTION: THE CARBON ICON SWEEP (BUSINESS PARTNER RUN)</summary>
+<p>The self-review pass takes a different shape on every run. In the Business Partner run, Bob finished generating all files and then identified a known Carbon icon compatibility problem: some <code>@carbon/react</code> Sass imports and icon names needed to be validated against the Carbon v11 specification before the app could build cleanly. With auto-approve enabled, the entire repair unfolded without a single click.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/d85dd666-e454-4987-8827-4d47cf73f409/File_e3cb3ac4d1534d0fae2b04177aacbd15_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/d85dd666-e454-4987-8827-4d47cf73f409/File_e3cb3ac4d1534d0fae2b04177aacbd15_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p>Bob resolved the Carbon icon issues autonomously, searching through the frontend source files for uncertain icon names and replacing them with confirmed valid <code>@carbon/icons-react</code> v11 alternatives.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/db866891-f05b-4ab9-9fa4-7e3b78235ea4/File_abe4829c107b4a5880f56e24080ccabb_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/db866891-f05b-4ab9-9fa4-7e3b78235ea4/File_abe4829c107b4a5880f56e24080ccabb_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p>The icon sweep continued with targeted diffs to <code>ProblemPage.jsx</code> and <code>SolutionPage.jsx</code> as well as <code>App.jsx</code>. These replaced any icon references that may not exist in Carbon v11 with known-safe alternatives.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/2e51038a-d610-402c-af1f-60d536e6f71f/File_123a4a18c7c540039c2fdc6508e482ad_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/2e51038a-d610-402c-af1f-60d536e6f71f/File_123a4a18c7c540039c2fdc6508e482ad_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p>Bob then consolidated all Carbon icon imports to a verified safe set, confirming each icon name against the <code>@carbon/icons-react</code> v11 library. This self-correction step is what ensures the app will build without errors.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/ee439486-ab85-42c4-87e1-97cda434bc48/File_7becb17ff1be479992b3009e2efe64bf_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/ee439486-ab85-42c4-87e1-97cda434bc48/File_7becb17ff1be479992b3009e2efe64bf_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p>A final sweep followed: verifying icon imports across all frontend source files; cleaning up unused imports; and running a last structural check on <code>backend/main.py</code> before wrapping up.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/4eedb378-9b09-41cc-9cbb-b0b8f82f78a3/File_bd78b305deba49ac822f5464a3982cfd_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/4eedb378-9b09-41cc-9cbb-b0b8f82f78a3/File_bd78b305deba49ac822f5464a3982cfd_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p>Bob continued its self-review by cleaning up unused imports within <code>SolutionPage.jsx</code> and verifying that the <code>ChartMultitype</code> and <code>Diagram</code> references in <code>App.jsx</code> were valid Carbon v11 components. Uncertain names were replaced with confirmed safe alternatives such as <code>BarChart</code> and <code>Document</code>. At this stage, 42 files had been updated and modified.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/b7d1c0db-2bf3-4101-9d4e-3b03bbd87206/File_8c274140dbe14fc99f6d956fb6c2f2a8_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/b7d1c0db-2bf3-4101-9d4e-3b03bbd87206/File_8c274140dbe14fc99f6d956fb6c2f2a8_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p>Bob wrapped up its quality pass with all icon imports consolidated to a verified safe set (<code>File</code>, <code>Icons</code> and <code>Safety</code> among others), each confirmed valid within <code>@carbon/icons-react</code> v11. It also confirmed that the backend <code>main.py</code> had no missing module references.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/6b1019e2-f8d0-40ad-ab07-a0f91550472c/File_67020c541a704f978a40388fbfef4e15_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/6b1019e2-f8d0-40ad-ab07-a0f91550472c/File_67020c541a704f978a40388fbfef4e15_text_export.jpeg" alt="" width="600"></a>
+</p>
+</details>
+</li>
+</ol>
+<hr>
+<h2 id="v-launch-the-demo"><strong>v. Launch the demo</strong></h2>
+<p>With the build complete and verified, the next stage is to launch the demo locally. This is a two-terminal sequence: one for the FastAPI back-end, and one for the Vite front-end. Bob provides the exact commands in its final completion message. If something breaks along the way, the recommended remedy is to paste the console log directly into the Agentic Sidebar and let Bob diagnose the issue.</p>
+<hr>
+<ol start="18">
+<li>
+<p>At this stage, the demo build has been completed and verified.</p>
+<p>Read through the final completion message and locate the <strong>Terminal commands</strong> (documented within the console read-out) to start the application.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/6e82530c-d497-45be-94cd-28ab810b6d93/File_8fab59f601a94309ae699ce8fb1a31e5_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-08/6e82530c-d497-45be-94cd-28ab810b6d93/File_8fab59f601a94309ae699ce8fb1a31e5_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/e267b6b4-6416-4e1d-b137-8221faeffabc/user_cropped_screenshot_820b4fc2f22242f187d47de8fe2484c1_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/e267b6b4-6416-4e1d-b137-8221faeffabc/user_cropped_screenshot_820b4fc2f22242f187d47de8fe2484c1_text_export.jpeg" alt="" width="600"></a>
+</p>
+<div class="admonition note">
+<p>In the Business Partner run, the same information was presented under a <strong>"To Start Now"</strong> section of the build summary. That build consumed approximately 15 Bobcoins and modified 42 files.</p>
+</div>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/960c9260-c2d0-4d2c-ae8e-b11340de8a47/File_2bf74e5080144bddaba07bb544bdcb51_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/960c9260-c2d0-4d2c-ae8e-b11340de8a47/File_2bf74e5080144bddaba07bb544bdcb51_text_export.jpeg" alt="" width="600"></a>
+</p>
+<details class="failure">
+<summary>TROUBLESHOOTING: THE STARTUP COMMANDS DO NOT WORK</summary>
+<p>Occasionally, the startup steps you initially receive for your app may not work. Whether it proves a simple syntax issue or a larger problem, getting past it is simple enough. Tell IBM Bob in natural language that there is an error and paste the entire console log.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/be64b168-f835-405a-8367-66d6e45439e5/File_3eee74d65583434881714670be5d8d2a_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/be64b168-f835-405a-8367-66d6e45439e5/File_3eee74d65583434881714670be5d8d2a_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p>When an error surfaces, Bob will find a solution quickly. If the provided solution does not work on the first attempt, keep iterating in the same fashion: simply copy and paste the console output into the Agentic Sidebar.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/b3d68e98-df0c-4b2c-bf9d-0533545c10d2/File_c24dbdf75e2e4609b8fd325f774ec5cc_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/b3d68e98-df0c-4b2c-bf9d-0533545c10d2/File_c24dbdf75e2e4609b8fd325f774ec5cc_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p>Bob will then provide new commands to start the app. The commands you receive will probably differ from those documented here. What <em>is likely</em> to remain consistent is that you will work in <strong>two separate Terminal windows</strong>, one each for the back-end and the front-end.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/057dcd55-4461-48fe-a54e-58f728d3d9ac/File_5fbc849cbf4049459c9a71d6aaa819fb_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/057dcd55-4461-48fe-a54e-58f728d3d9ac/File_5fbc849cbf4049459c9a71d6aaa819fb_text_export.jpeg" alt="" width="600"></a>
+</p>
+</details>
+</li>
+</ol>
+<hr>
+<ol start="19">
+<li>
+<p>Launch a new <strong>Terminal</strong> within the Bob IDE by clicking <strong>Terminal &gt; New Terminal</strong> from the top-line menu bar.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/f26488a0-e6d5-406d-b28f-ee4ea034afdc/user_cropped_screenshot_4564fa609ebf4ccaa702d4f761ce560a_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/f26488a0-e6d5-406d-b28f-ee4ea034afdc/user_cropped_screenshot_4564fa609ebf4ccaa702d4f761ce560a_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/569b9563-9e50-49f4-ba80-054de5a09eea/user_cropped_screenshot_c0911917c6df486cae56a8ccf073e678_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/569b9563-9e50-49f4-ba80-054de5a09eea/user_cropped_screenshot_c0911917c6df486cae56a8ccf073e678_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="20">
+<li>
+<p>Copy the <strong>Terminal 1 - Backend</strong> command line string (from <em>Step 18</em>) to your clipboard, paste it into the new Terminal console, and hit <span class="keys"><kbd class="key-enter">Enter</kbd></span> to execute.</p>
+<div class="admonition warning">
+<p>Execute these instructions line by line, one at a time.</p>
+</div>
+<p>Continue executing each instruction from <strong>Terminal 1 - Backend</strong> until the service has successfully started.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/cf81289d-fa87-4d13-90ac-1882688e8fc4/user_cropped_screenshot_74c744ae43134182a7c95868aa848701_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/cf81289d-fa87-4d13-90ac-1882688e8fc4/user_cropped_screenshot_74c744ae43134182a7c95868aa848701_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/29ef4ac2-7da8-4356-9e02-bead7fa0dcde/user_cropped_screenshot_46a4704c5f034d1ca400028b9a3e057c_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/29ef4ac2-7da8-4356-9e02-bead7fa0dcde/user_cropped_screenshot_46a4704c5f034d1ca400028b9a3e057c_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/f7eae393-fa94-4f2a-b6f3-7ff999f4ffc1/user_cropped_screenshot_89ed78992c084fcf96cbc8afaa90aed7_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/f7eae393-fa94-4f2a-b6f3-7ff999f4ffc1/user_cropped_screenshot_89ed78992c084fcf96cbc8afaa90aed7_text_export.jpeg" alt="" width="600"></a>
+</p>
+<details class="note">
+<summary>WHAT THE BACK-END COMMANDS TYPICALLY LOOK LIKE (BUSINESS PARTNER RUN)</summary>
+<p>The first back-end command changes into the back-end directory. In this example, that meant a <code>cd</code> into <code>demos/new-demo/backend</code>. Your path will reflect your own machine's <em>Downloads</em> location.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/1d5b848a-ee79-4cce-af1c-93161deae10f/File_944fc644d9094948bf1cb7003873eb1a_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/1d5b848a-ee79-4cce-af1c-93161deae10f/File_944fc644d9094948bf1cb7003873eb1a_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p>The second back-end command activates the Python virtual environment: <code>.\venv\Scripts\Activate.ps1</code> on Windows. Once active, your Terminal prompt will show <code>(venv)</code> to confirm that the environment is ready.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/91778551-0e79-4ab8-9bc1-27746a2831c8/user_cropped_screenshot_a4b5611a391e4cbf98089ed81a0ef8fc_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/91778551-0e79-4ab8-9bc1-27746a2831c8/user_cropped_screenshot_a4b5611a391e4cbf98089ed81a0ef8fc_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p>The final back-end command starts the service: <code>uvicorn main:app --reload --port 8000</code>. You should see Uvicorn report that it is running on <code>http://127.0.0.1:8000</code>, confirming the FastAPI backend is live and watching for changes.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/d3d95ae1-1987-440c-9f86-c665ca256455/File_7d2d654a54c049dc93324aba39711e57_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/d3d95ae1-1987-440c-9f86-c665ca256455/File_7d2d654a54c049dc93324aba39711e57_text_export.jpeg" alt="" width="600"></a>
+</p>
+</details>
+</li>
+</ol>
+<hr>
+<ol start="21">
+<li>
+<p>With the back-end service successfully started, you will need to open a second Terminal console to run the front-end service.</p>
+<p>As before, click <strong>Terminal &gt; New Terminal</strong> from the top-line menu of the Bob IDE. <em>(Alternatively, click the <span class="keys"><kbd class="key-plus">+</kbd></span> button to open a new Terminal window.)</em></p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/d44b6017-3611-4e91-9481-047b2dae1aa1/user_cropped_screenshot_6563aef7a6bd4446b22532c293554f02_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/d44b6017-3611-4e91-9481-047b2dae1aa1/user_cropped_screenshot_6563aef7a6bd4446b22532c293554f02_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="22">
+<li>
+<p>Copy the <strong>Terminal 2 - Frontend</strong> command line string (from <em>Step 18</em>) to your clipboard, paste it into the new Terminal console, and hit <span class="keys"><kbd class="key-enter">Enter</kbd></span> to execute.</p>
+<div class="admonition warning">
+<p>Execute these instructions line by line, one at a time.</p>
+</div>
+<p>Continue executing each instruction from <strong>Terminal 2 - Frontend</strong> until the service has successfully started.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/fbaa88de-f031-4166-b298-1b082f5ed111/user_cropped_screenshot_fd54230b437d42e6a16151c8509bc07a_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/fbaa88de-f031-4166-b298-1b082f5ed111/user_cropped_screenshot_fd54230b437d42e6a16151c8509bc07a_text_export.jpeg" alt="" width="600"></a>
+</p>
+<details class="note">
+<summary>WHAT THE FRONT-END COMMANDS TYPICALLY LOOK LIKE (BUSINESS PARTNER RUN)</summary>
+<p>The first front-end command changes into the front-end directory: a <code>cd</code> into <code>demos/new-demo/frontend</code>.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/3512d265-443e-406a-9793-b677e2f6a73e/File_f03953474f1a4b2987eb1ce7f8101a38_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/3512d265-443e-406a-9793-b677e2f6a73e/File_f03953474f1a4b2987eb1ce7f8101a38_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p>Running <code>npm install</code> then installs all front-end dependencies. You should see output confirming that packages were audited with no vulnerabilities.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/3039233e-db46-4949-a63b-0994c8084c0e/File_208a1cbef9a5414d9488d5e1f5fd227c_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/3039233e-db46-4949-a63b-0994c8084c0e/File_208a1cbef9a5414d9488d5e1f5fd227c_text_export.jpeg" alt="" width="600"></a>
+</p>
+</details>
+</li>
+</ol>
+<hr>
+<ol start="23">
+<li>
+<p>To finish starting up the app, the final instruction to be executed within the Terminal console should resemble something like the following:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>npm run dev
+</code></pre></div>
+<p>When it finishes, you will see a <code>Local: http://localhost:5173/</code> (or similar port) link within the terminal output. This is the URL for your demo app.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/e6e40ccc-9ee7-49f8-9b05-fa9e3ee215ef/user_cropped_screenshot_8f7aa93b449c4555823d6b2262bdda97_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/e6e40ccc-9ee7-49f8-9b05-fa9e3ee215ef/user_cropped_screenshot_8f7aa93b449c4555823d6b2262bdda97_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="24">
+<li>
+<p>If successful, the Terminal console should report back that the app has started.</p>
+<p>Hold <span class="keys"><kbd class="key-control">Ctrl</kbd></span> and then left-click the URL to <strong>open</strong> the address embedded within the Terminal console to view the application with your default web browser.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/17a21cb2-3c59-442c-b111-08375ef77cbd/user_cropped_screenshot_ac64142ea60c4d60a473fc03eb73c616_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/17a21cb2-3c59-442c-b111-08375ef77cbd/user_cropped_screenshot_ac64142ea60c4d60a473fc03eb73c616_text_export.jpeg" alt="" width="600"></a>
+</p>
+<div class="admonition warning">
+<p class="admonition-title">A WHITE SCREEN ON FIRST LOAD</p>
+<p>Upon accessing the site, you may initially see a white screen. Wait 1–2 minutes for the site to load. If the white screen persists, refresh or switch browsers. If the issue still persists, take a screenshot and describe the issue to Bob in the Agentic Sidebar.</p>
+</div>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/832c533f-6083-4848-869a-51df2e49d60b/File_d3dbd51bb1d9416c98665550dbae805a_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/832c533f-6083-4848-869a-51df2e49d60b/File_d3dbd51bb1d9416c98665550dbae805a_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/d9e14811-a4f8-42b8-9435-9a802847cb01/File_7f834722b60e4609af520769bfc8e16b_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/d9e14811-a4f8-42b8-9435-9a802847cb01/File_7f834722b60e4609af520769bfc8e16b_text_export.jpeg" alt="" width="600"></a>
+</p>
+<details class="warning">
+<summary>TROUBLESHOOTING: A STUCK SIDEBAR PANEL</summary>
+<p>Notice any issues once the demo loads? Fixing them is simple: take a screenshot and send it to IBM Bob. In the Business Partner run, the sidebar panel was stuck.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/0715d1c8-df42-485a-82f7-06240b5d4542/File_2f29935355c8443bbe56f394ac1f74b7_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/0715d1c8-df42-485a-82f7-06240b5d4542/File_2f29935355c8443bbe56f394ac1f74b7_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p>Simply describe the issue in natural language — providing a screenshot where possible — and Bob will fix it.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/5e4c8120-2e21-4b67-b11d-ac48af74ba74/File_fb58265abf194fb49a2799db38c0a522_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/5e4c8120-2e21-4b67-b11d-ac48af74ba74/File_fb58265abf194fb49a2799db38c0a522_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p>Solve any issues you may experience with your app (a complete crash, poor aesthetics, and so on) in a similar fashion: describe the problem in natural language and provide screenshots.</p>
+</details>
+</li>
+</ol>
+<hr>
+<h2 id="vi-the-one-click-quickstart-script"><strong>vi. The one-click quickstart script</strong></h2>
+<p>The two-terminal startup sequence works, but it is not what you want to be running in front of a client. The next stage condenses the entire launch into a single double-click by asking Bob to generate a quickstart script. Remember that IBM Bob is remarkably flexible: if something is unclear to you at any point in the process, simply explain it to Bob in natural language.</p>
+<hr>
+<ol start="25">
+<li>
+<p>To avoid the manual startup sequence in the future, simply ask Bob to make a quickstart script, like so:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Create a quickstart script so I can start my demo in one click, no terminal windows
+</code></pre></div>
+<div class="admonition note">
+<p>The wording is yours to choose. The IBMer run asked for the same thing as follows, with the same result:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Make a quickstart script that allows me to start the app in 1 click, no manual Terminal windows.
+</code></pre></div>
+</div>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/4257d628-1c6a-48e8-8dd4-6a6e05242106/File_b7171cce88654d0dbdfdb3b5c2e892bd_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/4257d628-1c6a-48e8-8dd4-6a6e05242106/File_b7171cce88654d0dbdfdb3b5c2e892bd_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="26">
+<li>
+<p>Bob will generate the script.</p>
+<p>To locate it quickly on your local machine, right-click any of the files on the IBM Bob sidebar and press <strong>"Reveal in File Explorer"</strong>.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/ed813b9d-daa6-48e6-8f16-3638807a2272/File_90b804b66a6347de98d1f86583f2bbf9_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/ed813b9d-daa6-48e6-8f16-3638807a2272/File_90b804b66a6347de98d1f86583f2bbf9_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="27">
+<li>
+<p>Inspect the contents of the <code>/IBM-Pre-Sales-Demo-Builder/</code> directory (or, for IBMers, your <code>Bob Demo Builder</code> workspace) and drill down into the <code>/demos/</code> sub-directory.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/e802f561-d5a1-4a03-ad33-bdf0cbe7e819/File_8b89c6074b794c3eb2467ed6d400de09_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/e802f561-d5a1-4a03-ad33-bdf0cbe7e819/File_8b89c6074b794c3eb2467ed6d400de09_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="28">
+<li>
+<p>Within the <code>/demos</code> directory you should see a newly-created <code>/new-demo</code> subdirectory. Double-click it to expose the contents.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/2efa71d0-f8d1-4277-b81e-aa472b7b7900/File_f33e9301e867406fa311936d8eb76184_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/2efa71d0-f8d1-4277-b81e-aa472b7b7900/File_f33e9301e867406fa311936d8eb76184_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="29">
+<li>
+<p>In this example, IBM Bob created a script called <strong><code>START_DEMO.bat</code></strong> for a Windows machine. The file name and type you receive will differ, though the naming will likely be similar. Look for something carrying <em>START</em> or similar.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/96dc48fa-9807-4641-8856-321514762fa2/File_b13ece5de0af4576b8b145b6e84b37be_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/96dc48fa-9807-4641-8856-321514762fa2/File_b13ece5de0af4576b8b145b6e84b37be_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="30">
+<li>
+<p><strong>Run</strong> (double-click) the demo script <code>.BAT</code> file.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/086b10bf-84d2-4a64-8e06-d69f74de301d/File_bd45a393e6f8479c9bc1500823afffae_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/086b10bf-84d2-4a64-8e06-d69f74de301d/File_bd45a393e6f8479c9bc1500823afffae_text_export.jpeg" alt="" width="600"></a>
+</p>
+<details class="warning">
+<summary>TROUBLESHOOTING</summary>
+<p>Here, some of the Terminal windows that open appear troublesome, with error logs — but Bob built in fallbacks to address this. If your quickstart script crashes, take a screenshot (or copy and paste the console output) and send it to Bob.</p>
+</details>
+</li>
+</ol>
+<hr>
+<ol start="31">
+<li>
+<p>The quickstart script continues. You may experience completely different behaviour.</p>
+<p>Expect multiple Terminal windows to open. <strong>Do not close them</strong>. Leave them running while you access the demo app.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/347bbf70-6764-4029-8511-b806161dd60d/File_606b165cb9084200b99b853ce5579909_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/347bbf70-6764-4029-8511-b806161dd60d/File_606b165cb9084200b99b853ce5579909_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="32">
+<li>
+<p>Another demo script window opens. Depending on how your quickstart script is wired, the app may open automatically or you may need to click it yourself.</p>
+<ul>
+<li>Look for a line reading <code>http://localhost:517x/...</code>, then hold <span class="keys"><kbd class="key-control">Ctrl</kbd></span> and <strong>click</strong> it</li>
+<li>In this specific example, the app started on port 5175, since other ports were already in use</li>
+<li>On a fresh run-through, your app will typically sit at <code>http://localhost:5173</code></li>
+</ul>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/679e0c78-6871-4525-8931-c6b134e4733d/File_4ed05fb6895545efa8a91119cc7f709f_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/679e0c78-6871-4525-8931-c6b134e4733d/File_4ed05fb6895545efa8a91119cc7f709f_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<h2 id="vii-explore-and-refine"><strong>vii. Explore and refine</strong></h2>
+<p>A demo is only client-ready once you have actually clicked through it end-to-end. The next stage walks through the pages of the running app, exercises the AI analysis flow and the auto-generated work order feature, and demonstrates how to apply the <em>screenshot + natural-language prompt</em> pattern to fix any issues you encounter.</p>
+<hr>
+<ol start="33">
+<li>
+<p>Once the application has loaded within the web browser, begin investigating the various components and features to verify that everything works as expected. Click and scroll around, exploring the app to make sure no bugs are lurking.</p>
+<p>Keep in mind that <em>your</em> page may look somewhat (or very) different from the app documented here, owing to generative AI's <em>non-deterministic</em> properties.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/6ac1f41f-1203-4c4c-8f9f-7d10dd63a484/user_cropped_screenshot_b01ca07ce5cb4db2acc529166fca0201_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/6ac1f41f-1203-4c4c-8f9f-7d10dd63a484/user_cropped_screenshot_b01ca07ce5cb4db2acc529166fca0201_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/38e61d8a-4a00-4d15-aeb2-9bf77ca7bdf1/user_cropped_screenshot_7b4d3d30312c4bf29ec3beb0f7bbd875_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/38e61d8a-4a00-4d15-aeb2-9bf77ca7bdf1/user_cropped_screenshot_7b4d3d30312c4bf29ec3beb0f7bbd875_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="34">
+<li>
+<p>What happens when you press <strong>Run AI Agent</strong>? Open the tab to investigate.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/44dbc4ff-6580-4bdd-b853-995cb6cb9eff/user_cropped_screenshot_de8a88b78d4f436f9b6314f2757ef4c5_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/44dbc4ff-6580-4bdd-b853-995cb6cb9eff/user_cropped_screenshot_de8a88b78d4f436f9b6314f2757ef4c5_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="35">
+<li>
+<p>In this instance, the AI Analysis executes for the <strong>CRITICAL Bearing Failure Alert</strong> scenario.</p>
+<p>Proceed to the <strong>Results</strong> tab.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/73525aaa-c537-4cba-8504-cdb4d2c41fd0/user_cropped_screenshot_a1924fa6c9264b6c8989d4b59c71eb20_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/73525aaa-c537-4cba-8504-cdb4d2c41fd0/user_cropped_screenshot_a1924fa6c9264b6c8989d4b59c71eb20_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="36">
+<li>
+<p>Everything looks in order here. Continue by clicking <strong>Architecture</strong>.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/1d809a68-c552-49ed-b7c3-6d0cc359d565/user_cropped_screenshot_3721868952434d6ca934fe5edb09e8ee_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/1d809a68-c552-49ed-b7c3-6d0cc359d565/user_cropped_screenshot_3721868952434d6ca934fe5edb09e8ee_text_export.jpeg" alt="" width="600"></a>
+</p>
+<p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/b3cffdce-1f7a-4e93-b68b-7f5ac8faeb07/user_cropped_screenshot_48fe3cfd3edd43a3a9862aea19c6be19_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/b3cffdce-1f7a-4e93-b68b-7f5ac8faeb07/user_cropped_screenshot_48fe3cfd3edd43a3a9862aea19c6be19_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="37">
+<li>
+<p>The Business Partner run produced an AI Agent page built around a scenario picker rather than a single alert. Return to the AI Agent and select one of the scenarios — here, the <strong>CNC Spindle Bearing Wear</strong> scenario.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/a4557e65-5db2-4024-91d1-6866103ef3ec/File_a3800a9ee8284fc0997287e0582f9a6e_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/a4557e65-5db2-4024-91d1-6866103ef3ec/File_a3800a9ee8284fc0997287e0582f9a6e_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="38">
+<li>
+<p>Click <strong>Analyze Equipment</strong> (or a similar blue button) to run the AI analysis demo.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/e3c41b35-a870-45d4-8c49-4e47e2e7ca54/File_417ee3c4c88044c4a0000a7b47cfbf48_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/e3c41b35-a870-45d4-8c49-4e47e2e7ca54/File_417ee3c4c88044c4a0000a7b47cfbf48_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="39">
+<li>
+<p>Review the analysis. If you experience errors here, simply screenshot them and send them to Bob, as before.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/2c4b2ae1-b215-4b95-a8b4-9c4cc5454d54/user_cropped_screenshot_93c9e48826474e57aa81213b9687de74_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/2c4b2ae1-b215-4b95-a8b4-9c4cc5454d54/user_cropped_screenshot_93c9e48826474e57aa81213b9687de74_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="40">
+<li>
+<p>Try another scenario — <strong>Hydraulic Press Seal Failure</strong>. Here, an option appears to auto-create a (mock) <strong>work order</strong>. Try it.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/c70363d7-f5cd-42bc-adec-97ff1aeb9f7b/File_a1a6e38d2a9b4fa7b853ef7ad2dd5cfc_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/c70363d7-f5cd-42bc-adec-97ff1aeb9f7b/File_a1a6e38d2a9b4fa7b853ef7ad2dd5cfc_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="41">
+<li>
+<p>The work order is created. Feel free to continue exploring your demo app, refining it as you wish.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/f91c299c-9e21-4e7f-9986-9a2027a44dd8/File_82595ff53a6c427b8ff4383ae3fc06ce_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/f91c299c-9e21-4e7f-9986-9a2027a44dd8/File_82595ff53a6c427b8ff4383ae3fc06ce_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="42">
+<li>
+<p>Should you experience issues with your demo environment (or you simply wish to personalize it with aesthetic changes), the Agentic Sidebar makes this process relatively straightforward.</p>
+<p>For example, in the IBMer run, the <strong>"Fleet Health Index"</strong> semicircle needed adjustment. Simply take a screenshot of <em>your</em> application as it is rendered within the web browser, paste that screenshot into the Agentic Sidebar as a reference for comparison, and then request the changes via a natural language prompt that describes the issue.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/49395320-74cb-4e0c-9645-1eb2efe04cfc/user_cropped_screenshot_d6fc28bd53d74be8a8ac06fd918ffec1_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/49395320-74cb-4e0c-9645-1eb2efe04cfc/user_cropped_screenshot_d6fc28bd53d74be8a8ac06fd918ffec1_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="43">
+<li>
+<p>As requested, the <em>"Fleet Health Index"</em> semicircle now renders properly.</p>
+<p>Whether you are looking to implement new features or make aesthetic changes, debug problematic areas or something else entirely — the same pattern applies to correcting and enhancing your demo. Take a screenshot of the issue, provide a brief description to IBM Bob in the Agentic Sidebar (in <em>IBM Pre-Sales Demo Builder</em> mode), and Bob will endeavor to implement those changes. With a functioning demonstration in hand, the core of this lab is complete.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/2e605024-e43c-4366-812e-fef32a411e49/user_cropped_screenshot_ebb31305b5904c9abdb37d853f62065a_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/2e605024-e43c-4366-812e-fef32a411e49/user_cropped_screenshot_ebb31305b5904c9abdb37d853f62065a_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<h2 id="viii-pitching-the-demo-script"><strong>viii. Pitching the demo script</strong></h2>
+<p>A running app is only half of what the Demo Builder produces. The other half is a fully-authored <code>DEMO_SCRIPT.md</code> file containing a preflight checklist and a verbal walkthrough — the material you will actually present in the room.</p>
+<hr>
+<ol start="44">
+<li>
+<p>To conclude the <em>simplified</em> flow demonstration, one task remains: how do you actually work with (and pitch) this demo for a potential client audience?</p>
+<p>Back within the IBM Bob IDE, locate the Markdown file named <strong>DEMO_SCRIPT.md</strong> (or something similar) under the <em>Explorer</em> tab. It contains a set of pre-flight checks, alongside the actual demo script you could adapt for walking a prospective client end-to-end through this demonstration. Of course, you can also use the Agentic Sidebar at any time to request for Bob to generate a presentation script for you, bulleted and timed for exactly the length of time you'll have for your client engagement.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/07422ad8-7793-48cf-82b5-558e474b2b16/user_cropped_screenshot_b7d5307d84d947959af8b09f6e273473_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-10/07422ad8-7793-48cf-82b5-558e474b2b16/user_cropped_screenshot_b7d5307d84d947959af8b09f6e273473_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="45">
+<li>
+<p>In the Business Partner run, the file sat inside the <strong><code>/demos</code></strong> folder. Look inside it for a Markdown file named something similar to <strong><code>DEMO_SCRIPT.md</code></strong> — click on it.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/37ec9f95-9f54-4f50-b728-fc9b1669fb5c/File_789731b122194d67afe65e8ae210dfb6_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/37ec9f95-9f54-4f50-b728-fc9b1669fb5c/File_789731b122194d67afe65e8ae210dfb6_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="46">
+<li>
+<p>Right-click and press <strong>"Open Preview"</strong> within IBM Bob to see a formatted version of the script.</p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/896181ec-c4f0-40a7-bcdd-c7e68445938e/File_6e49f741078d4801a44ca26c81e89719_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/896181ec-c4f0-40a7-bcdd-c7e68445938e/File_6e49f741078d4801a44ca26c81e89719_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<ol start="47">
+<li>
+<p>Finally, observe that IBM Bob's Pre-Sales Demo Builder mode created an accompanying preflight checklist and verbal presentation script to sit alongside your demo app. To modify it, simply describe the desired changes to Bob.</p>
+<p><strong>Experiment</strong> with this capability now and consider using it to script your next client engagement, Stand &amp; Deliver recording, or tradeshow presentation.</p>
+<p><strong>Congratulations — you have successfully built a product demo using IBM Bob!</strong></p>
+<p></p><p align="left">
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/dd719cbd-ce41-4217-9b32-a929b889619f/File_61c5ec2b74294a5f8bbce8b20e8e80e8_text_export.jpeg" data-desc-position="bottom"><img src="https://colony-recorder.s3.amazonaws.com/files/2026-07-16/dd719cbd-ce41-4217-9b32-a929b889619f/File_61c5ec2b74294a5f8bbce8b20e8e80e8_text_export.jpeg" alt="" width="600"></a>
+</p>
+</li>
+</ol>
+<hr>
+<h2 id="ix-key-takeaways"><strong>ix. Key takeaways</strong></h2>
+<hr>
+<ul>
+<li>The <strong>simplified flow</strong> carries a one-sentence use case through the Demo Builder's complete lifecycle: <strong>brief → intake → build → launch → refine → present</strong>. The same procedure applies whether the Demo Builder arrived via the CE Bob Marketplace or the Seismic package.</li>
+<li>Large Demo Builder tasks are best performed with <strong>Approve for task</strong> (or <strong>Auto-approve</strong>) enabled. This allows Bob to advance through the back-end build and its verification and tests, and then through the front-end build and compliance pass, without repeated interruption.</li>
+<li>The guided intake questionnaire covers the essential decision points that <em>you</em> author, and Bob actions: the build approach and audience; the environment and deployment target; the scenario; and the final confirmation. The exact set of questions varies between runs.</li>
+<li><strong>Mock mode</strong> produces a complete, navigable, client-credible demonstration with zero credentials and a fully offline environment — ideal for time-constrained engagements or when conserving Bob tokens.</li>
+<li>A complete build takes roughly <strong>20 minutes</strong> and consumes approximately <strong>15–20 Bobcoins</strong>.</li>
+<li>Bob's <strong>self-review methodology</strong> is on full display during the final compliance pass — catching its own bugs (such as the Carbon v11 icon sweep), investigating them autonomously, and applying repairs before declaring the build complete.</li>
+<li>The <strong>screenshot + natural-language prompt</strong> pattern — pasting console logs or screenshots (or simply a description) into the Agentic Sidebar — is the recommended remedy for startup issues and bugs, and for aesthetic refinements alike. If the Agentic Sidebar freezes or times out, the <code>continue</code> prompt reliably resumes your work where it left off.</li>
+<li>A Bob-generated <strong>quickstart script</strong> collapses the two-terminal startup sequence into a single click, eliminating manual setup at client meetings.</li>
+<li>The generated <strong><code>DEMO_SCRIPT.md</code></strong> transforms the build into a full presentation package: a preflight checklist plus a verbal walkthrough, modifiable on request.</li>
+<li>Human review remains essential throughout the process. Carefully reviewing intake selections, the running app, and the generated pitch script ensures a successful and trustworthy demonstration outcome.</li>
+</ul>
+<p>
+In the following chapter, you will learn to author the demo brief yourself according to best practices — the six things every prompt must answer — to produce demos that are expertly tailored to a specific client and industry, and to the audience in the room.</p>
+<hr></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../1-2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: For IBM Business Partners">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                For IBM Business Partners
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../3/" class="md-footer__link md-footer__link--next" aria-label="Next: 3. Prompting best practices">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                3. Prompting best practices
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "content.code.annotate", "content.code.copy", "content.code.select", "navigation.footer"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+        <script src="../_static/hide-toc-nav.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
